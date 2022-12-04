@@ -4,7 +4,7 @@ export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="font-spaceboards fixed">
+    <div className="font-spaceboards fixed z-40">
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
         <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
           <ul className="items-center justify-center hidden space-x-8 lg:flex">
@@ -56,9 +56,9 @@ export const NavBar = () => {
         </div>
         {isMenuOpen && (
           <div className="absolute top-0 left-0 w-full">
-            <div className="p-5 bg-black rounded shadow-sm min-h-screen">
+            <div className="p-5 bg-black rounded shadow-sm min-h-screen flex flex-col">
               <div className="flex items-center justify-between mb-4">
-                <div>
+                <div className="">
                   <Link
                     href="/"
                     aria-label="Thar 2023"
@@ -89,8 +89,8 @@ export const NavBar = () => {
                   </button>
                 </div>
               </div>
-              <nav>
-                <ul className="space-y-6 py-6 flex-col justify-center items-center text-center">
+              <nav className="my-auto">
+                <ul className="space-y-10 py-6 flex-col justify-center items-center text-center">
                   <NavItemPrimary href="/" text="Product" />
                   <NavItemPrimary href="/" text="Services" />
                   <NavItemPrimary href="/" text="Pricing" />
