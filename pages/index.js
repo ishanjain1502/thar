@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <main className="relative z-20">
         <NavBar />
-        <Hero/>
+        <Hero />
       </main>
       <div className="h-[100vh] overflow-hidden fixed left-0 top-0 z-[1]">
         <video
@@ -28,6 +28,13 @@ export default function Home() {
           <source src="/assets/videos/bg2.mp4" type="video/mp4" />
         </video>
       </div>
+      <p className="text-7xl">sdvdsavadsvsd</p>
+      <p className="text-7xl">sdvdsavadsvsd</p>
+      <p className="text-7xl">sdvdsavadsvsd</p>
+      <p className="text-7xl">sdvdsavadsvsd</p>
+      <p className="text-7xl">sdvdsavadsvsd</p>
+      <p className="text-7xl">sdvdsavadsvsd</p>
+      <p className="text-7xl">sdvdsavadsvsd</p>
     </>
   );
 }
