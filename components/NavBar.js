@@ -110,8 +110,7 @@ const NavItemPrimary = ({ href, text }) => {
     <li>
       <Link
         href={href}
-        class="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
-        aria-label={text}
+        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
         title={text}
       >
         {text}
@@ -124,8 +123,7 @@ const NavItemSecondary = ({ href, text }) => {
     <li>
       <a
         href={href}
-        class="inline-flex items-center justify-center w-full font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-        aria-label={text}
+        className="inline-flex items-center justify-center w-full font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
         title={text}
       >
         {text}
