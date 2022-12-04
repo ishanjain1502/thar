@@ -1,4 +1,5 @@
 import Head from "next/head";
+import About from "../components/home/About";
 import Hero from "../components/home/Hero";
 import { NavBar } from "../components/NavBar";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <main className="relative z-20">
         <NavBar />
         <Hero />
+        <About />
       </main>
       <div className="h-[100vh] overflow-hidden fixed left-0 top-0 z-[1]">
         <video
@@ -28,13 +30,6 @@ export default function Home() {
           <source src="/assets/videos/bg2.mp4" type="video/mp4" />
         </video>
       </div>
-      <p className="text-7xl">sdvdsavadsvsd</p>
-      <p className="text-7xl">sdvdsavadsvsd</p>
-      <p className="text-7xl">sdvdsavadsvsd</p>
-      <p className="text-7xl">sdvdsavadsvsd</p>
-      <p className="text-7xl">sdvdsavadsvsd</p>
-      <p className="text-7xl">sdvdsavadsvsd</p>
-      <p className="text-7xl">sdvdsavadsvsd</p>
     </>
   );
 }

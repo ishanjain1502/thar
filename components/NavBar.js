@@ -1,10 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useEffect(() => {
+    window.addEventListener(
+      "scroll",
+      () => {
+        let scrollYval = scrollY;
+        if (scrollYval > 50) {
+          document.getElementById("navbar").style.backgroundColor =
+            "rgb(0 0 0 / 0.3)";
+          document.getElementById("navbar").style.backdropFilter = "blur(24px)";
+        }else{
+            document.getElementById("navbar").style.backgroundColor =
+            "transparent";
+          document.getElementById("navbar").style.backdropFilter = "blur(0px)";
+        }
+      },
+      []
+    );
+  });
 
   return (
-    <div className="font-spaceboards fixed z-40">
+    <div
+      id="navbar"
+      className="font-spaceboards fixed z-40 transition-all ease-in-out"
+    >
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
         <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
           <ul className="items-center justify-center hidden space-x-8 lg:flex">

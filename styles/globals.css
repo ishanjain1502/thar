@@ -13,6 +13,11 @@
   font-family: "Space Boards";
 }
 
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* TEST ZONE STARTS */
 html {
   background-color: #000;
@@ -41,7 +46,7 @@ html {
 
 /* Text Strokes */
 .text-stroke-color {
-  -webkit-text-stroke-color: #120F22;
+  -webkit-text-stroke-color: #120f22;
 }
 
 .text-stroke {
