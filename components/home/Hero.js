@@ -12,7 +12,7 @@ function Hero() {
         setIsScrollVisible(true);
       }
     });
-  }, []);
+  }, [isScrollVisible]);
   return (
     <div className="min-h-screen grid place-items-center">
       <div className="flex justify-center flex-col items-center mt-10 sm:mt-20 w-full">
