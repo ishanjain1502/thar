@@ -69,3 +69,11 @@ html {
 .tracking-scroll {
   letter-spacing: 0.5em;
 }
+
+/* Hypens */
+.hyphens {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
