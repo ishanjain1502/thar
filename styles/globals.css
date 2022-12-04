@@ -2,3 +2,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Importing Font */
+@font-face {
+  font-family: "Space Boards";
+  src: url("/assets/fonts/Space Boards.otf");
+}
+
+.font-spaceboards {
+  font-family: "Space Boards";
+}
+
+/* TEST ZONE STARTS */
+html{
+  background-color: #000;
+  color: #fff;
+}
+/* TEST ZONE ENDS */
