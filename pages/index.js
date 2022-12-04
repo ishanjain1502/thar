@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Hero from "../components/home/Hero";
 import { NavBar } from "../components/NavBar";
 
 export default function Home() {
@@ -11,20 +12,20 @@ export default function Home() {
       </Head>
       <main className="relative z-20">
         <NavBar />
-        <p className="text-red-600 text-xl">Hello RTU</p><br/>
+        <Hero/>
       </main>
       <div className="h-[100vh] overflow-hidden fixed left-0 top-0 z-[1]">
         <video
           autoPlay
           muted
           loop
-          className="w-[100vw] object-fill h-full pointer-events-none scale-110 brightness-[1]"
+          className="w-[100vw] object-cover h-full pointer-events-none scale-110 brightness-[0.7]"
           id="bg-vid"
           // TODO: test for lazyload and on load complete event
           preload="none"
           onLoadedData={() => console.log(69)}
         >
-          <source src="/assets/videos/bg.mp4" type="video/mp4" />
+          <source src="/assets/videos/bg2.mp4" type="video/mp4" />
         </video>
       </div>
     </>
