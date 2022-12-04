@@ -59,7 +59,7 @@ export const NavBar = () => {
             <div className="p-5 bg-black rounded shadow-sm min-h-screen">
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <a
+                  <Link
                     href="/"
                     aria-label="Thar 2023"
                     title="Thar 2023"
@@ -71,7 +71,7 @@ export const NavBar = () => {
                       className="pointer-events-none w-8/12"
                       draggable="false"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div>
                   <button
