@@ -24,7 +24,7 @@ export const NavBar = () => {
   return (
     <div
       id="navbar"
-      className="font-spaceboards fixed z-40 transition-all ease-in-out"
+      className="font-spaceboards fixed z-40 transition-all ease-in-out w-full"
     >
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
         <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
