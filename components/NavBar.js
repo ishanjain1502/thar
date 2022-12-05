@@ -11,8 +11,8 @@ export const NavBar = () => {
           document.getElementById("navbar").style.backgroundColor =
             "rgb(0 0 0 / 0.3)";
           document.getElementById("navbar").style.backdropFilter = "blur(24px)";
-        }else{
-            document.getElementById("navbar").style.backgroundColor =
+        } else {
+          document.getElementById("navbar").style.backgroundColor =
             "transparent";
           document.getElementById("navbar").style.backdropFilter = "blur(0px)";
         }
@@ -117,6 +117,7 @@ export const NavBar = () => {
                   <NavItemPrimary href="/" text="Pricing" />
                   <NavItemSecondary text="Sign in" href="/" />
                   <NavItemSecondary text="Sign up" href="/" />
+                  <NavItemSecondary text="Team" href="/team" />
                 </ul>
               </nav>
             </div>
