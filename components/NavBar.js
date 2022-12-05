@@ -24,7 +24,7 @@ export const NavBar = () => {
   return (
     <div
       id="navbar"
-      className="font-spaceboards fixed z-40 transition-all ease-in-out"
+      className="font-spaceboards fixed z-40 transition-all ease-in-out w-full"
     >
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
         <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
@@ -49,7 +49,7 @@ export const NavBar = () => {
           <ul className="items-center justify-center hidden space-x-8 lg:flex">
             <NavItemSecondary text="Sign in" href="/" />
             <NavItemSecondary text="Sign up" href="/" />
-            <NavItemSecondary text="Sign up" href="/" />
+            <NavItemSecondary text="Team" href="/team" />
           </ul>
           <div className="ml-auto lg:hidden">
             <button
@@ -144,7 +144,7 @@ const NavItemSecondary = ({ href, text }) => {
     <li>
       <Link
         href={href}
-        className="inline-flex items-center justify-center w-full font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+        className="inline-flex items-center justify-center w-full font-medium tracking-wide text-white transition duration-200 rounded bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
         title={text}
       >
         {text}
