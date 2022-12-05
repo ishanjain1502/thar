@@ -21,7 +21,7 @@ export default function Theme() {
           &apos;23, welcoming you to encounter the bizzare gush of utterly
           prepossessing and striking events.
         </article>
-        <div className=" bg-yellow-300/20 backdrop-blur-xl w-full lg:w-3/12 flex h-full justify-center items-center lg:border-r-4 border-b-4 lg:border-b-0 border-yellow-300">
+        <div className=" bg-yellow-300/20 backdrop-blur-xl w-full lg:w-3/12 flex h-full justify-center items-center lg:border-l-4 border-b-4 lg:border-b-0 border-yellow-300">
           <span className="lg:rotate-90 h-max text-4xl font-spaceboards my-4 pt-3 text-center">
             The Galaxy Indelible
           </span>
