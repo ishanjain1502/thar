@@ -30,9 +30,9 @@ export const NavBar = () => {
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
         <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
           <ul className="items-center justify-center hidden space-x-8 lg:flex">
-            <NavItemPrimary href="/" text="GoKart" />
-            <NavItemPrimary href="/" text="Robowar" />
-            <NavItemPrimary href="/" text="MUN" />
+            <NavItemPrimary href="/events" text="Events" />
+            <NavItemPrimary href="/gokart" text="Gokart" />
+            <NavItemPrimary href="/robowar" text="Robowar" />
           </ul>
           <Link
             href="/"
@@ -50,9 +50,9 @@ export const NavBar = () => {
             />
           </Link>
           <ul className="items-center justify-center hidden space-x-8 lg:flex">
-            <NavItemSecondary text="Sign in" href="/" />
             <NavItemSecondary text="CA" href="/ca" />
             <NavItemSecondary text="Team" href="/team" />
+            <NavItemSecondary text="Sponsors" href="/sponsors" />
           </ul>
           <div className="ml-auto lg:hidden">
             <button
@@ -115,12 +115,12 @@ export const NavBar = () => {
               </div>
               <nav className="my-auto">
                 <ul className="space-y-10 py-6 flex-col justify-center items-center text-center">
-                  <NavItemSecondary text="Sign in" href="/" />
+                  <NavItemPrimary href="/events" text="Events" />
+                  <NavItemPrimary href="/gokart" text="Gokart" />
+                  <NavItemPrimary href="/robowar" text="Robowar" />
                   <NavItemSecondary text="CA" href="/ca" />
                   <NavItemSecondary text="Team" href="/team" />
-                  <NavItemPrimary href="/" text="Robowar" />
-                  <NavItemPrimary href="/" text="Gokart" />
-                  <NavItemPrimary href="/" text="Mun" />
+                  <NavItemSecondary text="Sponsors" href="/sponsors" />
                 </ul>
               </nav>
             </div>
