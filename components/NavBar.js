@@ -49,7 +49,7 @@ export const NavBar = () => {
           <ul className="items-center justify-center hidden space-x-8 lg:flex">
             <NavItemSecondary text="Sign in" href="/" />
             <NavItemSecondary text="Sign up" href="/" />
-            <NavItemSecondary text="Sign up" href="/" />
+            <NavItemSecondary text="Team" href="/team" />
           </ul>
           <div className="ml-auto lg:hidden">
             <button
@@ -144,7 +144,7 @@ const NavItemSecondary = ({ href, text }) => {
     <li>
       <Link
         href={href}
-        className="inline-flex items-center justify-center w-full font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+        className="inline-flex items-center justify-center w-full font-medium tracking-wide text-white transition duration-200 rounded bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
         title={text}
       >
         {text}
