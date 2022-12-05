@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {
@@ -29,9 +30,9 @@ export const NavBar = () => {
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
         <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
           <ul className="items-center justify-center hidden space-x-8 lg:flex">
-            <NavItemPrimary href="/" text="Product" />
-            <NavItemPrimary href="/" text="Services" />
-            <NavItemPrimary href="/" text="Pricing" />
+            <NavItemPrimary href="/" text="GoKart" />
+            <NavItemPrimary href="/" text="Robowar" />
+            <NavItemPrimary href="/" text="MUN" />
           </ul>
           <Link
             href="/"
@@ -39,7 +40,9 @@ export const NavBar = () => {
             title="Thar 2023"
             className="inline-flex items-center lg:mx-auto"
           >
-            <img
+            <Image
+              height={400}
+              width={400}
               src="/assets/images/main/navBanner.png"
               alt="Thar 2023 Navigation Logo"
               className="pointer-events-none w-auto sm:w-10/12 lg:w-auto"
@@ -48,7 +51,7 @@ export const NavBar = () => {
           </Link>
           <ul className="items-center justify-center hidden space-x-8 lg:flex">
             <NavItemSecondary text="Sign in" href="/" />
-            <NavItemSecondary text="Sign up" href="/" />
+            <NavItemSecondary text="CA" href="/ca" />
             <NavItemSecondary text="Team" href="/team" />
           </ul>
           <div className="ml-auto lg:hidden">
@@ -112,12 +115,12 @@ export const NavBar = () => {
               </div>
               <nav className="my-auto">
                 <ul className="space-y-10 py-6 flex-col justify-center items-center text-center">
-                  <NavItemPrimary href="/" text="Product" />
-                  <NavItemPrimary href="/" text="Services" />
-                  <NavItemPrimary href="/" text="Pricing" />
                   <NavItemSecondary text="Sign in" href="/" />
-                  <NavItemSecondary text="Sign up" href="/" />
+                  <NavItemSecondary text="CA" href="/ca" />
                   <NavItemSecondary text="Team" href="/team" />
+                  <NavItemPrimary href="/" text="Robowar" />
+                  <NavItemPrimary href="/" text="Gokart" />
+                  <NavItemPrimary href="/" text="Mun" />
                 </ul>
               </nav>
             </div>
