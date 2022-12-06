@@ -71,6 +71,9 @@ export default function Form() {
             required={true}
             placeholder="Name"
           />
+          <div className="text-red-300 text-sm -mb-6 -mt-2">
+            *Only unique Gmails allowed
+          </div>
           <input
             type="email"
             value={email}
