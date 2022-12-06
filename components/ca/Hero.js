@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col md:flex-row p-4 md:p-8 lg:p-12 xl:px-24 xl:pt-14 items-center">
+    <div className="flex flex-col md:flex-row p-4 md:p-8 lg:p-12 xl:px-24  md:pt-24 lg:pt-28 xl:pt-32 items-center">
       <div className="w-full md:w-[40%] mt-8 md:mt-0 p-4 md:m-6 lg:p-8">
         <img
           src="/assets/images/ca/ca.svg"
