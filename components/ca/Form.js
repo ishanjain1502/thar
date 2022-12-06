@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import axios from "axios";
 export default function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -16,21 +16,38 @@ export default function Form() {
   function handleSuccessDetails(e) {
     e.preventDefault();
     setIsProcessing(true);
-    setIsProcessing(true);
-    setTimeout(() => {
-      setCaId("CA-123456");
-      setName("");
-      setEmail("");
-      setPhone("");
-      setCollege("");
-      setRollNo("");
-      setYear("");
-      setDegree("");
-      setAddress("");
-      setPincode("");
-      setIsProcessing(false);
-      setIsSubmitted(true);
-    }, 2000);
+    axios
+      .post("/api/v1/ca/register", {
+        name: name,
+        phone: phone,
+        email: email,
+        college: college,
+        rollNo: rollNo,
+        degree: degree,
+        address: address,
+        pincode: pincode,
+        year: year,
+      })
+      .then(function (response) {
+        console.log(response);
+        setCaId("CA-123456");
+        setName("");
+        setEmail("");
+        setPhone("");
+        setCollege("");
+        setRollNo("");
+        setYear("");
+        setDegree("");
+        setAddress("");
+        setPincode("");
+        setIsProcessing(false);
+        setIsSubmitted(true);
+      })
+      .catch(function (error) {
+        console.log(error);
+        setIsProcessing(false);
+        setIsSubmitted(true);
+      });
   }
   return (
     <div id="ca" className="flex justify-center mb-10">
