@@ -21,6 +21,7 @@ function generateString(length) {
 
 const handler = async (req, res) => {
 
+
     try {
         let caID = 'CA-';
         const random = generateString(6);

@@ -15,40 +15,40 @@ export default function Form() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   function handleSuccessDetails(e) {
     e.preventDefault();
-    if(email.includes("@gmail.com")){
-    setIsProcessing(true);
-    axios
-      .post("/api/v1/ca/register", {
-        name: name,
-        phone: phone,
-        email: email,
-        college: college,
-        rollNo: rollNo,
-        degree: degree,
-        address: address,
-        pincode: pincode,
-        year: year,
-      })
-      .then(function (response) {
-        setCaId(response.data.data);
-        setName("");
-        setEmail("");
-        setPhone("");
-        setCollege("");
-        setRollNo("");
-        setYear("1st");
-        setDegree("B.Tech");
-        setAddress("");
-        setPincode("");
-        setIsProcessing(false);
-      })
-      .catch(function (error) {
-        alert(error.message);
-        setIsProcessing(false);
-        setIsSubmitted(true);
-      });}
-    else{
-      alert("Email must be a valid gmail id")
+    if (email.includes("@gmail.com")) {
+      setIsProcessing(true);
+      axios
+        .post("/api/v1/ca/register", {
+          name: name,
+          phone: phone,
+          email: email,
+          college: college,
+          rollNo: rollNo,
+          degree: degree,
+          address: address,
+          pincode: pincode,
+          year: year,
+        })
+        .then(function (response) {
+          setCaId(response.data.data);
+          setName("");
+          setEmail("");
+          setPhone("");
+          setCollege("");
+          setRollNo("");
+          setYear("1st");
+          setDegree("B.Tech");
+          setAddress("");
+          setPincode("");
+          setIsProcessing(false);
+          setIsSubmitted(true);
+        })
+        .catch(function (error) {
+          alert(error.message);
+          setIsProcessing(false);
+        });
+    } else {
+      alert("Email must be a valid gmail id");
     }
   }
   return (
@@ -177,7 +177,7 @@ export default function Form() {
             placeholder="Address"
           />
           <input
-            type="number"
+            type="string"
             autoComplete="off"
             value={pincode}
             minLength={6}
