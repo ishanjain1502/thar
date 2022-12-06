@@ -1,8 +1,11 @@
 
-
+const methods = ['POST']
 
 export default function withValidation(handler, schema) {
     return (req, res) => {
+        if (!methods.includes(req.method)) {
+            return res.status(405).json({ error: true, message: 'Method not allowed' })
+        }
         const { error, value } = schema.validate(req.body);
         if (error) {
             const message = error.details[0].message.replace(/"/g, '');
