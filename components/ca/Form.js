@@ -44,7 +44,7 @@ export default function Form() {
           setIsSubmitted(true);
         })
         .catch(function (error) {
-          alert(error.message);
+          alert(error.response.data.message);
           setIsProcessing(false);
         });
     } else {
