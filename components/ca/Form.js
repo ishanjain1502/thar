@@ -1,35 +1,59 @@
 import React, { useState } from "react";
-
+import axios from "axios";
 export default function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [college, setCollege] = useState("");
   const [rollNo, setRollNo] = useState("");
-  const [degree, setDegree] = useState("");
+  const [year, setYear] = useState("1st");
+  const [degree, setDegree] = useState("B.Tech");
   const [address, setAddress] = useState("");
   const [pincode, setPincode] = useState("");
+  const [caId, setCaId] = useState("");
   const [isProcessing, setIsProcessing] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   function handleSuccessDetails(e) {
     e.preventDefault();
     setIsProcessing(true);
-    setIsProcessing(true);
-    setTimeout(() => {
-      setIsProcessing(false);
-      setIsSubmitted(true);
-      alert(
-        `For Temporary Purpose \n${name}, ${email}, ${phone}, ${college}, ${rollNo}, ${degree}, ${address}, ${pincode}`
-      );
-    }, 2000);
+    axios
+      .post("/api/v1/ca/register", {
+        name: name,
+        phone: phone,
+        email: email,
+        college: college,
+        rollNo: rollNo,
+        degree: degree,
+        address: address,
+        pincode: pincode,
+        year: year,
+      })
+      .then(function (response) {
+        setCaId(response.data.data);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setCollege("");
+        setRollNo("");
+        setYear("");
+        setDegree("");
+        setAddress("");
+        setPincode("");
+        setIsProcessing(false);
+      })
+      .catch(function (error) {
+        alert(error.message);
+        setIsProcessing(false);
+        setIsSubmitted(true);
+      });
   }
   return (
     <div id="ca" className="flex justify-center mb-10">
       {/* Flex Break Point - lg */}
       <div className="w-11/12 sm:w-10/12 md:w-8/12 xl:w-8/12 border-4 border-yellow-300 flex flex-col lg:flex-row">
         <div className=" bg-yellow-300/20 backdrop-blur-xl w-full lg:w-3/12 flex h-full justify-center items-center lg:border-r-4 border-b-4 lg:border-b-0 border-yellow-300">
-          <span className="lg:-rotate-90 h-max text-6xl font-spaceboards my-4 pt-3">
-            CA FORM
+          <span className="lg:-rotate-90 text-center h-max text-5xl font-spaceboards my-4 pt-3">
+            Campus Ambassadors
           </span>
         </div>
         <form
@@ -83,15 +107,47 @@ export default function Form() {
             required={true}
             placeholder="College Roll No"
           />
-          <input
-            type="text"
+          <select
+            className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
+            placeholder="Choose a year"
             value={degree}
             onChange={(e) => setDegree(e.target.value)}
-            autoComplete="off"
+          >
+            <option className="bg-black text-white" value="B.Tech">
+              B.Tech
+            </option>
+            <option className="bg-black text-white" value="M.Tech">
+              M.Tech
+            </option>
+            <option className="bg-black text-white" value="MBA">
+              MBA
+            </option>
+            <option className="bg-black text-white" value="Other">
+              Other
+            </option>
+          </select>
+          <select
             className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
-            required={true}
-            placeholder="Degree and Year (B.Tech CSE 2nd year)"
-          />
+            placeholder="Choose a year"
+            value={year}
+            onChange={(e) => setYear(e.target.value)}
+          >
+            <option className="bg-black text-white" value="1st">
+              1st
+            </option>
+            <option className="bg-black text-white" value="2nd">
+              2nd
+            </option>
+            <option className="bg-black text-white" value="3rd">
+              3rd
+            </option>
+            <option className="bg-black text-white" value="4th">
+              4th
+            </option>
+            <option className="bg-black text-white" value="Other">
+              Other
+            </option>
+          </select>
           <input
             type="text"
             autoComplete="off"
@@ -141,6 +197,14 @@ export default function Form() {
               )}
             </button>
           </div>
+          {isSubmitted && (
+            <div className="w-full p-2">
+              Congratulations! You have been registered for Campus Ambassador
+              Programme of RTU THAR 2023. Your CA id is{" "}
+              <span className="font-mono">{caId}</span>. Copy this id for future
+              refrence, we will contact you soon.
+            </div>
+          )}
         </form>
       </div>
     </div>
