@@ -6,8 +6,8 @@ export default function Form() {
   const [phone, setPhone] = useState("");
   const [college, setCollege] = useState("");
   const [rollNo, setRollNo] = useState("");
-  const [year, setYear] = useState("");
-  const [degree, setDegree] = useState("");
+  const [year, setYear] = useState("1st");
+  const [degree, setDegree] = useState("B.Tech");
   const [address, setAddress] = useState("");
   const [pincode, setPincode] = useState("");
   const [caId, setCaId] = useState("");
@@ -29,8 +29,7 @@ export default function Form() {
         year: year,
       })
       .then(function (response) {
-        console.log(response);
-        setCaId("CA-123456");
+        setCaId(response.data.data);
         setName("");
         setEmail("");
         setPhone("");
@@ -41,10 +40,9 @@ export default function Form() {
         setAddress("");
         setPincode("");
         setIsProcessing(false);
-        setIsSubmitted(true);
       })
       .catch(function (error) {
-        console.log(error);
+        alert(error.message);
         setIsProcessing(false);
         setIsSubmitted(true);
       });
