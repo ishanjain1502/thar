@@ -6,9 +6,11 @@ export default function Form() {
   const [phone, setPhone] = useState("");
   const [college, setCollege] = useState("");
   const [rollNo, setRollNo] = useState("");
+  const [year, setYear] = useState("");
   const [degree, setDegree] = useState("");
   const [address, setAddress] = useState("");
   const [pincode, setPincode] = useState("");
+  const [caId, setCaId] = useState("");
   const [isProcessing, setIsProcessing] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   function handleSuccessDetails(e) {
@@ -16,11 +18,18 @@ export default function Form() {
     setIsProcessing(true);
     setIsProcessing(true);
     setTimeout(() => {
+      setCaId("CA-123456");
+      setName("");
+      setEmail("");
+      setPhone("");
+      setCollege("");
+      setRollNo("");
+      setYear("");
+      setDegree("");
+      setAddress("");
+      setPincode("");
       setIsProcessing(false);
       setIsSubmitted(true);
-      alert(
-        `For Temporary Purpose \n${name}, ${email}, ${phone}, ${college}, ${rollNo}, ${degree}, ${address}, ${pincode}`
-      );
     }, 2000);
   }
   return (
@@ -83,15 +92,47 @@ export default function Form() {
             required={true}
             placeholder="College Roll No"
           />
-          <input
-            type="text"
+          <select
+            className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
+            placeholder="Choose a year"
             value={degree}
             onChange={(e) => setDegree(e.target.value)}
-            autoComplete="off"
+          >
+            <option className="bg-black text-white" value="B.Tech">
+              B.Tech
+            </option>
+            <option className="bg-black text-white" value="M.Tech">
+              M.Tech
+            </option>
+            <option className="bg-black text-white" value="MBA">
+              MBA
+            </option>
+            <option className="bg-black text-white" value="Other">
+              Other
+            </option>
+          </select>
+          <select
             className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
-            required={true}
-            placeholder="Degree and Year (B.Tech CSE 2nd year)"
-          />
+            placeholder="Choose a year"
+            value={year}
+            onChange={(e) => setYear(e.target.value)}
+          >
+            <option className="bg-black text-white" value="1st">
+              1st
+            </option>
+            <option className="bg-black text-white" value="2nd">
+              2nd
+            </option>
+            <option className="bg-black text-white" value="3rd">
+              3rd
+            </option>
+            <option className="bg-black text-white" value="4th">
+              4th
+            </option>
+            <option className="bg-black text-white" value="Other">
+              Other
+            </option>
+          </select>
           <input
             type="text"
             autoComplete="off"
@@ -141,6 +182,14 @@ export default function Form() {
               )}
             </button>
           </div>
+          {isSubmitted && (
+            <div className="w-full p-2">
+              Congratulations! You have been registered for Campus Ambassador
+              Programme of RTU THAR 2023. Your CA id is{" "}
+              <span className="font-mono">{caId}</span>. Copy this id for future
+              refrence, we will contact you soon.
+            </div>
+          )}
         </form>
       </div>
     </div>
