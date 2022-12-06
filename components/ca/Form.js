@@ -15,6 +15,7 @@ export default function Form() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   function handleSuccessDetails(e) {
     e.preventDefault();
+    if(email.includes("@gmail.com")){
     setIsProcessing(true);
     axios
       .post("/api/v1/ca/register", {
@@ -35,8 +36,8 @@ export default function Form() {
         setPhone("");
         setCollege("");
         setRollNo("");
-        setYear("");
-        setDegree("");
+        setYear("1st");
+        setDegree("B.Tech");
         setAddress("");
         setPincode("");
         setIsProcessing(false);
@@ -45,7 +46,10 @@ export default function Form() {
         alert(error.message);
         setIsProcessing(false);
         setIsSubmitted(true);
-      });
+      });}
+    else{
+      alert("Email must be a valid gmail id")
+    }
   }
   return (
     <div id="ca" className="flex justify-center mb-10">
