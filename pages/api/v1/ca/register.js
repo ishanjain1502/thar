@@ -25,8 +25,8 @@ const handler = async (req, res) => {
         let caID = 'CA-';
         const random = generateString(6);
         caID = caID + random;
-        await user.create({ ...req.body, referralCode: caID });
-        res.status(200).json({ error: false, message: 'success' })
+        const data = await user.create({ ...req.body, referralCode: caID });
+        res.status(200).json({ error: false, message: 'success', data: data.referralCode })
 
     } catch (error) {
         if (error.code === 11000) {
