@@ -67,6 +67,8 @@ export default function Form() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             autoComplete="off"
+            minLength={3}
+            maxLength={30}
             className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
             required={true}
             placeholder="Name"
@@ -76,6 +78,8 @@ export default function Form() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             autoComplete="off"
+            minLength={16}
+            maxLength={50}
             className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
             required={true}
             placeholder="Email Address"
@@ -85,6 +89,8 @@ export default function Form() {
             autoComplete="off"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
+            minLength={10}
+            maxLength={10}
             className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
             required={true}
             placeholder="Phone no"
@@ -94,6 +100,8 @@ export default function Form() {
             value={college}
             onChange={(e) => setCollege(e.target.value)}
             autoComplete="off"
+            minLength={3}
+            maxLength={100}
             className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
             required={true}
             placeholder="College"
@@ -103,6 +111,8 @@ export default function Form() {
             value={rollNo}
             onChange={(e) => setRollNo(e.target.value)}
             autoComplete="off"
+            minLength={3}
+            maxLength={30}
             className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
             required={true}
             placeholder="College Roll No"
@@ -153,6 +163,8 @@ export default function Form() {
             autoComplete="off"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
+            minLength={2}
+            maxLength={200}
             className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
             required={true}
             placeholder="Address"
@@ -161,6 +173,8 @@ export default function Form() {
             type="number"
             autoComplete="off"
             value={pincode}
+            minLength={6}
+            maxLength={6}
             onChange={(e) => setPincode(e.target.value)}
             className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
             required={true}

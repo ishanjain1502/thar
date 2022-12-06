@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema({
         maxLength: 30,
         minLength: 3,
     },
+    // TODO: change min value of mail to 13
     email: {
         type: String,
         required: true,
