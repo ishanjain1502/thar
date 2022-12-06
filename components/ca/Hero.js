@@ -16,12 +16,13 @@ export default function Hero() {
           Campus Ambassadors
         </div>
         <div className="text-base sm:text-lg lg:text-xl text-slate-300">
-          If you&apos;re wondering what is a campus ambassador program,
-          it&apos;s an opportunity to be a representative of the state&apos;s
-          prestigious university, RTU. Act as a link to our institute and be the
-          face of your college amongst the amazing campus ambassadors of the
-          state. This is a chance to get involved in a network committed to
-          flourish and boost the learning curve of your student career.
+          If you&apos;re wondering what a campus ambassador program is,
+          it&apos;s an opportunity to be a representative of the
+          Rajasthan&apos;s prestigious university, RTU. <br /> Act as a link
+          between our institute and yours, and be the face of your college
+          amongst the amazing campus ambassadors across the nation. This is a
+          chance for you to get involved in a network committed towards
+          flourishing and boosting the learning curve of your student career.
         </div>
       </div>
     </div>
