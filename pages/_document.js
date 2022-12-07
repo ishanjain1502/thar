@@ -33,6 +33,11 @@ export default function Document() {
         <meta property="twitter:image" content="https://rtuthar.in/og.png" />
         <meta http-equiv="content-language" content="en" />
         <link rel="icon" href="/favicon.png" />
+        {/* Google Site Verification */}
+        <meta
+          name="google-site-verification"
+          content="N_jA3DHZLTm0Kk7Wdo6RcaBKCSqyxATyk6oMvTbezvA"
+        />
       </Head>
       {/* Google Analytics */}
       <Script
