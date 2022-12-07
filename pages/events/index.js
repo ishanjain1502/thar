@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import { NavBar } from "../../components/NavBar";
+import { NavBar } from "../../components/globals/NavBar";
 
 export default function index() {
   return (
