@@ -2,6 +2,11 @@ import Script from "next/script";
 import "../styles/globals.css";
 import "../styles/loader.css";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
