@@ -14,17 +14,17 @@ export default function About() {
           lang="en"
           className="w-full lg:w-9/12 p-8 text-xl md: bg-black/20 backdrop-blur-2xl hyphens"
         >
-          Welcome to the symposium of innovation. Sustaining the legacy of past
-          4 editions. RTU is back with an assembly of exceptional minds THAR
-          2023.
+          Welcome to the symposium of innovation. <br /> Sustaining the legacy
+          of past 4 editions, RTU is back with an assembly of exceptional minds
+          THAR-23.
           <br />
-          Rajasthan&apos;s biggest techno management festival is a celebration
-          for intellectuals across the country. Providing a platform for
-          thinkers and doers alike, it&apos;s a fusion of monumental technology,
-          enticing arts, inspirational forums and much more.
+          Rajasthan&apos;s biggest techno management festival, THAR-23 is a
+          celebration for intellectuals across the country. Providing a platform
+          for thinkers and doers alike, it&apos;s a fusion of monumental
+          technology, enticing arts, inspirational forums and much more.
           <br />
           THAR 2023 offers a 3 day voyage containing a plethora of competitions,
-          unheard stories and surfiet of wonder. It&apos;s an otherworldly
+          unheard stories and a surplus of wonders. It&apos;s an otherworldly
           experience that will leave it&apos;s partakers with an unquenchable
           thirst for technological enlightenment.
         </article>
