@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Script from "next/script";
 import About from "../components/home/About";
 import BecomeCA from "../components/home/BecomeCA";
 import Hero from "../components/home/Hero";

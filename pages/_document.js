@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Footer from "../components/Footer";
 // import Script from "next/script";
 
 export default function Document() {
@@ -59,6 +60,7 @@ export default function Document() {
         <div className="relative z-20">
           <Main />
           <NextScript />
+          <Footer />
         </div>
         <div className="h-[100vh] overflow-hidden fixed left-0 top-0 z-[1]">
           <video
