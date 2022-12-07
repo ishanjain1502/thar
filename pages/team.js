@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import { NavBar } from "../components/globals/NavBar";
 import Member from "../components/team/Member";
@@ -5,6 +6,9 @@ import Member from "../components/team/Member";
 export default function team() {
   return (
     <>
+      <Head>
+        <title>Team - Thar 2023</title>
+      </Head>
       <NavBar />
       <div className="pt-32 pb-20">
         <div className="flex flex-col items-center mt-20">

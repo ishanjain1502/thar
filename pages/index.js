@@ -19,6 +19,7 @@ export default function Home() {
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <title>Home - Thar 2023</title>
       </Head>
       {isLoading ? (
         <Loader />

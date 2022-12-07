@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -5,6 +6,9 @@ import React from "react";
 export default function PageNotFound() {
   return (
     <div className="">
+      <Head>
+      <title>404 - Thar 2023</title>
+      </Head>
       <div className="min-h-screen">
         <div className="flex items-center justify-center py-12">
           <div className="flex items-center justify-center mx-4 md:w-2/3 ">

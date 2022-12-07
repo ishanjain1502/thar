@@ -7,6 +7,7 @@ export default function index() {
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <title>Events - Thar 2023</title>
       </Head>
       <main className="flex flex-col items-center">
         <NavBar />
