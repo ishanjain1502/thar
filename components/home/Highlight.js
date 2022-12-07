@@ -20,42 +20,49 @@ export default function Highlights() {
             alt=""
             height={300}
             width={300}
+            loading="lazy"
           />
           <Image
             src="/assets/images/highlight/2.JPG"
             alt=""
             height={300}
             width={300}
+            loading="lazy"
           />
           <Image
             src="/assets/images/highlight/3.JPG"
             alt=""
             height={300}
             width={300}
+            loading="lazy"
           />
           <Image
             src="/assets/images/highlight/4.JPG"
             alt=""
             height={300}
             width={300}
+            loading="lazy"
           />
           <Image
             src="/assets/images/highlight/5.JPG"
             alt=""
             height={300}
             width={300}
+            loading="lazy"
           />
           <Image
             src="/assets/images/highlight/6.JPG"
             alt=""
             height={300}
             width={300}
+            loading="lazy"
           />
           <Image
             src="/assets/images/highlight/7.JPG"
             alt=""
             height={300}
             width={300}
+            loading="lazy"
           />
         </div>
       </div>
