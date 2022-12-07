@@ -78,3 +78,38 @@ const events = [
   "COLLEGE VIDEO",
   "HACK-2-ON",
 ];
+
+// const sample_data = [
+//   {
+//     id: "event id",
+//     name: "name",
+//     domain: "domain name",
+//     desc: {
+//       short: "short description",
+//       full: "full description",
+//     },
+//     banner_src: "banner link",
+//     thumb_src: "Thumbnail link",
+//     img: ["first image url", "2nd image url", "3rd image url"],
+//     prize: {
+//       winner: "10K",
+//       runner: "5K",
+//     },
+//     credit: "entry credit/cost required",
+//     venue: "",
+//     cords: [
+//       {
+//         name: "Faculty Co-Ordinator",
+//         contact: 8976789765,
+//       },
+//       {
+//         name: "Final Year Co-Ordinator",
+//         contact: 8976789765,
+//       },
+//       {
+//         name: "2nd Co-Ordinator",
+//         contact: 8976789765,
+//       },
+//     ],
+//   },
+// ];
