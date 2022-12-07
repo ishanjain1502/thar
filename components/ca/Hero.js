@@ -9,6 +9,7 @@ export default function Hero() {
           className="transition-all w-full sm:w-[90%] md:w-full mx-auto border-none bg-yellow-300/10 hover:scale-105 hover:skew-x-3 hover:-skew-y-3"
           style={{ borderRadius: "30% 70% 53% 47% / 30% 30% 70% 70%" }}
           alt="header_img"
+          loading="lazy"
         />
       </div>
       <div className="w-full md:w-[60%] text-slate-50">
