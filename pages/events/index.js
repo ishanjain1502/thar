@@ -1,0 +1,84 @@
+import Head from "next/head";
+import React from "react";
+import { NavBar } from "../../components/NavBar";
+
+export default function index() {
+  return (
+    <>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main className="">
+        <NavBar />
+      </main>
+    </>
+  );
+}
+
+const events = [
+"THAR GO-KARTING CHAMPIONSHIP"
+"ROBOWAR"
+"RC NITRO"
+"CAD WAR"
+"KOD"
+"TRACK-O-MANIA"
+"ROBO RACE"
+"ROBO SOCCER"
+"CYBORG TRENCH"
+    "HYDRA-ZONE"
+    "GAME OF DRONES (DRONES)"
+    "AIRBORNE(RC PLANES)"
+    "ANTOHO (WATER ROCKET)"
+    "AERONAVE(CONTROL LINE)"
+    "HOVERSTORM(HOVERCRAFT)"
+    "ROCKETVERSE(MODE ROCKET)"
+    "BRIDGE-O-MANIA"
+    "CANTILEVO"
+    "IMPROV CHALLENGE"
+    "HYDRACS"
+    "DESIGNOTHON"
+    "DESIGN BATTLE"
+    "SHARK TANK RTU"
+    "FUNNIST PITCHDECK"
+    "BUSINESS PLAN COMPETITION"
+    "MUN (MODEL UNITED NATIONS)"
+    "COURT ROOM SESSION"
+    "OPEN MIC (RJ)"
+    "CSS BATTLE"
+    "CS FUNDA"
+    "MINDSTORM"
+    "BATTLE RUSH"
+    "HACK THE CODE"
+    "CODE LAPSE"
+    "BLIND FORCES" 
+    "CREO 3D"
+    "BUSINESS BUZZ"
+    "TRI GAME"
+    "IMPROV CHALLENGE"
+    "BATTLE OF BIDS"
+    "FIN QUEST"
+    "STRATOTHON"
+    "BASKET OF GOLD EVENTS"
+    "KNOCK YOUR BRAIN"
+    "BUSINESS QUIZ"
+    "AD-MAD"
+    "PRODUCT ADVERTISEMENT SHOOT"
+    "COLLEGE VIDEO"
+    "HACK-2-ON"
+    "RTU'S ENERGION"
+    "OUR CRAFT"
+    "IMPROV MANIA"
+    "OPEN MIC"    
+    "BRAIN GARAGE"
+    "KALAKRITI (SHORT VIDEO)"
+    "HALLOWEEN NIGHT"
+    "GAMING ARENA"
+    "THE SHORTIES (EVENT SHORT FILM)"
+    "PC GAMING"
+    "MOBILES GAMES"
+    "TREASURE HUNT (MNM)"
+    "TRESURE HUNT"
+    "VR GAMING(FUN)"
+    "IG(K)NIGHT LASER MAZE (FUN)"
+    "PAINT BALL"
+];
