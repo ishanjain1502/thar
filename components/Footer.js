@@ -80,7 +80,7 @@ export default function Footer() {
         <div className="flex flex-row flex-wrap gap-4">
           {/* Twitter */}
           <a
-            href="https://twitter.com/VishwaGauravIn"
+            href="https://twitter.com/rtuthar2023"
             className="text-zinc-400 hover:text-zinc-200 transition-all ease-out"
             target="_blank"
             rel="noreferrer noopener"
