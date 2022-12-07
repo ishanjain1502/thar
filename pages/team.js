@@ -1,5 +1,5 @@
 import React from "react";
-import { NavBar } from "../components/NavBar";
+import { NavBar } from "../components/globals/NavBar";
 import Member from "../components/team/Member";
 
 export default function team() {
