@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     phone: {
         type: String,
         minLength: 10,
-        maxLength: 10,
+        maxLength: 13,
         required: true,
     },
     college: {
