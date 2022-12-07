@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import Script from "next/script";
+// import Script from "next/script";
 
 export default function Document() {
   return (
@@ -39,7 +39,7 @@ export default function Document() {
           content="N_jA3DHZLTm0Kk7Wdo6RcaBKCSqyxATyk6oMvTbezvA"
         />
       </Head>
-      {/* Google Analytics */}
+      {/* Google Analytics
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-EY4D843XDN"
@@ -55,7 +55,7 @@ export default function Document() {
               gtag('config', 'G-EY4D843XDN', { page_path: window.location.pathname });
             `,
         }}
-      />
+      /> */}
       <body>
         <div className="relative z-20">
           <Main />
