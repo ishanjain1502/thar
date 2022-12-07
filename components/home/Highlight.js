@@ -6,7 +6,7 @@ export default function Highlights() {
     <div id="highlights" className="flex justify-center mb-10">
       {/* Flex Break Point - lg */}
       <div className="w-11/12 sm:w-10/12 md:w-8/12 xl:w-8/12 border-4 border-yellow-300 flex flex-col-reverse lg:flex-row">
-        <div className=" bg-yellow-300/20 backdrop-blur-xl w-full lg:w-3/12 flex h-full justify-center items-center lg:border-r-4 border-b-4 lg:border-b-0 border-yellow-300">
+        <div className=" bg-yellow-300/20 backdrop-blur-xl w-full lg:w-3/12 flex h-fit lg:h-full justify-center items-center lg:border-r-4 border-b-4 lg:border-b-0 border-yellow-300">
           <span className="lg:-rotate-90 h-max text-3xl font-spaceboards my-4 pt-3 text-center">
             Highlights
           </span>
@@ -20,42 +20,49 @@ export default function Highlights() {
             alt=""
             height={300}
             width={300}
+            loading="lazy"
           />
           <Image
             src="/assets/images/highlight/2.JPG"
             alt=""
             height={300}
             width={300}
+            loading="lazy"
           />
           <Image
             src="/assets/images/highlight/3.JPG"
             alt=""
             height={300}
             width={300}
+            loading="lazy"
           />
           <Image
             src="/assets/images/highlight/4.JPG"
             alt=""
             height={300}
             width={300}
+            loading="lazy"
           />
           <Image
             src="/assets/images/highlight/5.JPG"
             alt=""
             height={300}
             width={300}
+            loading="lazy"
           />
           <Image
             src="/assets/images/highlight/6.JPG"
             alt=""
             height={300}
             width={300}
+            loading="lazy"
           />
           <Image
             src="/assets/images/highlight/7.JPG"
             alt=""
             height={300}
             width={300}
+            loading="lazy"
           />
         </div>
       </div>

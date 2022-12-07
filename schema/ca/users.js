@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     phone: {
         type: String,
         minLength: 10,
-        maxLength: 10,
+        maxLength: 13,
         required: true,
     },
     college: {
@@ -61,7 +61,8 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         minLength: 9,
-        maxLength: 9
+        maxLength: 9,
+        unique: true
     },
     referralCount: {
         type: Number,
