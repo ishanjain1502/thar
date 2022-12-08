@@ -69,9 +69,9 @@ export default function Document() {
             loop
             className="w-[100vw] object-cover h-full pointer-events-none scale-110 brightness-[0.7]"
             id="bg-vid"
-            // TODO: test for lazyload and on load complete event
-            preload="none"
-            onLoadedData={() => console.log(69)}
+            // TODO: disabled lazyload, trying on load complete event but not working :(
+            preload="auto"
+            onLoad={() => console.log(69)}
           >
             <source src="/assets/videos/bg2.mp4" type="video/mp4" />
           </video>
