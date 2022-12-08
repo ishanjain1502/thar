@@ -135,7 +135,7 @@ const NavItemPrimary = ({ href, text }) => {
     <li>
       <Link
         href={href}
-        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400 p-2"
         title={text}
       >
         {text}
