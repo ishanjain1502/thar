@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import Footer from "../components/globals/Footer";
 import { NavBar } from "../components/globals/NavBar";
 import Member from "../components/team/Member";
 
@@ -51,6 +52,7 @@ export default function team() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

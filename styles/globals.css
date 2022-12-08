@@ -28,13 +28,13 @@ html {
 body {
   background-color: #000;
   color: #fff;
-  background-image: url("/assets//images/bg_initial.jpg");
+  background-image: url("/assets//images/bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-body:after {
+body:before {
   content: "";
   position: fixed;
   top: 0;

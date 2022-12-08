@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import Footer from "../components/globals/Footer";
 
 export default function Document() {
   return (
@@ -39,10 +38,9 @@ export default function Document() {
         />
       </Head>
       <body>
-        <div className="relative z-20">
+        <div className="relative">
           <Main />
           <NextScript />
-          <Footer />
         </div>
       </body>
     </Html>

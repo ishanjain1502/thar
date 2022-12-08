@@ -7,6 +7,7 @@ import Theme from "../components/home/Theme";
 import { NavBar } from "../components/globals/NavBar";
 import Loader from "../components/globals/Loader";
 import { useEffect, useState } from "react";
+import Footer from "../components/globals/Footer";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +29,7 @@ export default function Home() {
         <BecomeCA />
         <Highlights />
         <Theme />
+        <Footer />
         {isLoading && <Loader />}
       </main>
 
