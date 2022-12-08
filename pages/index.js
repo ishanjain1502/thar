@@ -13,7 +13,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 8000);
+    }, 3000);
   }, []);
   return (
     <>
@@ -21,18 +21,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <title>Home - Thar 2023</title>
       </Head>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <main className="">
-          <NavBar />
-          <Hero />
-          <About />
-          <BecomeCA />
-          <Highlights />
-          <Theme />
-        </main>
-      )}
+      <main className="relative z-10">
+        <NavBar />
+        <Hero />
+        <About />
+        <BecomeCA />
+        <Highlights />
+        <Theme />
+        {isLoading && <Loader />}
+      </main>
+
+      <div className="h-[100vh] overflow-hidden fixed left-0 top-0 z-[1]">
+        <video
+          autoPlay
+          muted
+          loop
+          className="w-[100vw] object-cover h-full pointer-events-none scale-110 brightness-[0.7]"
+          id="bg-vid"
+          // TODO: disabled lazyload, trying on load complete event but not working :(
+          preload="auto"
+          onLoad={() => console.log(69)}
+        >
+          <source src="/assets/videos/bg2.mp4" type="video/mp4" />
+        </video>
+      </div>
     </>
   );
 }
