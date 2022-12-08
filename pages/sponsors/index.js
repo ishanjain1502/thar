@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
+import Footer from "../../components/globals/Footer";
 import { NavBar } from "../../components/globals/NavBar";
 
 export default function index() {
@@ -25,6 +26,7 @@ export default function index() {
             <Image src="/assets/images/sponsors/categories.png" fill />
           </div>
         </div>
+        <Footer/>
       </main>
     </>
   );

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import Footer from "../../components/globals/Footer";
 import { NavBar } from "../../components/globals/NavBar";
 
 export default function index() {
@@ -26,6 +27,7 @@ export default function index() {
             </p>
           ))}
         </div>
+        <Footer/>
       </main>
     </>
   );
