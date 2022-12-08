@@ -156,7 +156,7 @@ export default function Form() {
               2nd Year
             </option>
             <option className="bg-black text-white" value="3rd">
-              3rd year
+              3rd Year
             </option>
             <option className="bg-black text-white" value="4th">
               4th Year
