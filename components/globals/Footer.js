@@ -3,6 +3,60 @@ import React from "react";
 export default function Footer() {
   return (
     <footer className="w-full mx-auto p-4 sm:p-6 mt-10">
+      <hr className="mb-4 opacity-20" />
+      <span className="a flex flex-col justify-center text-xs text-zinc-300 self-end text-center">
+        <span className="text-sm self-center">Address:</span>
+        Rajasthan Technical University, Kota
+        <br />
+        Akelgarh, Rawatbhata Road - 324010
+        <span>
+          Mail us -{" "}
+          <a
+            href="mailto:support@rtuthar.in"
+            className="underline text-porsche opacity-75"
+          >
+            support@rtuthar.in
+          </a>
+        </span>
+      </span>
+      <div className="flex flex-row flex-wrap gap-4 justify-center my-2">
+        {/* Instagram */}
+        <a
+          href="https://www.instagram.com/thar.rtu"
+          className="text-zinc-400 hover:text-zinc-200 transition-all ease-out"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <INSTAGRAM_SVG size={5} />
+        </a>
+        {/* Twitter */}
+        <a
+          href="https://twitter.com/rtuthar2023"
+          className="text-zinc-400 hover:text-zinc-200 transition-all ease-out"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <TWITTER_SVG size={5} />
+        </a>
+        {/* Facebook */}
+        <a
+          href="https://www.facebook.com/rtuthar/"
+          className="text-zinc-400 hover:text-zinc-200 transition-all ease-out"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <FACEBOOK_SVG size={5} />
+        </a>
+        {/* LinkedIn */}
+        <a
+          href="https://www.linkedin.com/company/thar-rtu-kota/"
+          className="text-zinc-400 hover:text-zinc-200 transition-all ease-out"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <LINKEDIN_SVG size={5} />
+        </a>
+      </div>
       <div className="flex flex-col md:flex-row flex-wrap items-center md:justify-between">
         <div className="mb-6 md:mb-0">
           <a
@@ -12,7 +66,7 @@ export default function Footer() {
             className="flex items-center"
           >
             <img src="/logo64trans.png" className="mr-3 h-10" alt="Thar Logo" />
-            <span className="self-center text-lg whitespace-nowrap text-zinc-200 opacity-70">
+            <span className="self-center text-sm whitespace-nowrap text-zinc-200 opacity-70">
               © 2022-23 THAR
             </span>
           </a>
@@ -50,23 +104,7 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-      <span className="a flex flex-col justify-center text-xs text-zinc-300 self-end text-center">
-        <span className="text-sm self-center">Address:</span>
-        Rajasthan Technical University, Kota
-        <br />
-        Akelgarh, Rawatbhata Road - 324010
-        <span>
-          Mail us -{" "}
-          <a
-            href="mailto:support@rtuthar.in"
-            className="underline text-porsche opacity-75"
-          >
-            support@rtuthar.in
-          </a>
-        </span>
-      </span>
-      <hr className="my-6 border-zinc-200 sm:mx-auto dark:border-zinc-700 lg:my-8" />
-      <div className="flex flex-col-reverse gap-4 sm:gap-0 sm:flex-row items-center justify-between">
+      <div className="flex items-center justify-center">
         <span className="text-sm text-white">
           <a
             href="#"
@@ -77,44 +115,6 @@ export default function Footer() {
             {"</>"} with ☕ by Team Thar&apos;23
           </a>
         </span>
-        <div className="flex flex-row flex-wrap gap-4">
-          {/* Instagram */}
-          <a
-            href="https://www.instagram.com/thar.rtu"
-            className="text-zinc-400 hover:text-zinc-200 transition-all ease-out"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <INSTAGRAM_SVG size={5} />
-          </a>
-          {/* Twitter */}
-          <a
-            href="https://twitter.com/rtuthar2023"
-            className="text-zinc-400 hover:text-zinc-200 transition-all ease-out"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <TWITTER_SVG size={5} />
-          </a>
-          {/* Facebook */}
-          <a
-            href="https://www.facebook.com/rtuthar/"
-            className="text-zinc-400 hover:text-zinc-200 transition-all ease-out"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <FACEBOOK_SVG size={5} />
-          </a>
-          {/* LinkedIn */}
-          <a
-            href="https://www.linkedin.com/company/thar-rtu-kota/"
-            className="text-zinc-400 hover:text-zinc-200 transition-all ease-out"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <LINKEDIN_SVG size={5} />
-          </a>
-        </div>
       </div>
     </footer>
   );
