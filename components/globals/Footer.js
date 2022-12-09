@@ -58,7 +58,7 @@ export default function Footer() {
         </a>
       </div>
       <div className="flex flex-col md:flex-row flex-wrap items-center md:justify-between">
-        <div className="mb-6 md:mb-0">
+        <div className="mb-6 md:mb-0 hidden md:block">
           <a
             href="#"
             target="_blank"
@@ -77,7 +77,7 @@ export default function Footer() {
               href="#about"
               target="_blank"
               rel="noreferrer noopener"
-              className="mr-4 text-sm text-white hover:underline md:mr-6"
+              className="mr-4 text-sm text-zinc-400 hover:text-zinc-200 hover:underline md:mr-6"
             >
               About
             </a>
@@ -87,7 +87,7 @@ export default function Footer() {
               href="/privacy-policy.html"
               target="_blank"
               rel="noreferrer noopener"
-              className="mr-4 text-sm text-white hover:underline md:mr-6"
+              className="mr-4 text-sm text-zinc-400 hover:text-zinc-200 hover:underline md:mr-6"
             >
               Privacy Policy
             </a>
@@ -97,7 +97,7 @@ export default function Footer() {
               href="/terms-and-conditions.html"
               target="_blank"
               rel="noreferrer noopener"
-              className="mr-4 text-sm text-white hover:underline md:mr-6"
+              className="mr-4 text-sm text-zinc-400 hover:text-zinc-200 hover:underline md:mr-6"
             >
               Terms & Conditions
             </a>
