@@ -38,7 +38,7 @@ export default function Latest() {
           >
             <SwiperSlide className="mySwiper flex justify-center items-center relative">
               <Image
-                src="/assets/images/latest/1.JPEG"
+                src="/assets/images/latest/1.jpeg"
                 className="obje object-contain"
                 alt=""
                 fill
@@ -47,7 +47,7 @@ export default function Latest() {
             </SwiperSlide>
             <SwiperSlide className="mySwiper flex justify-center items-center relative">
               <Image
-                src="/assets/images/latest/2.JPEG"
+                src="/assets/images/latest/2.jpeg"
                 className="obje object-contain"
                 alt=""
                 fill
@@ -56,7 +56,7 @@ export default function Latest() {
             </SwiperSlide>
             <SwiperSlide className="mySwiper flex justify-center items-center relative">
               <Image
-                src="/assets/images/latest/3.JPEG"
+                src="/assets/images/latest/3.jpeg"
                 className="obje object-contain"
                 alt=""
                 fill
@@ -65,7 +65,7 @@ export default function Latest() {
             </SwiperSlide>
             <SwiperSlide className="mySwiper flex justify-center items-center relative">
               <Image
-                src="/assets/images/latest/4.JPEG"
+                src="/assets/images/latest/4.jpeg"
                 className="obje object-contain"
                 alt=""
                 fill
@@ -74,7 +74,7 @@ export default function Latest() {
             </SwiperSlide>
             <SwiperSlide className="mySwiper flex justify-center items-center relative">
               <Image
-                src="/assets/images/latest/5.JPEG"
+                src="/assets/images/latest/5.jpeg"
                 className="obje object-contain"
                 alt=""
                 fill
@@ -83,7 +83,7 @@ export default function Latest() {
             </SwiperSlide>
             <SwiperSlide className="mySwiper flex justify-center items-center relative">
               <Image
-                src="/assets/images/latest/6.JPEG"
+                src="/assets/images/latest/6.jpeg"
                 className="obje object-contain"
                 alt=""
                 fill
@@ -92,7 +92,7 @@ export default function Latest() {
             </SwiperSlide>
             <SwiperSlide className="mySwiper flex justify-center items-center relative">
               <Image
-                src="/assets/images/latest/7.JPEG"
+                src="/assets/images/latest/7.jpeg"
                 className="obje object-contain"
                 alt=""
                 fill
@@ -101,7 +101,7 @@ export default function Latest() {
             </SwiperSlide>
             <SwiperSlide className="mySwiper flex justify-center items-center relative">
               <Image
-                src="/assets/images/latest/8.JPEG"
+                src="/assets/images/latest/8.jpeg"
                 className="obje object-contain"
                 alt=""
                 fill
