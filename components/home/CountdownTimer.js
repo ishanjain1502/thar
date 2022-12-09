@@ -9,28 +9,28 @@ export default function CountdownTimer() {
     } else {
       // Render a countdown
       return (
-        <div className="flex gap-6 sm:gap-10 my-10 text-yellow-300 text-stroke text-stroke-color">
+        <div className="flex gap-6 sm:gap-10 mb-10 mt-4 text-yellow-300 font-alarmclock">
           <div className="flex flex-col items-center text-4xl sm:text-6xl">
             {days}
-            <span className="text-xs sm:text-sm text-white text-stroke-0 tracking-wide">
+            <span className="text-xs sm:text-sm text-white tracking-wide">
               DAYS
             </span>
           </div>
           <div className="flex flex-col items-center text-4xl sm:text-6xl">
             {hours}
-            <span className="text-xs sm:text-sm text-white text-stroke-0 tracking-wide">
+            <span className="text-xs sm:text-sm text-white tracking-wide">
               HOURS
             </span>
           </div>
           <div className="flex flex-col items-center text-4xl sm:text-6xl">
             {minutes}
-            <span className="text-xs sm:text-sm text-white text-stroke-0 tracking-wide">
+            <span className="text-xs sm:text-sm text-white tracking-wide">
               MINUTES
             </span>
           </div>
           <div className="flex flex-col items-center text-4xl sm:text-6xl">
             {seconds}
-            <span className="text-xs sm:text-sm text-white text-stroke-0 tracking-wide">
+            <span className="text-xs sm:text-sm text-white tracking-wide">
               SECONDS
             </span>
           </div>
@@ -39,10 +39,9 @@ export default function CountdownTimer() {
     }
   };
   return (
-    <div className="font-spaceboards tracking-wide flex w-full flex-col items-center">
-      <p className="text-2xl sm:text-3xl underline underline-offset-8">LAUNCHING IN</p>
+    <div className="tracking-wide flex w-full flex-col items-center">
+      <p className="text-2xl sm:text-4xl font-spaceboards text-stroke text-stroke-color">LAUNCHING IN</p>
       <Countdown
-        className="font-spaceboards"
         renderer={renderer}
         date={1677252600000}
       />
