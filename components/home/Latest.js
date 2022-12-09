@@ -34,7 +34,7 @@ export default function Latest() {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper flex justify-center items-center aspect-[720/480]"
+            className="mySwiper flex justify-center items-center w-full aspect-[720/480]"
           >
             <SwiperSlide className="mySwiper flex justify-center items-center relative">
               <Image

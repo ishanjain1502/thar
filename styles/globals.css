@@ -9,8 +9,17 @@
   src: url("/assets/fonts/Space Boards.otf");
 }
 
+@font-face {
+  font-family: "alarm clock";
+  src: url("/assets/fonts/Alarm Clock.ttf");
+}
+
 .font-spaceboards {
   font-family: "Space Boards";
+}
+
+.font-alarmclock {
+  font-family: "alarm clock";
 }
 
 /* Smooth Scrolling */
