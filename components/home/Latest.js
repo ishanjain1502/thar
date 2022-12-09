@@ -99,6 +99,15 @@ export default function Latest() {
                 loading="lazy"
               />
             </SwiperSlide>
+            <SwiperSlide className="mySwiper flex justify-center items-center relative">
+              <Image
+                src="/assets/images/latest/8.JPEG"
+                className="obje object-contain"
+                alt=""
+                fill
+                loading="lazy"
+              />
+            </SwiperSlide>
           </Swiper>
         </div>
       </div>

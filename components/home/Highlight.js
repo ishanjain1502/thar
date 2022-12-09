@@ -99,15 +99,6 @@ export default function Highlights() {
                 loading="lazy"
               />
             </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center">
-              <Image
-                src="/assets/images/highlight/8.JPG"
-                alt=""
-                width={720}
-                height={480}
-                loading="lazy"
-              />
-            </SwiperSlide>
           </Swiper>
         </div>
       </div>
