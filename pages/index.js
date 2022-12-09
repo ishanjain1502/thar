@@ -9,6 +9,7 @@ import Loader from "../components/globals/Loader";
 import { useEffect, useState } from "react";
 import Footer from "../components/globals/Footer";
 import BottomNavBar from "../components/home/BottomNavBar";
+import Latest from "../components/home/Latest";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +31,7 @@ export default function Home() {
         <BecomeCA />
         <Highlights />
         <Theme />
+        <Latest />
         {/* TODO: */}
         {/* <BottomNavBar /> */}
         <Footer />
