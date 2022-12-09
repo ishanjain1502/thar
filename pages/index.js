@@ -30,6 +30,16 @@ export default function Home() {
         <About />
         <BecomeCA />
         <Highlights />
+        {/* Thar Pronite 2020 video */}
+        <div className="flex justify-center w-full mb-10"><iframe
+          src="https://www.youtube.com/embed/95RDe4rNQ_A"
+          title="Thar 2020 Pronite"
+          className="w-11/12 sm:w-10/12 md:w-8/12 aspect-video rounded shadow-xl"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe></div>
+        
         <Theme />
         <Latest />
         {/* TODO: */}
