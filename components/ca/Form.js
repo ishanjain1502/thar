@@ -150,16 +150,16 @@ export default function Form() {
             onChange={(e) => setYear(e.target.value)}
           >
             <option className="bg-black text-white" value="1st">
-              1st
+              1st Year
             </option>
             <option className="bg-black text-white" value="2nd">
-              2nd
+              2nd Year
             </option>
             <option className="bg-black text-white" value="3rd">
-              3rd
+              3rd year
             </option>
             <option className="bg-black text-white" value="4th">
-              4th
+              4th Year
             </option>
             <option className="bg-black text-white" value="Other">
               Other
