@@ -74,7 +74,7 @@ export default function EventWrapper() {
                 </p>
                 {/* :::infos */}
                 <span className="flex flex-col justify-between items-center">
-                  <span className="text-sm text-white font-semibold">
+                  <span className="text-sm text-white">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dicta, ex.
                   </span>
