@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import EventWrapper from "../../components/events/EventWrapper";
 import Footer from "../../components/globals/Footer";
 import { NavBar } from "../../components/globals/NavBar";
 
@@ -12,22 +13,14 @@ export default function index() {
       </Head>
       <main className="flex flex-col items-center">
         <NavBar />
-        <p className="pt-32 lg:pt-48 pb-6 text-center font-spaceboards text-yellow-300 text-5xl md:text-7xl">
+        <p className="pt-32 lg:pt-48 pb-6 text-center font-spaceboards text-yellow-300 text-5xl md:text-7xl text-stroke text-stroke-color">
           EVENTS
           <br />
-          <span className="text-xl text-white animate-pulse">coming soon</span>
         </p>
-        <div className="flex justify-center max-w-screen flex-wrap gap-8 w-10/12 pb-20">
-          {events.map((event, index) => (
-            <p
-              className="w-full text-center sm:w-fit text-lg lg:text-xl border-[3px] px-4 py-2 lg:px-6 lg:py-3 font-semibold backdrop-blur-lg border-yellow-300 hover:text-yellow-300 transition-all ease-in-out hover:scale-95"
-              key={index}
-            >
-              {event}
-            </p>
-          ))}
+        <div className="w-full">
+          <EventWrapper />
         </div>
-        <Footer/>
+        <Footer />
       </main>
     </>
   );
@@ -81,38 +74,3 @@ const events = [
   "COLLEGE VIDEO",
   "HACK-2-ON",
 ];
-
-// const sample_data = [
-//   {
-//     id: "event id",
-//     name: "name",
-//     domain: "domain name",
-//     desc: {
-//       short: "short description",
-//       full: "full description",
-//     },
-//     banner_src: "banner link",
-//     thumb_src: "Thumbnail link",
-//     img: ["first image url", "2nd image url", "3rd image url"],
-//     prize: {
-//       winner: "10K",
-//       runner: "5K",
-//     },
-//     credit: "entry credit/cost required",
-//     venue: "",
-//     cords: [
-//       {
-//         name: "Faculty Co-Ordinator",
-//         contact: 8976789765,
-//       },
-//       {
-//         name: "Final Year Co-Ordinator",
-//         contact: 8976789765,
-//       },
-//       {
-//         name: "2nd Co-Ordinator",
-//         contact: 8976789765,
-//       },
-//     ],
-//   },
-// ];
