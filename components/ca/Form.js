@@ -52,7 +52,7 @@ export default function Form() {
     }
   }
   return (
-    <div id="ca" className="flex justify-center mb-10">
+    <div id="ca" className="flex justify-center my-8">
       {/* Flex Break Point - lg */}
       <div className="w-11/12 sm:w-10/12 md:w-8/12 xl:w-8/12 border-4 border-yellow-300 flex flex-col lg:flex-row">
         <div className=" bg-yellow-300/20 backdrop-blur-xl w-full lg:w-3/12 flex h-full justify-center items-center lg:border-r-4 border-b-4 lg:border-b-0 border-yellow-300">
