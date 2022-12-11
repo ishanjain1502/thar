@@ -1,10 +1,23 @@
 import React, { useState } from "react";
 
 export default function About() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    college: "",
+    rollNo: "",
+    degree: "",
+    address: "",
+    pincode: "",
+    year: "",
+  });
+  const [caId, setCaId] = useState("");
+  const [processing, setProcessing] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   function handle_ca_form(e) {
     // To prevent defaault behaviour of Form
     e.preventDefault();
-
     alert("Processing");
   }
   return (
