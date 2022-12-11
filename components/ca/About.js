@@ -12,7 +12,7 @@ export default function About() {
         </div>
         <article
           lang="en"
-          className="w-full lg:w-9/12 p-8 text-xl md: bg-black/20 backdrop-blur-2xl break-words text-justify"
+          className="w-full lg:w-9/12 p-8 text-xl md: bg-black/20 backdrop-blur-2xl break-words"
         >
           <div className="text-lg md:text-xl lg:text2xl xl:text-3xl font-semibold">
             What is Campus Ambassadors Programme?
