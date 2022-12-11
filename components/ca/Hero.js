@@ -13,7 +13,7 @@ export default function Hero() {
         </div>
         <div className="flex flex-row justify-center items-center pt-12 pb-6 gap-4">
           <a
-            href="#about"
+            href="#aboutca"
             className="font-spaceboards text-lg lg:text-xl p-4 border-2 bg-white/10 backdrop-blur-lg text-white border-yellow-300 hover:brightness-110 hover:bg-white/20 hover:text-yellow-300 hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all ease-in-out"
           >
             Know More
