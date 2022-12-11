@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import About from "../components/ca/About";
 import Form from "../components/ca/Form";
 import Hero from "../components/ca/Hero";
 import Footer from "../components/globals/Footer";
@@ -13,6 +14,7 @@ export default function ca() {
       </Head>
       <NavBar />
       <Hero />
+      <About />
       <Form />
       <Footer />
     </>
