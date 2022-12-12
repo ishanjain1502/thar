@@ -14,18 +14,13 @@ import CountdownTimer from "../components/home/CountdownTimer";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-  }, []);
   return (
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <title>Home - Thar 2023</title>
       </Head>
-      <main className="relative z-10">
+      <div className="relative z-10">
         <NavBar />
         <Hero />
         {!isLoading && <CountdownTimer />}
@@ -49,8 +44,7 @@ export default function Home() {
         {/* TODO: */}
         {/* <BottomNavBar /> */}
         <Footer />
-        {isLoading && <Loader />}
-      </main>
+      </div>
 
       <div className="h-[100vh] overflow-hidden fixed left-0 top-0 z-[1]">
         <video
@@ -59,9 +53,8 @@ export default function Home() {
           loop
           className="w-[100vw] object-cover h-full pointer-events-none scale-110 brightness-[0.7]"
           id="bg-vid"
-          // TODO: disabled lazyload, trying on load complete event but not working :(
           preload="auto"
-          onLoad={() => console.log(69)}
+          onLoadedData={() => setIsLoading(false)}
         >
           <source src="/assets/videos/bg2.mp4" type="video/mp4" />
         </video>
