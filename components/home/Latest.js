@@ -39,7 +39,7 @@ export default function Latest() {
             <SwiperSlide className="mySwiper flex justify-center items-center relative">
               <Image
                 src="/assets/images/latest/1.jpeg"
-                className="obje object-contain"
+                className="obje object-contain brightness-[1.5]"
                 alt=""
                 fill
                 loading="lazy"
