@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Processing from "./MicroComponents/Processing";
-
+import axios from "axios";
 export default function About() {
   const [formData, setFormData] = useState({
     name: "",
@@ -19,10 +19,44 @@ export default function About() {
   function handle_ca_form(e) {
     // To prevent defaault behaviour of Form
     e.preventDefault();
-
+    if (formData.email.includes("@gmail.com")) {
+      setProcessing(true);
+      axios
+        .post("/api/v1/ca/register", {
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          college: formData.college,
+          rollNo: formData.rollNo,
+          degree: formData.degree,
+          address: formData.address,
+          pincode: formData.pincode,
+          year: formData.year,
+        })
+        .then(function (response) {
+          setCaId(response.data.data);
+          setFormData({
+            name: "",
+            phone: "",
+            email: "",
+            college: "",
+            rollNo: "",
+            degree: "B.Tech",
+            address: "",
+            pincode: "",
+            year: "1st",
+          });
+          setProcessing(false);
+          setSubmitted(true);
+        })
+        .catch(function (error) {
+          alert(error.response.data.message);
+          setProcessing(false);
+        });
+    } else {
+      alert("Email must be a valid gmail id");
+    }
     /* TODO: Load data with a single ref to optimise extra memory usage */
-
-    console.log(formData);
   }
   return (
     <div
