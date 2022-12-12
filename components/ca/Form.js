@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Processing from "./MicroComponents/Processing";
 import axios from "axios";
+import Submitted from "./MicroComponents/Submitted";
+
 export default function About() {
   const [formData, setFormData] = useState({
     name: "",
@@ -72,13 +74,7 @@ export default function About() {
             <Processing />
           ) : // if not processing then check for submitted or not
           submitted ? (
-            <div className="text-xl md:text-2xl lg:text-3xl text-center text-slate-900 font-semibold">
-              Congratulations! You have been registered for Campus Ambassador
-              Programme of RTU THAR 2023.
-              <div className=" bg-yellow-300 px-2 mt-2 py-1 w-fit mx-auto">
-                Your Id: <span className="font-mono">{caId}</span>
-              </div>
-            </div>
+            <Submitted id={caId} />
           ) : (
             <>
               <div>
@@ -293,7 +289,7 @@ export default function About() {
                   <div className="flex justify-end">
                     <button
                       type="submit"
-                      class=" bg-yellow-300 text-black  focus:outline-none font-medium text-sm px-5 py-2.5 text-center mr-2 inline-flex items-center font-spaceboards"
+                      className=" bg-yellow-300 text-black  focus:outline-none font-medium text-sm px-5 py-2.5 text-center mr-2 inline-flex items-center font-spaceboards"
                     >
                       Submit Details
                     </button>
