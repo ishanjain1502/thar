@@ -118,3 +118,10 @@ body:before {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.framed{
+  background-image: url('/assets/images/videoframe.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

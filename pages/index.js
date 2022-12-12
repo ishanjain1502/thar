@@ -36,7 +36,7 @@ export default function Home() {
           <iframe
             src="https://www.youtube.com/embed/95RDe4rNQ_A"
             title="Thar 2020 Pronite"
-            className="w-11/12 sm:w-10/12 md:w-8/12 aspect-video rounded shadow-xl"
+            className="w-11/12 sm:w-10/12 md:w-8/12 aspect-video rounded framed p-4 sm:p-6 md:p-8 lg:p-10"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
