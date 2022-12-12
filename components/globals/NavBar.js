@@ -30,9 +30,9 @@ export const NavBar = () => {
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
         <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
           <ul className="items-center justify-center hidden space-x-8 lg:flex">
-            <NavItemPrimary href="/events" text="Events" />
-            <NavItemPrimary href="/gokart" text="Gokart" />
-            <NavItemPrimary href="/robowar" text="Robowar" />
+            <NavItemPrimary href="/events" text="EVENTS" />
+            <NavItemPrimary href="/gokart" text="GOKART" />
+            <NavItemPrimary href="/robowar" text="ROBOWAR" />
           </ul>
           <Link
             href="/"
@@ -51,8 +51,8 @@ export const NavBar = () => {
           </Link>
           <ul className="items-center justify-center hidden space-x-8 lg:flex">
             <NavItemSecondary text="CA" href="/ca" />
-            <NavItemSecondary text="Team" href="/team" />
-            <NavItemSecondary text="Sponsors" href="/sponsors" />
+            <NavItemSecondary text="TEAM" href="/team" />
+            <NavItemSecondary text="SPONSORS" href="/sponsors" />
           </ul>
           <div className="ml-auto lg:hidden">
             <button
