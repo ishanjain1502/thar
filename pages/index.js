@@ -14,6 +14,10 @@ import CountdownTimer from "../components/home/CountdownTimer";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const mediaElem = document.querySelector("video");
+    mediaElem.load()
+  });
   return (
     <>
       <Head>
@@ -44,6 +48,7 @@ export default function Home() {
         {/* TODO: */}
         {/* <BottomNavBar /> */}
         <Footer />
+        {isLoading && <Loader />}
       </div>
 
       <div className="h-[100vh] overflow-hidden fixed left-0 top-0 z-[1]">
