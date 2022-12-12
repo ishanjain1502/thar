@@ -7,7 +7,7 @@ export default function Theme() {
       <div className="w-11/12 sm:w-10/12 md:w-8/12 xl:w-8/12 border-4 border-yellow-300 flex flex-col-reverse lg:flex-row">
         <article
           lang="en"
-          className="w-full lg:w-9/12 p-8 text-xl md: bg-black/20 backdrop-blur-2xl break-words text-justify"
+          className="w-full lg:w-9/12 p-8 text-base md:text-xl bg-black/20 backdrop-blur-2xl break-words text-justify"
         >
           Granted that you are indefinitely trivial and your kind have only
           existed for a minuscule time, you are a salient part of something very
