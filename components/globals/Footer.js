@@ -12,10 +12,10 @@ export default function Footer() {
         <span>
           Mail us -{" "}
           <a
-            href="mailto:support@rtuthar.in"
+            href="mailto:thar.techfest@rtu.ac.in"
             className="underline text-porsche opacity-75"
           >
-            support@rtuthar.in
+            thar.techfest@rtu.ac.in
           </a>
         </span>
       </span>
