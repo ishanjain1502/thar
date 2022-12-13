@@ -14,9 +14,9 @@ export default function ca() {
       </Head>
       <NavBar />
       <Hero />
-      <Form />
       <About />
-      <Footer/>
+      <Form />
+      <Footer />
     </>
   );
 }

@@ -1,232 +1,304 @@
 import React, { useState } from "react";
 import axios from "axios";
-export default function Form() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [college, setCollege] = useState("");
-  const [rollNo, setRollNo] = useState("");
-  const [year, setYear] = useState("1st");
-  const [degree, setDegree] = useState("B.Tech");
-  const [address, setAddress] = useState("");
-  const [pincode, setPincode] = useState("");
+import Processing from "./MicroComponents/Processing";
+import Submitted from "./MicroComponents/Submitted";
+
+export default function About() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    college: "",
+    rollNo: "",
+    degree: "B.Tech",
+    address: "",
+    pincode: "",
+    year: "1st",
+  });
   const [caId, setCaId] = useState("");
-  const [isProcessing, setIsProcessing] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  function handleSuccessDetails(e) {
+  const [processing, setProcessing] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  function handle_ca_form(e) {
+    // To prevent defaault behaviour of Form
     e.preventDefault();
-    if (email.includes("@gmail.com")) {
-      setIsProcessing(true);
+    if (formData.email.includes("@gmail.com")) {
+      setProcessing(true);
       axios
         .post("/api/v1/ca/register", {
-          name: name,
-          phone: phone,
-          email: email,
-          college: college,
-          rollNo: rollNo,
-          degree: degree,
-          address: address,
-          pincode: pincode,
-          year: year,
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          college: formData.college,
+          rollNo: formData.rollNo,
+          degree: formData.degree,
+          address: formData.address,
+          pincode: formData.pincode,
+          year: formData.year,
         })
         .then(function (response) {
           setCaId(response.data.data);
-          setName("");
-          setEmail("");
-          setPhone("");
-          setCollege("");
-          setRollNo("");
-          setYear("1st");
-          setDegree("B.Tech");
-          setAddress("");
-          setPincode("");
-          setIsProcessing(false);
-          setIsSubmitted(true);
+          setFormData({
+            name: "",
+            phone: "",
+            email: "",
+            college: "",
+            rollNo: "",
+            degree: "B.Tech",
+            address: "",
+            pincode: "",
+            year: "1st",
+          });
+          setProcessing(false);
+          setSubmitted(true);
         })
         .catch(function (error) {
           alert(error.response.data.message);
-          setIsProcessing(false);
+          setProcessing(false);
         });
     } else {
       alert("Email must be a valid gmail id");
     }
+    /* TODO: Load data with a single ref to optimise extra memory usage */
   }
   return (
-    <div id="ca" className="flex justify-center mb-10">
+    <div
+      className="w-full py-6 flex flex-col justify-center sm:py-12"
+      id="caform"
+    >
       {/* Flex Break Point - lg */}
-      <div className="w-11/12 sm:w-10/12 md:w-8/12 xl:w-8/12 border-4 border-yellow-300 flex flex-col lg:flex-row">
-        <div className=" bg-yellow-300/20 backdrop-blur-xl w-full lg:w-3/12 flex h-full justify-center items-center lg:border-r-4 border-b-4 lg:border-b-0 border-yellow-300">
-          <span className="lg:-rotate-90 text-center h-max text-3xl sm:text-4xl md:text-5xl font-spaceboards my-4 pt-3">
-            Campus Ambassadors
-          </span>
-        </div>
-        <form
-          action=""
-          onSubmit={(e) => handleSuccessDetails(e)}
-          className="w-full lg:w-9/12 p-8 text-xl md: bg-black/20 backdrop-blur-2xl hyphens flex flex-col gap-8"
-        >
-          Fill up this form to become a Campus Ambassador for Thar 2023
-          <input
-            type="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            autoComplete="off"
-            minLength={3}
-            maxLength={30}
-            className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
-            required={true}
-            placeholder="Name"
-          />
-          <div className="text-red-300 text-sm -mb-6 -mt-2">
-            *Only Gmails allowed
-          </div>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            autoComplete="off"
-            minLength={16}
-            maxLength={50}
-            className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
-            required={true}
-            placeholder="Email Address"
-          />
-          <input
-            type="mobile"
-            autoComplete="off"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            minLength={10}
-            maxLength={10}
-            className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
-            required={true}
-            placeholder="Phone no"
-          />
-          <input
-            type="text"
-            value={college}
-            onChange={(e) => setCollege(e.target.value)}
-            autoComplete="off"
-            minLength={3}
-            maxLength={100}
-            className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
-            required={true}
-            placeholder="College"
-          />
-          <input
-            type="text"
-            value={rollNo}
-            onChange={(e) => setRollNo(e.target.value)}
-            autoComplete="off"
-            minLength={3}
-            maxLength={30}
-            className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
-            required={true}
-            placeholder="College Roll No"
-          />
-          <select
-            className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
-            placeholder="Choose a year"
-            value={degree}
-            onChange={(e) => setDegree(e.target.value)}
-          >
-            <option className="bg-black text-white" value="B.Tech">
-              B.Tech
-            </option>
-            <option className="bg-black text-white" value="M.Tech">
-              M.Tech
-            </option>
-            <option className="bg-black text-white" value="MBA">
-              MBA
-            </option>
-            <option className="bg-black text-white" value="Other">
-              Other
-            </option>
-          </select>
-          <select
-            className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
-            placeholder="Choose a year"
-            value={year}
-            onChange={(e) => setYear(e.target.value)}
-          >
-            <option className="bg-black text-white" value="1st">
-              1st Year
-            </option>
-            <option className="bg-black text-white" value="2nd">
-              2nd Year
-            </option>
-            <option className="bg-black text-white" value="3rd">
-              3rd Year
-            </option>
-            <option className="bg-black text-white" value="4th">
-              4th Year
-            </option>
-            <option className="bg-black text-white" value="Other">
-              Other
-            </option>
-          </select>
-          <input
-            type="text"
-            autoComplete="off"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-            minLength={2}
-            maxLength={200}
-            className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
-            required={true}
-            placeholder="Address"
-          />
-          <input
-            type="string"
-            autoComplete="off"
-            value={pincode}
-            minLength={6}
-            maxLength={6}
-            onChange={(e) => setPincode(e.target.value)}
-            className="transition-all w-full bg-transparent p-1 lg:p-2 text-base rounded-none border-b-2 placeholder:text-slate-500 border-slate-500 focus:border-slate-300 outline-none"
-            required={true}
-            placeholder="Pincode"
-          />
-          <div className="w-full flex justify-end">
-            {isProcessing ? (
-              <div className="bg-yellow-300 text-black  focus:outline-none font-medium text-sm px-5 py-2.5 text-center mr-2 inline-flex items-center font-spaceboards">
-                <svg
-                  aria-hidden="true"
-                  role="status"
-                  class="inline mr-3 w-4 h-4 text-black animate-spin"
-                  viewBox="0 0 100 101"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-                    fill="#fff"
-                  ></path>
-                  <path
-                    d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-                Submitting
+
+      <div className="py-3 mx-auto w-11/12 sm:w-9/12  md:w-8/12 lg:w-7/12 xl:w-6/12">
+        <div className="relative px-4 py-10 bg-white/60 backdrop-blur-xl shadow-lg rounded-xl sm:rounded-3xl sm:p-20">
+          {/* check if it's processing */}
+          {processing ? (
+            <Processing />
+          ) : // if not processing then check for submitted or not
+          submitted ? (
+            <Submitted id={caId} />
+          ) : (
+            <>
+              <div>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl text-center text-black font-semibold">
+                  Campus Ambassadors Form
+                </h1>
               </div>
-            ) : (
-              <button
-                type="submit"
-                class=" bg-yellow-300 text-black  focus:outline-none font-medium text-sm px-5 py-2.5 text-center mr-2 inline-flex items-center font-spaceboards"
-              >
-                Submit Details
-              </button>
-            )}
-          </div>
-          {isSubmitted && (
-            <div className="w-full p-2">
-              Congratulations! You have been registered for Campus Ambassador
-              Programme of RTU THAR 2023. Your request id is{" "}
-              <span className="font-mono text-yellow-300">{caId}</span> keep
-              this id for future refrence, we will contact you soon.
-            </div>
+              <div className="divide-y divide-gray-200">
+                <form
+                  onSubmit={(e) => {
+                    handle_ca_form(e);
+                  }}
+                  className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7"
+                >
+                  <div className="relative">
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      value={formData.name}
+                      onChange={(e) => {
+                        setFormData({ ...formData, name: e.target.value });
+                      }}
+                      autoComplete="off"
+                      minLength={3}
+                      maxLength={30}
+                      className="peer placeholder-transparent h-10 mt-2 w-full border-b-2 bg-transparent border-gray-300 text-gray-900 font-semibold text-lg focus:outline-none focus:borer-rose-600"
+                      placeholder="Email address"
+                    />
+                    <label
+                      htmlFor="name"
+                      className="absolute left-0 -top-3.5 text-gray-700 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >
+                      Name
+                    </label>
+                  </div>
+                  <div className="relative">
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => {
+                        setFormData({ ...formData, email: e.target.value });
+                      }}
+                      autoComplete="off"
+                      minLength={16}
+                      maxLength={50}
+                      className="peer placeholder-transparent h-10 mt-2 w-full border-b-2 bg-transparent border-gray-300 text-gray-900 font-semibold text-lg focus:outline-none focus:borer-rose-600"
+                      placeholder="Email address"
+                    />
+                    <label
+                      htmlFor="email"
+                      className="absolute left-0 -top-3.5 text-gray-700 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >
+                      Valid Gmail Address
+                    </label>
+                  </div>
+                  <div className="relative">
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="mobile"
+                      autoComplete="off"
+                      value={formData.phone}
+                      onChange={(e) => {
+                        setFormData({ ...formData, phone: e.target.value });
+                      }}
+                      minLength={10}
+                      maxLength={13}
+                      className="peer placeholder-transparent h-10 mt-2 w-full border-b-2 bg-transparent border-gray-300 text-gray-900 font-semibold text-lg focus:outline-none focus:borer-rose-600"
+                      placeholder="phone no"
+                    />
+                    <label
+                      htmlFor="phone"
+                      className="absolute left-0 -top-3.5 text-gray-700 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >
+                      Phone number
+                    </label>
+                  </div>
+                  <div className="relative">
+                    <input
+                      id="college"
+                      type="text"
+                      value={formData.college}
+                      onChange={(e) => {
+                        setFormData({ ...formData, college: e.target.value });
+                      }}
+                      autoComplete="off"
+                      minLength={3}
+                      maxLength={100}
+                      className="peer placeholder-transparent h-10 mt-2 w-full border-b-2 bg-transparent border-gray-300 text-gray-900 font-semibold text-lg focus:outline-none focus:borer-rose-600"
+                      placeholder="college"
+                    />
+                    <label
+                      htmlFor="college"
+                      className="absolute left-0 -top-3.5 text-gray-700 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >
+                      college
+                    </label>
+                  </div>
+                  <div className="relative">
+                    <input
+                      id="rollno"
+                      name="rollno"
+                      type="text"
+                      value={formData.rollNo}
+                      onChange={(e) => {
+                        setFormData({ ...formData, rollNo: e.target.value });
+                      }}
+                      autoComplete="off"
+                      minLength={3}
+                      maxLength={30}
+                      className="peer placeholder-transparent h-10 mt-2 w-full border-b-2 bg-transparent border-gray-300 text-gray-900 font-semibold text-lg focus:outline-none focus:borer-rose-600"
+                      placeholder="roll no"
+                    />
+                    <label
+                      htmlFor="rollno"
+                      className="absolute left-0 -top-3.5 text-gray-700 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >
+                      Roll no
+                    </label>
+                  </div>
+                  <div className="relative">
+                    <input
+                      id="address"
+                      name="address"
+                      type="text"
+                      autoComplete="off"
+                      value={formData.address}
+                      onChange={(e) => {
+                        setFormData({ ...formData, address: e.target.value });
+                      }}
+                      minLength={2}
+                      maxLength={200}
+                      className="peer placeholder-transparent h-10 mt-2 w-full border-b-2 bg-transparent border-gray-300 text-gray-900 font-semibold text-lg focus:outline-none focus:borer-rose-600"
+                      placeholder="address"
+                    />
+                    <label
+                      htmlFor="address"
+                      className="absolute left-0 -top-3.5 text-gray-700 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >
+                      Address
+                    </label>
+                  </div>
+                  <div className="relative">
+                    <input
+                      id="pincode"
+                      name="pincode"
+                      type="text"
+                      value={formData.pincode}
+                      minLength={6}
+                      maxLength={6}
+                      onChange={(e) => {
+                        setFormData({ ...formData, pincode: e.target.value });
+                      }}
+                      className="peer placeholder-transparent h-10 mt-2 w-full border-b-2 bg-transparent border-gray-300 text-gray-900 font-semibold text-lg focus:outline-none focus:borer-rose-600"
+                      placeholder="roll no"
+                    />
+                    <label
+                      htmlFor="pincode"
+                      className="absolute left-0 -top-3.5 text-gray-700 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >
+                      Pincode
+                    </label>
+                  </div>
+                  <select
+                    className="transition-all w-full bg-transparent py-2 text-base rounded-none border-b-2 placeholder:text-slate-500 text-slate-800 font-semibold border-slate-300 focus:border-slate-300 outline-none"
+                    placeholder="Choose Your Degree"
+                    value={formData.degree}
+                    onChange={(e) => {
+                      setFormData({ ...formData, degree: e.target.value });
+                    }}
+                  >
+                    <option className="bg-black text-white" value="B.Tech">
+                      B.Tech
+                    </option>
+                    <option className="bg-black text-white" value="M.Tech">
+                      M.Tech
+                    </option>
+                    <option className="bg-black text-white" value="MBA">
+                      MBA
+                    </option>
+                    <option className="bg-black text-white" value="Other">
+                      Other
+                    </option>
+                  </select>
+                  <select
+                    className="transition-all w-full bg-transparent py-2 text-base rounded-none border-b-2 placeholder:text-slate-500 text-slate-800 font-semibold border-slate-300 focus:border-slate-300 outline-none"
+                    placeholder="Choose a year"
+                    value={formData.year}
+                    onChange={(e) => {
+                      setFormData({ ...formData, year: e.target.value });
+                    }}
+                  >
+                    <option className="bg-black text-white" value="1st">
+                      1st Year
+                    </option>
+                    <option className="bg-black text-white" value="2nd">
+                      2nd Year
+                    </option>
+                    <option className="bg-black text-white" value="3rd">
+                      3rd Year
+                    </option>
+                    <option className="bg-black text-white" value="4th">
+                      4th Year
+                    </option>
+                    <option className="bg-black text-white" value="Other">
+                      Other
+                    </option>
+                  </select>
+                  <div className="flex justify-end">
+                    <button
+                      type="submit"
+                      className="transition-all mt-4 bg-yellow-300 text-black focus:outline-none font-medium text-sm px-6 py-3 text-center mr-2 inline-flex items-center font-spaceboards active:scale-95 outline-none"
+                    >
+                      Submit Details
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </>
           )}
-        </form>
+        </div>
       </div>
     </div>
   );
