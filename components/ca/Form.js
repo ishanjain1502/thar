@@ -289,7 +289,7 @@ export default function About() {
                   <div className="flex justify-end">
                     <button
                       type="submit"
-                      className="transition-all mt-2 bg-yellow-300 text-black  focus:outline-none font-medium text-sm px-5 py-2.5 text-center mr-2 inline-flex items-center font-spaceboards active:scale-95 outline-none"
+                      className="transition-all mt-4 bg-yellow-300 text-black focus:outline-none font-medium text-sm px-6 py-3 text-center mr-2 inline-flex items-center font-spaceboards active:scale-95 outline-none"
                     >
                       Submit Details
                     </button>

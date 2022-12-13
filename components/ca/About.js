@@ -26,6 +26,9 @@ export default function About() {
             you to get involved in a network committed towards flourishing and
             boosting the learning curve of your student career.
           </p>
+          <p className="bg-yellow-300 px-2 text-slate-800 font-semibold font-mono mt-2">
+            This form is not for students studying inside the RTU campus.
+          </p>
           <div className="text-lg md:text-xl lg:text2xl xl:text-3xl font-semibold mt-4">
             Who can be a Campus Ambassador?
           </div>
