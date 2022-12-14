@@ -112,7 +112,7 @@ export default function Footer() {
             rel="noreferrer noopener"
             className="hover:text-zinc-200 text-sm text-white sm:text-center sm:text-base transition-all ease-in-out"
           >
-            {"</>"} with ☕ by Team Thar&apos;23
+            {"</>"} with ☕ by Team THAR&apos;23
           </a>
         </span>
       </div>

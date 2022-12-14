@@ -8,7 +8,7 @@ export default function team() {
   return (
     <>
       <Head>
-        <title>Team - Thar 2023</title>
+        <title>Team - THAR 2023</title>
       </Head>
       <NavBar />
       <div className="pt-32 pb-20">
@@ -23,7 +23,7 @@ export default function team() {
           </p>
           <div className="flex flex-col items-center w-8/12 mt-10">
             <p className="font-spaceboards text-2xl underline underline-offset-4">
-              CORE TEAM
+              ORGANIZING TEAM
             </p>
             <div className="flex flex-col gap-12 pt-6 flex-wrap justify-center items-center">
               <Member
@@ -40,12 +40,12 @@ export default function team() {
                 <Member
                   src="ak"
                   name="Dr. D.K. Sambariya"
-                  pos="Coordinator Thar'23"
+                  pos="Coordinator THAR'23"
                 />
                 <Member
                   src="rp"
                   name="Dr. Ritesh Patidar"
-                  pos="Coordinator Thar'23"
+                  pos="Coordinator THAR'23"
                 />
               </div>
             </div>
