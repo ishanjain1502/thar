@@ -23,7 +23,7 @@ export default function team() {
           </p>
           <div className="flex flex-col items-center w-8/12 mt-10">
             <p className="font-spaceboards text-2xl underline underline-offset-4">
-              CORE TEAM
+              ORGANIZING TEAM
             </p>
             <div className="flex flex-col gap-12 pt-6 flex-wrap justify-center items-center">
               <Member
