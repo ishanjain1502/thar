@@ -40,11 +40,10 @@ export default function CountdownTimer() {
   };
   return (
     <div className="tracking-wide flex w-full flex-col items-center">
-      <p className="text-2xl sm:text-4xl font-spaceboards text-stroke text-stroke-color">LAUNCHING IN</p>
-      <Countdown
-        renderer={renderer}
-        date={1677252600000}
-      />
+      <p className="text-2xl sm:text-4xl font-spaceboards text-stroke text-stroke-color">
+        EMBARKING IN
+      </p>
+      <Countdown renderer={renderer} date={1677252600000} />
     </div>
   );
 }
