@@ -50,7 +50,7 @@ export const NavBar = () => {
             />
           </Link>
           <ul className="items-center justify-center hidden space-x-8 lg:flex">
-            <NavItemSecondary text="CA" href="/ca" />
+            <NavItemSecondary text="Campus Ambassador" href="/ca" />
             <NavItemSecondary text="TEAM" href="/team" />
             <NavItemSecondary text="SPONSORS" href="/sponsors" />
           </ul>
@@ -118,7 +118,7 @@ export const NavBar = () => {
                   <NavItemPrimary href="/events" text="Events" />
                   <NavItemPrimary href="/gokart" text="Gokart" />
                   <NavItemPrimary href="/robowar" text="Robowar" />
-                  <NavItemSecondary text="CA" href="/ca" />
+                  <NavItemSecondary text="Campus Ambassador" href="/ca" />
                   <NavItemSecondary text="Team" href="/team" />
                   <NavItemSecondary text="Sponsors" href="/sponsors" />
                 </ul>
@@ -135,7 +135,7 @@ const NavItemPrimary = ({ href, text }) => {
     <li>
       <Link
         href={href}
-        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400 p-2"
+        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400 p-2 text-center"
         title={text}
       >
         {text}
@@ -148,7 +148,7 @@ const NavItemSecondary = ({ href, text }) => {
     <li>
       <Link
         href={href}
-        className="inline-flex items-center justify-center w-full font-medium tracking-wide text-white transition duration-200 rounded bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+        className="inline-flex items-center justify-center w-full font-medium tracking-wide text-white transition duration-200 rounded bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none text-center"
         title={text}
       >
         {text}
