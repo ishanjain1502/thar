@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
@@ -115,14 +116,12 @@ export default function Footer() {
       </div>
       <div className="flex items-center justify-center">
         <span className="text-sm text-white">
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer noopener"
+          <Link
+            href="/devs"
             className="hover:text-zinc-200 text-sm text-white sm:text-center sm:text-base transition-all ease-in-out"
           >
             {"</>"} with ☕ by Team THAR&apos;23
-          </a>
+          </Link>
         </span>
       </div>
     </footer>
