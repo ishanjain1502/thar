@@ -19,7 +19,7 @@ export default function EventWrapper() {
       <div className="mx-auto max-w-5xl">
         {/* Stand Alones */}
         {/* :TITLE CONTAINER */}
-        <div className="flex items-end justify-between">
+        <div id="STAND_ALONE" className="flex items-end justify-between">
           <h2 className="text-xl sm:text-2xl text-white font-bold">
             Stand Alone Events
           </h2>
@@ -42,7 +42,7 @@ export default function EventWrapper() {
           ))}
         </div>
         {/* ----------- CodeWars ---------- */}
-        <div className="flex items-end justify-between">
+        <div id="Code_wars" className="flex items-end justify-between">
           <h2 className="text-xl sm:text-2xl text-white font-bold">
             Code Wars
           </h2>
@@ -65,7 +65,7 @@ export default function EventWrapper() {
           ))}
         </div>
         {/* ----------- Robotics ---------- */}
-        <div className="flex items-end justify-between">
+        <div id="Robotics" className="flex items-end justify-between">
           <h2 className="text-xl sm:text-2xl text-white font-bold">Robotics</h2>
           {/* <a
             href="#link"
@@ -86,7 +86,7 @@ export default function EventWrapper() {
           ))}
         </div>
         {/* ----------- Structures ---------- */}
-        <div className="flex items-end justify-between">
+        <div id="Structures" className="flex items-end justify-between">
           <h2 className="text-xl sm:text-2xl text-white font-bold">
             Structures
           </h2>
@@ -109,7 +109,7 @@ export default function EventWrapper() {
           ))}
         </div>
         {/* ----------- Automate ---------- */}
-        <div className="flex items-end justify-between">
+        <div id="Automate" className="flex items-end justify-between">
           <h2 className="text-xl sm:text-2xl text-white font-bold">Automate</h2>
           {/* <a
             href="#link"
@@ -130,7 +130,7 @@ export default function EventWrapper() {
           ))}
         </div>
         {/* ----------- Startup Hub ---------- */}
-        <div className="flex items-end justify-between">
+        <div id="Startup_Hub" className="flex items-end justify-between">
           <h2 className="text-xl sm:text-2xl text-white font-bold">
             Startup Hub
           </h2>
@@ -153,7 +153,7 @@ export default function EventWrapper() {
           ))}
         </div>
         {/* -----------Design and Graphics ---------- */}
-        <div className="flex items-end justify-between">
+        <div id="Design_and_Graphics" className="flex items-end justify-between">
           <h2 className="text-xl sm:text-2xl text-white font-bold">
             Design and Graphics
           </h2>
@@ -176,7 +176,7 @@ export default function EventWrapper() {
           ))}
         </div>
         {/* ----------- Finance ---------- */}
-        <div className="flex items-end justify-between">
+        <div id="Finance" className="flex items-end justify-between">
           <h2 className="text-xl sm:text-2xl text-white font-bold">Finance</h2>
           {/* <a
             href="#link"
@@ -197,7 +197,7 @@ export default function EventWrapper() {
           ))}
         </div>
         {/* ----------- Marketing and Management ---------- */}
-        <div className="flex items-end justify-between">
+        <div id="Marketing_and_Management" className="flex items-end justify-between">
           <h2 className="text-xl sm:text-2xl text-white font-bold">
             Marketing and Management
           </h2>
@@ -220,7 +220,7 @@ export default function EventWrapper() {
           ))}
         </div>
         {/* ----------- Aeromodeling ---------- */}
-        <div className="flex items-end justify-between">
+        <div id="Aeromodelling" className="flex items-end justify-between">
           <h2 className="text-xl sm:text-2xl text-white font-bold">
             Aeromodeling
           </h2>
