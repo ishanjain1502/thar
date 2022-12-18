@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import EventWrapper from "../../components/events/EventWrapper";
 import Footer from "../../components/globals/Footer";
 import { NavBar } from "../../components/globals/NavBar";
 
@@ -12,22 +13,75 @@ export default function index() {
       </Head>
       <main className="flex flex-col items-center">
         <NavBar />
-        <p className="pt-32 lg:pt-48 pb-6 text-center font-spaceboards text-yellow-300 text-5xl md:text-7xl">
+        <p className="pt-32 lg:pt-48 pb-6 text-center font-spaceboards text-yellow-300 text-5xl md:text-7xl text-stroke text-stroke-color">
           EVENTS
-          <br />
-          <span className="text-xl text-white animate-pulse">coming soon</span>
         </p>
-        <div className="flex justify-center max-w-screen flex-wrap gap-8 w-10/12 pb-20">
-          {events.map((event, index) => (
-            <p
-              className="w-full text-center sm:w-fit text-lg lg:text-xl border-[3px] px-4 py-2 lg:px-6 lg:py-3 font-semibold backdrop-blur-lg border-yellow-300 hover:text-yellow-300 transition-all ease-in-out hover:scale-95"
-              key={index}
-            >
-              {event}
-            </p>
-          ))}
+        <div className="relative mx-auto py-8 px-4 w-full max-w-7xl flex flex-wrap justify-center gap-4 sm:gap-8 text-sm sm:text-base ">
+          <a
+            href="#Stand_Alone"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
+          >
+            Stand Alone
+          </a>
+          <a
+            href="#Robotics"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
+          >
+            Robotics
+          </a>
+          <a
+            href="#Structures"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
+          >
+            Structures
+          </a>
+          <a
+            href="#Automate"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
+          >
+            Automate
+          </a>
+          <a
+            href="#Startup_Hub"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
+          >
+            Startup Hub
+          </a>
+          <a
+            href="#Design_and_Graphics"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
+          >
+            Design and Graphics
+          </a>
+          <a
+            href="#Finance"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
+          >
+            Finance
+          </a>
+          <a
+            href="#Marketing_and_Management"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
+          >
+            Marketing and Management
+          </a>
+          <a
+            href="#Aeromodelling"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
+          >
+            Aeromodelling
+          </a>
+          <a
+            href="#Code_wars"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
+          >
+            Code wars
+          </a>
         </div>
-        <Footer/>
+        <div className="w-full">
+          <EventWrapper />
+        </div>
+        <Footer />
       </main>
     </>
   );
@@ -81,38 +135,3 @@ const events = [
   "COLLEGE VIDEO",
   "HACK-2-ON",
 ];
-
-// const sample_data = [
-//   {
-//     id: "event id",
-//     name: "name",
-//     domain: "domain name",
-//     desc: {
-//       short: "short description",
-//       full: "full description",
-//     },
-//     banner_src: "banner link",
-//     thumb_src: "Thumbnail link",
-//     img: ["first image url", "2nd image url", "3rd image url"],
-//     prize: {
-//       winner: "10K",
-//       runner: "5K",
-//     },
-//     credit: "entry credit/cost required",
-//     venue: "",
-//     cords: [
-//       {
-//         name: "Faculty Co-Ordinator",
-//         contact: 8976789765,
-//       },
-//       {
-//         name: "Final Year Co-Ordinator",
-//         contact: 8976789765,
-//       },
-//       {
-//         name: "2nd Co-Ordinator",
-//         contact: 8976789765,
-//       },
-//     ],
-//   },
-// ];
