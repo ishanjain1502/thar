@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import Footer from "../components/globals/Footer";
 import { NavBar } from "../components/globals/NavBar";
@@ -5,6 +6,10 @@ import { NavBar } from "../components/globals/NavBar";
 export default function Devs() {
   return (
     <>
+      <Head>
+        <title>Website Team - Thar 2023</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <NavBar />
       <div className="pt-20 sm:pt-32">
         <div className="container flex justify-center mx-auto pt-16">
