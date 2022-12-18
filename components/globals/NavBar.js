@@ -50,7 +50,7 @@ export const NavBar = () => {
             />
           </Link>
           <ul className="items-center justify-center hidden space-x-8 lg:flex">
-            <NavItemSecondary text="Campus Ambassador" href="/ca" />
+            <NavItemSecondary text="AMBASSADOR" href="/ca" />
             <NavItemSecondary text="TEAM" href="/team" />
             <NavItemSecondary text="SPONSORS" href="/sponsors" />
           </ul>
