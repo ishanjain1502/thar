@@ -35,6 +35,7 @@ export default function EventWrapper() {
           {STAND_ALONE.map((event) => (
             <Event
               id={event.id}
+              key={event.id}
               name={event.name}
               timeLeft={event.domain}
               sDesc={event.sDesc}
@@ -58,6 +59,7 @@ export default function EventWrapper() {
           {Code_wars.map((event) => (
             <Event
               id={event.id}
+              key={event.id}
               name={event.name}
               timeLeft={event.domain}
               sDesc={event.sDesc}
@@ -79,6 +81,7 @@ export default function EventWrapper() {
           {Robotics.map((event) => (
             <Event
               id={event.id}
+              key={event.id}
               name={event.name}
               timeLeft={event.domain}
               sDesc={event.sDesc}
@@ -102,6 +105,7 @@ export default function EventWrapper() {
           {Structures.map((event) => (
             <Event
               id={event.id}
+              key={event.id}
               name={event.name}
               timeLeft={event.domain}
               sDesc={event.sDesc}
@@ -123,6 +127,7 @@ export default function EventWrapper() {
           {Automate.map((event) => (
             <Event
               id={event.id}
+              key={event.id}
               name={event.name}
               timeLeft={event.domain}
               sDesc={event.sDesc}
@@ -146,6 +151,7 @@ export default function EventWrapper() {
           {Startup_Hub.map((event) => (
             <Event
               id={event.id}
+              key={event.id}
               name={event.name}
               timeLeft={event.domain}
               sDesc={event.sDesc}
@@ -153,7 +159,10 @@ export default function EventWrapper() {
           ))}
         </div>
         {/* -----------Design and Graphics ---------- */}
-        <div id="Design_and_Graphics" className="flex items-end justify-between">
+        <div
+          id="Design_and_Graphics"
+          className="flex items-end justify-between"
+        >
           <h2 className="text-xl sm:text-2xl text-white font-bold">
             Design and Graphics
           </h2>
@@ -169,6 +178,7 @@ export default function EventWrapper() {
           {Design_and_Graphics.map((event) => (
             <Event
               id={event.id}
+              key={event.id}
               name={event.name}
               timeLeft={event.domain}
               sDesc={event.sDesc}
@@ -190,6 +200,7 @@ export default function EventWrapper() {
           {Finance.map((event) => (
             <Event
               id={event.id}
+              key={event.id}
               name={event.name}
               timeLeft={event.domain}
               sDesc={event.sDesc}
@@ -197,7 +208,10 @@ export default function EventWrapper() {
           ))}
         </div>
         {/* ----------- Marketing and Management ---------- */}
-        <div id="Marketing_and_Management" className="flex items-end justify-between">
+        <div
+          id="Marketing_and_Management"
+          className="flex items-end justify-between"
+        >
           <h2 className="text-xl sm:text-2xl text-white font-bold">
             Marketing and Management
           </h2>
@@ -213,6 +227,7 @@ export default function EventWrapper() {
           {Marketing_and_Management.map((event) => (
             <Event
               id={event.id}
+              key={event.id}
               name={event.name}
               timeLeft={event.domain}
               sDesc={event.sDesc}
@@ -236,6 +251,7 @@ export default function EventWrapper() {
           {Aeromodelling.map((event) => (
             <Event
               id={event.id}
+              key={event.id}
               name={event.name}
               timeLeft={event.domain}
               sDesc={event.sDesc}
