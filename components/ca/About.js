@@ -52,11 +52,11 @@ export default function About() {
             Perks of becoming a Campus Ambassador
           </div>
           <ul className="text-white/90 mt-2">
-            <li>&#10024; Certificates </li>
-            <li>&#10024; Goodies </li>
-            <li>&#10024; Free entry and registration </li>
-            <li>&#10024; Accomodation </li>
-            <li>&#10024; Letter of recommendation </li>
+            <li>&#128640; Certificates </li>
+            <li>&#128640; Goodies </li>
+            <li>&#128640; Free entry and registration </li>
+            <li>&#128640; Accomodation </li>
+            <li>&#128640; Letter of recommendation </li>
           </ul>
         </article>
       </div>
