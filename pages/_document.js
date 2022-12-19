@@ -38,7 +38,7 @@ export default function Document() {
           content="Rajasthan's biggest techno management festival, THAR-23 is a celebration for intellectuals across the country."
         />
         <meta property="twitter:image" content="https://rtuthar.in/og.png" />
-        <meta http-equiv="content-language" content="en" />
+        <meta httpEquiv="content-language" content="en" />
         <link rel="icon" href="/favicon.png" />
         {/* Google Site Verification */}
         <meta
