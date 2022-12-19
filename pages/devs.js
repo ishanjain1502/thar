@@ -40,8 +40,8 @@ export default function Devs() {
               role="Frontend Developer"
               p="https://pushkaryadav.in"
               l="pushkarydv"
-              t="pushkarydv"
-              g="pushkaryadavin"
+              t="pushkaryadavin"
+              g="pushkarydv"
             />
             {/* Profile Block Ends */}
           </div>
@@ -126,7 +126,7 @@ const SVG_CONTAINER = ({ d }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="rgb(113 63 18)"
-      class="w-6 hover:scale-105 ease-in-out transition-all duration-200"
+      className="w-6 hover:scale-105 ease-in-out transition-all duration-200"
       viewBox="0 0 16 16"
     >
       <path fillRule="evenodd" d={d} />

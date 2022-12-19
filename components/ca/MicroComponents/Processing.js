@@ -6,7 +6,7 @@ export default function Processing() {
       <svg
         aria-hidden="true"
         role="status"
-        class="8 w-12 h-12 text-black animate-spin"
+        className="8 w-12 h-12 text-black animate-spin"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -14,7 +14,7 @@ export default function About() {
           lang="en"
           className="w-full lg:w-9/12 p-8 text-xl md: bg-black/20 backdrop-blur-2xl break-words"
         >
-          <div className="text-lg md:text-xl lg:text2xl xl:text-3xl font-semibold">
+          <div className="text-lg md:text-xl lg:text2xl xl:text-3xl font-semibold text-yellow-50">
             What is Campus Ambassadors Programme?
           </div>
           <p className="text-white/80 mt-2">
@@ -29,7 +29,7 @@ export default function About() {
           <p className="bg-yellow-300 px-2 text-slate-800 font-semibold font-mono mt-2">
             This form is not for students studying inside the RTU campus.
           </p>
-          <div className="text-lg md:text-xl lg:text2xl xl:text-3xl font-semibold mt-4">
+          <div className="text-lg md:text-xl lg:text2xl xl:text-3xl font-semibold mt-4 text-yellow-50">
             Who can be a Campus Ambassador?
           </div>
           <p className="text-white/80 mt-2">
@@ -39,7 +39,7 @@ export default function About() {
             for this amazing programme. All you need is an ardent desire to
             enhance your knowledge.
           </p>
-          <div className="text-lg md:text-xl lg:text2xl xl:text-3xl font-semibold mt-4">
+          <div className="text-lg md:text-xl lg:text2xl xl:text-3xl font-semibold mt-4 text-yellow-50">
             Why should you become one?
           </div>
           <p className="text-white/80 mt-2">
@@ -48,6 +48,16 @@ export default function About() {
             community of intellectuals. You will also have a chance for a first
             hand experience of the fabulous events conducted by the university.
           </p>
+          <div className="text-lg md:text-xl lg:text2xl xl:text-3xl font-semibold mt-4 text-yellow-50">
+            Perks of becoming a Campus Ambassador
+          </div>
+          <ul className="text-white/90 mt-2">
+            <li>&#128640; Certificates </li>
+            <li>&#128640; Goodies </li>
+            <li>&#128640; Free entry and registration </li>
+            <li>&#128640; Accomodation </li>
+            <li>&#128640; Letter of recommendation </li>
+          </ul>
         </article>
       </div>
     </div>
