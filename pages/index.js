@@ -15,17 +15,16 @@ import CountdownTimer from "../components/home/CountdownTimer";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-  }, []);
+    const mediaElem = document.querySelector("video");
+    mediaElem.load();
+  });
   return (
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <title>Home - Thar 2023</title>
       </Head>
-      <main className="relative z-10">
+      <div className="relative z-10">
         <NavBar />
         <Hero />
         {!isLoading && <CountdownTimer />}
@@ -37,10 +36,10 @@ export default function Home() {
           <iframe
             src="https://www.youtube.com/embed/95RDe4rNQ_A"
             title="Thar 2020 Pronite"
-            className="w-11/12 sm:w-10/12 md:w-8/12 aspect-video rounded shadow-xl"
-            frameborder="0"
+            className="w-11/12 sm:w-10/12 md:w-8/12 aspect-video rounded framed p-4 sm:p-6 md:p-8 lg:p-10"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
 
@@ -50,7 +49,7 @@ export default function Home() {
         {/* <BottomNavBar /> */}
         <Footer />
         {isLoading && <Loader />}
-      </main>
+      </div>
 
       <div className="h-[100vh] overflow-hidden fixed left-0 top-0 z-[1]">
         <video
@@ -59,9 +58,8 @@ export default function Home() {
           loop
           className="w-[100vw] object-cover h-full pointer-events-none scale-110 brightness-[0.7]"
           id="bg-vid"
-          // TODO: disabled lazyload, trying on load complete event but not working :(
           preload="auto"
-          onLoad={() => console.log(69)}
+          onLoadedData={() => setIsLoading(false)}
         >
           <source src="/assets/videos/bg2.mp4" type="video/mp4" />
         </video>

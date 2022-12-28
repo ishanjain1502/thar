@@ -12,7 +12,7 @@ export default function About() {
         </div>
         <article
           lang="en"
-          className="w-full lg:w-9/12 p-8 text-xl md: bg-black/20 backdrop-blur-2xl break-words text-justify"
+          className="w-full lg:w-9/12 p-8 text-base md:text-xl bg-black/20 backdrop-blur-2xl break-words text-justify"
         >
           Welcome to the symposium of innovation. Sustaining the legacy
           of past 4 editions, RTU is back with an assembly of exceptional minds
