@@ -19,7 +19,7 @@ export default function Domains({ id }) {
           </article>
         </span>
         <Link href={`/events/${id}`} passHref legacyBehavior>
-          <a className="px-6 py-2 ring mt-4 rounded-md font-bold bg-yellow-300 hover:bg-yellow-300/90 hover:text-black active:scale-95 transition-all ease-in-out text-yellow-900 ring-yellow-200/30 uppercase">
+          <a className="px-6 py-2 ring mt-4 rounded-md font-bold bg-yellow-300 hover:bg-yellow-300/90 hover:text-black active:scale-95 transition-all ease-in-out text-yellow-900 ring-yellow-200/30 uppercase text-center">
             View Events
           </a>
         </Link>
