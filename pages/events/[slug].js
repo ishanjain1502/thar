@@ -27,6 +27,11 @@ export default function Domains() {
         <p className="pt-32 lg:pt-48 pb-6 text-center font-spaceboards text-yellow-300 text-5xl md:text-7xl text-stroke text-stroke-color">
           EVENTS
         </p>
+        {slugVal && (
+          <h2 className="text-xl sm:text-2xl md:text-3xl text-white etxt-stroke text-stroke-color font-bold uppercase">
+            {slugVal.replaceAll("_", " ")} Events
+          </h2>
+        )}
         <div className="w-full">
           {slugVal && (
             <div className="relative mx-auto py-8 md:py-16 px-4 w-full max-w-5xl flex flex-col items-center gap-10">
