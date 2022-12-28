@@ -344,3 +344,16 @@ for (let i = 0; i < events_data.length; i++) {
     code_wars.push(events_data[i]);
   }
 }
+
+export let filtered_events = {
+  stand_alone: stand_alone,
+  robotics: robotics,
+  structures: structures,
+  automate: automate,
+  startup_hub: startup_hub,
+  design_and_graphics: design_and_graphics,
+  finance: finance,
+  marketing_and_management: marketing_and_management,
+  aeromodelling: aeromodelling,
+  code_wars: code_wars,
+};
