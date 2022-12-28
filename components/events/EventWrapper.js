@@ -6,7 +6,7 @@ export default function EventWrapper() {
   return (
     <div className="relative mx-auto py-8 md:py-16 px-4 w-full max-w-7xl flex flex-col items-center gap-10">
       {Object.keys(domains_data).map((domain) => (
-        <Domains id={domain} />
+        <Domains key={domain} id={domain} />
       ))}
     </div>
   );
