@@ -301,46 +301,46 @@ const events_data = [
   },
 ];
 
-export let STAND_ALONE = [];
-export let Robotics = [];
-export let Structures = [];
-export let Automate = [];
-export let Startup_Hub = [];
-export let Design_and_Graphics = [];
-export let Finance = [];
-export let Marketing_and_Management = [];
-export let Aeromodelling = [];
-export let Code_wars = [];
+export let stand_alone = [];
+export let robotics = [];
+export let structures = [];
+export let automate = [];
+export let startup_hub = [];
+export let design_and_graphics = [];
+export let finance = [];
+export let marketing_and_management = [];
+export let aeromodelling = [];
+export let code_wars = [];
 
 for (let i = 0; i < events_data.length; i++) {
   if (events_data[i].domain.includes("STAND")) {
-    STAND_ALONE.push(events_data[i]);
+    stand_alone.push(events_data[i]);
   }
   if (events_data[i].domain.includes("Robotics")) {
-    Robotics.push(events_data[i]);
+    robotics.push(events_data[i]);
   }
   if (events_data[i].domain.includes("Structures")) {
-    Structures.push(events_data[i]);
+    structures.push(events_data[i]);
   }
   if (events_data[i].domain.includes("Automate")) {
-    Automate.push(events_data[i]);
+    automate.push(events_data[i]);
   }
   if (events_data[i].domain.includes("Startup")) {
-    Startup_Hub.push(events_data[i]);
+    startup_hub.push(events_data[i]);
   }
   if (events_data[i].domain.includes("Design")) {
-    Design_and_Graphics.push(events_data[i]);
+    design_and_graphics.push(events_data[i]);
   }
   if (events_data[i].domain.includes("Finance")) {
-    Finance.push(events_data[i]);
+    finance.push(events_data[i]);
   }
   if (events_data[i].domain.includes("Marketing")) {
-    Marketing_and_Management.push(events_data[i]);
+    marketing_and_management.push(events_data[i]);
   }
   if (events_data[i].domain.includes("Aeromodelling")) {
-    Aeromodelling.push(events_data[i]);
+    aeromodelling.push(events_data[i]);
   }
   if (events_data[i].domain.includes("Code")) {
-    Code_wars.push(events_data[i]);
+    code_wars.push(events_data[i]);
   }
 }

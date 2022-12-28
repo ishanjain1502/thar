@@ -16,68 +16,6 @@ export default function index() {
         <p className="pt-32 lg:pt-48 pb-6 text-center font-spaceboards text-yellow-300 text-5xl md:text-7xl text-stroke text-stroke-color">
           EVENTS
         </p>
-        <div className="relative mx-auto py-8 px-4 w-full max-w-7xl flex flex-wrap justify-center gap-4 sm:gap-8 text-sm sm:text-base ">
-          <a
-            href="#Stand_Alone"
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
-          >
-            Stand Alone
-          </a>
-          <a
-            href="#Robotics"
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
-          >
-            Robotics
-          </a>
-          <a
-            href="#Structures"
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
-          >
-            Structures
-          </a>
-          <a
-            href="#Automate"
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
-          >
-            Automate
-          </a>
-          <a
-            href="#Startup_Hub"
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
-          >
-            Startup Hub
-          </a>
-          <a
-            href="#Design_and_Graphics"
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
-          >
-            Design and Graphics
-          </a>
-          <a
-            href="#Finance"
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
-          >
-            Finance
-          </a>
-          <a
-            href="#Marketing_and_Management"
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
-          >
-            Marketing and Management
-          </a>
-          <a
-            href="#Aeromodelling"
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
-          >
-            Aeromodelling
-          </a>
-          <a
-            href="#Code_wars"
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-200 text-yellow-900 font-semibold rounded-full ring-2 ring-yellow-300/70 active:scale-95 hover:bg-yellow-200/90 ease-in-out transition-all shadow-lg"
-          >
-            Code wars
-          </a>
-        </div>
         <div className="w-full">
           <EventWrapper />
         </div>
