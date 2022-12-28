@@ -29,7 +29,7 @@ export default function Domains() {
         </p>
         <div className="w-full">
           {slugVal && (
-            <div className="relative mx-auto py-8 md:py-16 px-4 w-full max-w-7xl flex flex-col items-center gap-10">
+            <div className="relative mx-auto py-8 md:py-16 px-4 w-full max-w-5xl flex flex-col items-center gap-10">
               <div className="mt-8 mx-auto md:mx-auto max-w-md md:max-w-none grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-10 mb-10">
                 {filtered_events[slugVal].map((event) => (
                   <Event
