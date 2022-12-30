@@ -46,13 +46,13 @@ export default function gokart() {
                 Register Now
               </a>
             </div>
-            <div className="flex gap-8 items-center text-lg font-semibold self-start">
-              <div className="h-32 w-32 bg-white rounded-lg bg-opacity-20 backdrop-blur-3xl flex justify-center items-center flex-col">
+            <div className="flex gap-8 items-center text-lg font-semibold md:self-start">
+              <div className="h-24 w-24 md:h-32 md:w-32 bg-white rounded-lg bg-opacity-20 backdrop-blur-3xl flex justify-center items-center flex-col">
                 <p className="text-5xl">24</p>
                 <p className="text-lg">Feb</p>
               </div>
               to
-              <div className="h-32 w-32 bg-white rounded-lg bg-opacity-20 backdrop-blur-3xl flex justify-center items-center flex-col">
+              <div className="h-24 w-24 md:h-32 md:w-32 bg-white rounded-lg bg-opacity-20 backdrop-blur-3xl flex justify-center items-center flex-col">
                 <p className="text-5xl">26</p>
                 <p className="text-lg">Feb</p>
               </div>
