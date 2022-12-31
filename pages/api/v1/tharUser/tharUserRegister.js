@@ -1,6 +1,6 @@
 import connectDB from '../../../../lib/mongodb'
 import withValidation from '../../../../middleware/withValidation'
-import validationSchema from '../../../../validators/v1/ca/register'
+import validationSchema from '../../../../validators/v1/user/tharUser'
 import tharUser from '../../../../schema/tharUser/tharUsers'
 import user from '../../../../schema/ca/users'
 
@@ -23,12 +23,20 @@ function generateString(length) {
 
 const handler = async (req, res) => {
 
-    try {
+    try { 
         
-        let tharID = "THAR'23-";
+        let tharID = "THAR23-";
         const random = generateString(6);
         tharID = tharID + random;
-        const data = await tharUser.create({ ...req.body, userTharID : tharID });
+
+        const ca = await user.find({ referralCode : req.body.referredBy  })
+        
+        req.body.referredBy = ca[0]._id;
+        const data = await tharUser.create({ ...req.body, userTharID : tharID});
+        console.log(ca);
+        const doc = await user.updateOne({_id : ca[0]._id}, {
+            referredTharUser : [...ca[0].referredTharUser, data._id]
+        });
         // console.log("data is:------", data);
         res.status(200).json({ error: false, message: 'success', data: data.userTharID  })
 

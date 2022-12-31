@@ -70,10 +70,9 @@ const userSchema = new mongoose.Schema({
         min: 0,
         max: 1000
     },
-    referedTharUser: {
-        type: mongoose.Schema.ObjectId,        
+    referredTharUser: {
+        type: [mongoose.Schema.Types.ObjectId],        
         ref: 'tharUser' ,
-        required: true,
     }
 }, {
     timestamps: true,

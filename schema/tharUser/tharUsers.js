@@ -14,7 +14,7 @@ const tharUserSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        min: 16,
+        minLength: 16,
         maxLength: 50,
         unique: true,
     },
@@ -67,12 +67,11 @@ const tharUserSchema = new mongoose.Schema({
         maxLength: 20,
         unique: true
     },
-    referedBy: {
-        type: mongoose.Schema.ObjectId,
-        ref: "user" ,
-        required: true,        
+    referredBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "user" ,      
     },
-    referedCode: {
+    referredCode: {
         type: String,
         minLength: 9,
         maxLength: 9,     
