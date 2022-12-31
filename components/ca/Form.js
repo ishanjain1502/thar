@@ -1,4 +1,5 @@
 import React from "react";
+import AuthenticationButton from "./AuthenticationButton";
 
 export default function About() {
   return (
@@ -13,9 +14,10 @@ export default function About() {
           If you previously filled the from then continue with the same emal id
           filled OR you can continue we will ask you details in furthur process
           <div className="w-full">
-            <button className="transition-all flex flex-row gap-2 flex-shrink-0 w-fit mx-auto bg-rose-600 text-white py-2 px-4 rounded-xl justify-center items-center mt-4 active:scale-95">
+            {/* <button className="transition-all flex flex-row gap-2 flex-shrink-0 w-fit mx-auto bg-rose-600 text-white py-2 px-4 rounded-xl justify-center items-center mt-4 active:scale-95">
               Continue with Google
-            </button>
+            </button> */}
+            <AuthenticationButton />
           </div>
         </div>
       </div>
