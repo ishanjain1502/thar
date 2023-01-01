@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { domains_data } from "../../data/domains";
@@ -8,11 +9,17 @@ export default function Domains({ id }) {
       key={id}
       className="flex flex-col sm:flex-row w-full bg-zinc-900 backdrop-blur-lg max-w-sm sm:max-w-full md:max-w-3xl lg:max-w-4xl rounded-md overflow-hidden ring-2 ring-yellow-300"
     >
-      <div className="ring-1 aspect-square w-full sm:w-6/12"></div>
-      <div className="ring-1 w-6/12 p-4 justify-between py-10 flex flex-col">
+      <div className="aspect-square w-full sm:w-6/12 overflow-hidden relative">
+        <Image
+          src={`/assets/images/events/domains/${id}.jpg`}
+          fill
+          quality={75}
+        />
+      </div>
+      <div className="w-6/12 p-4 justify-between py-10 flex flex-col">
         <span>
           <p className="text-4xl font-spaceboards text-yellow-300 uppercase">
-            {id.replaceAll('_',' ')}
+            {id.replaceAll("_", " ")}
           </p>
           <article className="text-lg mt-2 text-zinc-300">
             {domains_data[id]}
