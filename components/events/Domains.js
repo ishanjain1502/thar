@@ -1,9 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { domains_data } from "../../data/domains";
 
 export default function Domains({ id }) {
+  const [imgUrl, setImgUrl] = useState(
+    `/assets/images/events/domains/${id}.jpg`
+  );
   return (
     <div
       key={id}
@@ -11,9 +14,10 @@ export default function Domains({ id }) {
     >
       <div className="aspect-square w-full sm:w-6/12 overflow-hidden relative">
         <Image
-          src={`/assets/images/events/domains/${id}.jpg`}
+          src={imgUrl}
           fill
           quality={75}
+          onError={() => setImgUrl(`/assets/images/events/placeholder.png`)}
         />
       </div>
       <div className="w-full sm:w-6/12 p-4 justify-between py-10 flex flex-col">
