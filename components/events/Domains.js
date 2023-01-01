@@ -16,9 +16,9 @@ export default function Domains({ id }) {
           quality={75}
         />
       </div>
-      <div className="w-6/12 p-4 justify-between py-10 flex flex-col">
+      <div className="w-full sm:w-6/12 p-4 justify-between py-10 flex flex-col">
         <span>
-          <p className="text-4xl font-spaceboards text-yellow-300 uppercase">
+          <p className="text-3xl sm:text-4xl font-spaceboards text-yellow-300 uppercase break-words">
             {id.replaceAll("_", " ")}
           </p>
           <article className="text-lg mt-2 text-zinc-300">
