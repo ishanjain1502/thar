@@ -21,7 +21,7 @@ export default function Domains({ id }) {
           <p className="text-3xl sm:text-4xl font-spaceboards text-yellow-300 uppercase break-words">
             {id.replaceAll("_", " ")}
           </p>
-          <article className="text-lg mt-2 text-zinc-300">
+          <article className="text-base sm:text-lg mt-2 text-zinc-300">
             {domains_data[id]}
           </article>
         </span>
