@@ -46,7 +46,7 @@ export default function Home() {
         <Theme />
         <Latest />
         {/* TODO: */}
-        {/* <BottomNavBar /> */}
+        <BottomNavBar />
         <Footer />
         {isLoading && <Loader />}
       </div>
