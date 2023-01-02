@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper";
 
 export default function Highlights() {
+  let arr = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
   return (
     <div id="highlights" className="flex justify-center mb-10">
       {/* Flex Break Point - lg */}
@@ -36,69 +37,20 @@ export default function Highlights() {
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper flex justify-center items-center aspect-[720/480]"
           >
-            <SwiperSlide className="mySwiper flex justify-center items-center">
-              <Image
-                src="/assets/images/highlight/1.JPG"
-                alt=""
-                width={720}
-                height={480}
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center">
-              <Image
-                src="/assets/images/highlight/2.JPG"
-                alt=""
-                width={720}
-                height={480}
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center">
-              <Image
-                src="/assets/images/highlight/3.JPG"
-                alt=""
-                width={720}
-                height={480}
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center">
-              <Image
-                src="/assets/images/highlight/4.JPG"
-                alt=""
-                width={720}
-                height={480}
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center">
-              <Image
-                src="/assets/images/highlight/5.JPG"
-                alt=""
-                width={720}
-                height={480}
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center">
-              <Image
-                src="/assets/images/highlight/6.JPG"
-                alt=""
-                width={720}
-                height={480}
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center">
-              <Image
-                src="/assets/images/highlight/7.JPG"
-                alt=""
-                width={720}
-                height={480}
-                loading="lazy"
-              />
-            </SwiperSlide>
+            {arr.map((i, index) => (
+              <SwiperSlide
+                key={index}
+                className="mySwiper flex justify-center items-center"
+              >
+                <Image
+                  src={`/assets/images/highlight/${index + 1}.JPG`}
+                  alt=""
+                  width={720}
+                  height={480}
+                  loading="lazy"
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
