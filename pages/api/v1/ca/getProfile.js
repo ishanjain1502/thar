@@ -18,7 +18,7 @@ const handler = async (req, res) => {
           "name email phone college degree year address referralCode referralCount"
         )
         .lean();
-      return res.status(200).json({ error: true, message: "success", data });
+      return res.status(200).json({ error: false, message: "success", data });
     }
     handleError(res,"unauthroized");
   } catch (error) {

@@ -22,9 +22,9 @@ export default function Dashboard() {
   //     .then((res) => console.log(res));
   // });
   if (data != undefined) {
-    // const porfileData = axios
-    //   .get("/api/v1/ca/getProfile")
-    //   .then((res) => console.log(res));
+    const porfileData = axios
+      .get("/api/v1/ca/getProfile")
+      .then((res) => console.log(res));
     return (
       <>
         <NavBar />
