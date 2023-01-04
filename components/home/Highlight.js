@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper";
 
 export default function Highlights() {
-  let arr = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+  let arr = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
   return (
     <div id="highlights" className="flex justify-center mb-10">
       {/* Flex Break Point - lg */}
