@@ -20,9 +20,9 @@ export default function BottomNavBar() {
   return (
     <div
       id="bottom-nav"
-      className="w-full fixed bottom-0 z-10 hidden justify-between font-spaceboards"
+      className="w-full sticky bottom-0 z-10 hidden justify-between font-spaceboards"
     >
-      <div className="p-4 w-3/12 bg-black/20 rounded-tr-xl backdrop-blur-2xl lg:flex flex-row items-center justify-evenly ring-2 ring-white/80 hidden">
+      <div className="p-4 w-3/12 bg-black/20 rounded-r-xl backdrop-blur-2xl lg:flex flex-row items-center justify-evenly ring-2 ring-white/80 hidden">
         <div className="p-2">
           <Link href="/about" legacyBehavior passHref>
             <a>ABOUT</a>
@@ -34,7 +34,7 @@ export default function BottomNavBar() {
           </Link>
         </div>
       </div>
-      <div className="p-4 w-3/12 bg-black/20 rounded-tl-xl backdrop-blur-2xl lg:flex flex-row items-center justify-evenly ring-2 ring-white/80 hidden">
+      <div className="p-4 w-3/12 bg-black/20 rounded-l-xl backdrop-blur-2xl lg:flex flex-row items-center justify-evenly ring-2 ring-white/80 hidden">
         <div className="p-2">
           <Link href="/workshop" legacyBehavior passHref>
             <a>WORKSHOP</a>
