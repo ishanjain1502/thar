@@ -1,54 +1,64 @@
 import axios from "axios";
-import { signOut, useSession } from "next-auth/react";
-import { useRouter } from "next/router";
+import { getSession, signOut } from "next-auth/react";
 import React, { useEffect, useState } from "react";
+import DataTable from "../../components/ca/DataTable";
+import Processing from "../../components/ca/MicroComponents/Processing";
 import { NavBar } from "../../components/globals/NavBar";
 
-export default function Dashboard() {
-  const router = useRouter();
-  const { data } = useSession();
-  const { status } = useSession({
-    required: true,
-    onUnauthenticated() {
-      router.push("/ca");
-    },
-  });
-  if (status === "loading") {
-    return "Loading or not authenticated...";
-  }
-  // useEffect(() => {
-  //   const porfileData = axios
-  //     .get("/api/v1/ca/getProfile")
-  //     .then((res) => console.log(res));
-  // });
-  if (data != undefined) {
-    const porfileData = axios
-      .get("/api/v1/ca/getProfile")
-      .then((res) => console.log(res));
-    return (
-      <>
-        <NavBar />
+export default function Dashboard(props) {
+  // const router = useRouter();
 
-        <h1 className="pt-32 text-center">
-          <img
-            src={data.user?.image}
-            referrerPolicy="no-referrer"
-            className="w-16 aspect-square mx-auto rounded-full"
-            loading="lazy"
-            alt=""
-          />
-          Hello {data.user?.name} <br /> ({data.user?.email})
-        </h1>
-        <button
-          className="transition-all block w-fit mx-auto bg-white text-black py-2 px-4 rounded-xl justify-center items-center mt-4 active:scale-95"
-          onClick={() => signOut()}
-        >
-          Sign out
-        </button>
-      </>
-    );
-  } else {
-    return "Waiting  For Data...";
-  }
+  const [userData, setUserData] = useState(null);
+  // const [form, setForm] = useState(false);
+
+  useEffect(() => {
+    axios.get("/api/v1/ca/getProfile").then((res) => {
+      setUserData(res.data.data);
+    });
+  });
+
+  return (
+    <>
+      <NavBar />
+
+      <div className="pt-32 md:pt-36">
+        <div className="w-[70%] md:w-[60%] lg:w-[55%] xl:w-[50%] mx-auto text-white ring-2 ring-white/60 bg-white/20 backdrop-blur-3xl p-4 rounded text-center">
+          <div className="text-xl mt-2 mb-4 font-semibold">
+            <img
+              src={props.user?.image}
+              referrerPolicy="no-referrer"
+              className="w-16 aspect-square mx-auto rounded-full ring-4 ring-yellow-300"
+              loading="lazy"
+              alt=""
+            />
+            Hello {props.user?.name}
+          </div>
+          {/* {JSON.stringify(props.user)} */}
+          {userData ? (
+            <DataTable userData={userData} />
+          ) : (
+            <Processing text="Fetching Your data..." />
+          )}
+          <button
+            className="transition-all block w-fit mx-auto bg-yellow-100 text-black ring-black ring-2 py-2 px-4 rounded-xl justify-center items-center mt-4 active:scale-95"
+            onClick={() => signOut()}
+          >
+            Sign out
+          </button>
+        </div>
+      </div>
+    </>
+  );
 }
-Dashboard;
+export async function getServerSideProps(context) {
+  const session = await getSession(context);
+  if (!session) {
+    context.res.writeHead(302, { Location: "/ca#caform" });
+    context.res.end();
+    return {};
+  }
+  const user = session.user;
+  return {
+    props: { user },
+  };
+}
