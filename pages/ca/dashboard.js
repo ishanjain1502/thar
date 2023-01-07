@@ -55,7 +55,7 @@ export default function Dashboard() {
                 <Processing text="Fetching Your data..." />
               )}
               <button
-                className="transition-all block w-fit mx-auto bg-yellow-100 text-black ring-black ring-2 py-2 px-4 rounded-xl justify-center items-center mt-4 active:scale-95"
+                className="transition-all w-fit mx-auto bg-white text-black py-2 px-4 rounded-md ring-2 ring-black/40 justify-center items-center mt-4 active:scale-95 flex flex-row gap-2"
                 onClick={() => signOut()}
               >
                 Sign out
