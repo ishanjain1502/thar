@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { NavBar } from "../../components/globals/NavBar";
 import CaForm from "../../components/ca/CaForm";
-import DataTable from "../../components/ca/DataTable";
+import ShowUser from "../../components/ca/ShowUser";
 import Processing from "../../components/ca/MicroComponents/Processing";
 export default function Dashboard() {
   const router = useRouter();
@@ -38,28 +38,25 @@ export default function Dashboard() {
           {form ? (
             <CaForm name={data.user?.name} email={data.user?.email} />
           ) : (
-            <div className="w-[70%] md:w-[60%] lg:w-[55%] xl:w-[50%] mx-auto text-white ring-2 ring-white/60 bg-white/20 backdrop-blur-3xl p-4 rounded text-center">
-              <div className="text-xl mt-2 mb-4 font-semibold">
+            <div className="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[60%] xl:w-[50%] 2xl:w-[45%] bg-white/90 backdrop-blur-3xl text-black rounded-lg mx-auto px-2 md:px-4 py-4 mt-16">
+              <div className="relative mb-16 flex justify-center items-center">
                 <img
                   src={data.user?.image}
                   referrerPolicy="no-referrer"
-                  className="w-16 aspect-square mx-auto rounded-full ring-4 ring-yellow-300"
+                  className="w-28 aspect-square mx-auto rounded-full ring-4 ring-white/80 absolute -mt-8"
                   loading="lazy"
                   alt=""
                 />
+              </div>
+              <div className="text-center mt-16 text-2xl font-semibold ">
                 Hello {data.user?.name}
               </div>
+
               {userData ? (
-                <DataTable userData={userData} />
+                <ShowUser userData={userData} />
               ) : (
                 <Processing text="Fetching Your data..." />
               )}
-              <button
-                className="transition-all w-fit mx-auto bg-white text-black py-2 px-4 rounded-md ring-2 ring-black/40 justify-center items-center mt-4 active:scale-95 flex flex-row gap-2"
-                onClick={() => signOut()}
-              >
-                Sign out
-              </button>
             </div>
           )}
         </div>
