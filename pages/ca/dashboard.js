@@ -1,8 +1,9 @@
 import { useRouter } from "next/router";
-import { signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { NavBar } from "../../components/globals/NavBar";
+import Footer from "../../components/globals/Footer";
 import CaForm from "../../components/ca/CaForm";
 import ShowUser from "../../components/ca/ShowUser";
 import Processing from "../../components/ca/MicroComponents/Processing";
@@ -33,7 +34,6 @@ export default function Dashboard() {
     return (
       <>
         <NavBar />
-
         <div className="pt-32 md:pt-36">
           {form ? (
             <CaForm name={data.user?.name} email={data.user?.email} />
@@ -60,6 +60,7 @@ export default function Dashboard() {
             </div>
           )}
         </div>
+        <Footer />
       </>
     );
   }
