@@ -1,6 +1,9 @@
-// name, email, phone, college, rollNo, degree, address, pincode
+// name, email, phone, college, rollNo, degree, address, pincode, refferedBy(CA-ID),Events(all registered), team-mates name(optional)
 import mongoose from "mongoose";
-const userSchema = new mongoose.Schema({
+
+
+
+const tharUserSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -11,7 +14,7 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        min: 16,
+        minLength: 16,
         maxLength: 50,
         unique: true,
     },
@@ -57,26 +60,25 @@ const userSchema = new mongoose.Schema({
         minLength: 6,
         maxLength: 6,
     },
-    referralCode: {
+    userTharID: {
         type: String,
         required: true,
         minLength: 9,
-        maxLength: 9,
+        maxLength: 20,
         unique: true
     },
-    referralCount: {
-        type: Number,
-        default: 0,
-        min: 0,
-        max: 1000
+    referredBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "user" ,      
     },
-    referredTharUser: {
-        type: [mongoose.Schema.Types.ObjectId],        
-        ref: 'tharUser' ,
+    referredCode: {
+        type: String,
+        minLength: 9,
+        maxLength: 9,     
     }
 }, {
     timestamps: true,
 })
 
-const user = mongoose.models.User || mongoose.model('User', userSchema);
-export default user;
+const tharUser = mongoose.models.tharUser || mongoose.model('tharUser', tharUserSchema);
+export default tharUser;
