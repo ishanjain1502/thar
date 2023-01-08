@@ -1,6 +1,10 @@
-import React from "react";
+import Image from "next/image";
+import React, { useState } from "react";
 
 export default function Event({ id, timeLeft, name, sDesc }) {
+  const [imgUrl, setImgUrl] = useState(
+    `/assets/images/events/${id}.jpg`
+  );
   return (
     <a
       // Disable it currently as we don't have all the info
@@ -11,11 +15,14 @@ export default function Event({ id, timeLeft, name, sDesc }) {
     >
       {/* ::Image */}
       <div className="relative  rounded-2xl overflow-hidden w-full">
-        <img
-          src="/assets/images/events/placeholder.png"
-          alt=""
-          className="object-cover aspect-square transition duration-200 ease-in transform group-hover:scale-105 w-full"
-        />
+        <div className="object-cover aspect-square transition duration-200 ease-in transform group-hover:scale-105 w-full">
+          <Image
+            src={imgUrl}
+            fill
+            quality={75}
+            onError={() => setImgUrl(`/assets/images/events/placeholder.png`)}
+          />
+        </div>
         {/* :::time left */}
         <span className="absolute top-2 right-2 py-1 px-3 rounded-full bg-gray-800 bg-opacity-30 text-xs text-white font-bold backdrop-filter backdrop-blur-sm">
           {timeLeft}
