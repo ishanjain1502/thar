@@ -15,7 +15,6 @@
     "joi": "^17.7.0",
     "mongoose": "^6.7.5",
     "next": "13.0.6",
-    "next-auth": "^4.18.7",
     "react": "18.2.0",
     "react-countdown": "^2.3.5",
     "react-dom": "18.2.0",
