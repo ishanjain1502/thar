@@ -41,6 +41,7 @@ export default function Latest() {
                 src="/assets/images/latest/1.jpeg"
                 className="obje object-contain brightness-[1.5]"
                 alt=""
+                quality={100}
                 fill
                 loading="lazy"
               />
@@ -50,6 +51,7 @@ export default function Latest() {
                 src="/assets/images/latest/2.jpeg"
                 className="obje object-contain"
                 alt=""
+                quality={100}
                 fill
                 loading="lazy"
               />
@@ -59,6 +61,7 @@ export default function Latest() {
                 src="/assets/images/latest/3.jpeg"
                 className="obje object-contain"
                 alt=""
+                quality={30}
                 fill
                 loading="lazy"
               />
@@ -68,6 +71,7 @@ export default function Latest() {
                 src="/assets/images/latest/4.jpeg"
                 className="obje object-contain"
                 alt=""
+                quality={30}
                 fill
                 loading="lazy"
               />
