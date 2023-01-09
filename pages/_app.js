@@ -6,8 +6,9 @@ import "../styles/loader.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { SessionProvider } from "next-auth/react";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <>
       {/* Google Analytics */}
@@ -27,7 +28,9 @@ function MyApp({ Component, pageProps }) {
             `,
         }}
       />
-      <Component {...pageProps} />
+      <SessionProvider session={session} refetchOnWindowFocus={false} refetchInterval={10*60}>
+        <Component {...pageProps} />
+      </SessionProvider>
     </>
   );
 }
