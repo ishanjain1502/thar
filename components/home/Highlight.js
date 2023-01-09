@@ -45,7 +45,7 @@ export default function Highlights() {
                 <Image
                   src={`/assets/images/highlight/${index + 1}.JPG`}
                   alt=""
-                  quality={50}
+                  quality={100}
                   width={720}
                   height={480}
                   loading="lazy"
