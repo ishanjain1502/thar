@@ -72,42 +72,6 @@ export default function Latest() {
                 loading="lazy"
               />
             </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center relative">
-              <Image
-                src="/assets/images/latest/5.jpeg"
-                className="obje object-contain"
-                alt=""
-                fill
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center relative">
-              <Image
-                src="/assets/images/latest/6.jpeg"
-                className="obje object-contain"
-                alt=""
-                fill
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center relative">
-              <Image
-                src="/assets/images/latest/7.jpeg"
-                className="obje object-contain"
-                alt=""
-                fill
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center relative">
-              <Image
-                src="/assets/images/latest/8.jpeg"
-                className="obje object-contain"
-                alt=""
-                fill
-                loading="lazy"
-              />
-            </SwiperSlide>
           </Swiper>
         </div>
       </div>
