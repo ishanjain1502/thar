@@ -41,6 +41,7 @@ export default function Latest() {
                 src="/assets/images/latest/1.jpeg"
                 className="obje object-contain brightness-[1.5]"
                 alt=""
+                quality={100}
                 fill
                 loading="lazy"
               />
@@ -50,6 +51,7 @@ export default function Latest() {
                 src="/assets/images/latest/2.jpeg"
                 className="obje object-contain"
                 alt=""
+                quality={100}
                 fill
                 loading="lazy"
               />
@@ -59,6 +61,7 @@ export default function Latest() {
                 src="/assets/images/latest/3.jpeg"
                 className="obje object-contain"
                 alt=""
+                quality={30}
                 fill
                 loading="lazy"
               />
@@ -68,42 +71,7 @@ export default function Latest() {
                 src="/assets/images/latest/4.jpeg"
                 className="obje object-contain"
                 alt=""
-                fill
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center relative">
-              <Image
-                src="/assets/images/latest/5.jpeg"
-                className="obje object-contain"
-                alt=""
-                fill
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center relative">
-              <Image
-                src="/assets/images/latest/6.jpeg"
-                className="obje object-contain"
-                alt=""
-                fill
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center relative">
-              <Image
-                src="/assets/images/latest/7.jpeg"
-                className="obje object-contain"
-                alt=""
-                fill
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="mySwiper flex justify-center items-center relative">
-              <Image
-                src="/assets/images/latest/8.jpeg"
-                className="obje object-contain"
-                alt=""
+                quality={30}
                 fill
                 loading="lazy"
               />

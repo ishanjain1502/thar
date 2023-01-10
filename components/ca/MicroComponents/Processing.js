@@ -1,12 +1,12 @@
 import React from "react";
 
-export default function Processing() {
+export default function Processing({ text = "Registering" }) {
   return (
     <div className="flex flex-col gap-4 my-4 justify-center items-center">
       <svg
         aria-hidden="true"
         role="status"
-        className="8 w-12 h-12 text-black animate-spin"
+        className="8 w-12 h-12 animate-spin"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ export default function Processing() {
           fill="currentColor"
         ></path>
       </svg>
-      <div className="text-2xl text-slate-900 font-semibold">Registering</div>
+      <div className="text-2xl font-semibold">{text}</div>
     </div>
   );
 }

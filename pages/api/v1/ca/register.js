@@ -30,6 +30,7 @@ const handler = async (req, res) => {
         res.status(200).json({ error: false, message: 'success', data: data.referralCode })
 
     } catch (error) {
+        console.log("error in ca-register.js page----",error);
         if (error.code === 11000) {
             return res.status(403).json({ error: true, message: 'Email already exists' })
         }

@@ -69,6 +69,10 @@ const userSchema = new mongoose.Schema({
         default: 0,
         min: 0,
         max: 1000
+    },
+    referredTharUser: {
+        type: [mongoose.Schema.Types.ObjectId],        
+        ref: 'tharUser' ,
     }
 }, {
     timestamps: true,

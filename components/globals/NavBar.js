@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [imgSize, setImgSize] = useState(485)
   useEffect(() => {
     window.addEventListener(
       "scroll",
@@ -12,10 +13,12 @@ export const NavBar = () => {
           document.getElementById("navbar").style.backgroundColor =
             "rgb(0 0 0 / 0.3)";
           document.getElementById("navbar").style.backdropFilter = "blur(24px)";
+          setImgSize(300)
         } else {
           document.getElementById("navbar").style.backgroundColor =
             "transparent";
           document.getElementById("navbar").style.backdropFilter = "blur(0px)";
+          setImgSize(485)
         }
       },
       []
@@ -29,7 +32,7 @@ export const NavBar = () => {
     >
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
         <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
-          <ul className="items-center justify-center hidden space-x-8 lg:flex">
+          <ul className="items-center justify-center hidden space-x-4 xl:space-x-8 lg:flex">
             <NavItemPrimary href="/events" text="EVENTS" />
             <NavItemPrimary href="/gokart" text="GOKART" />
             <NavItemPrimary href="/robowar" text="ROBOWAR" />
@@ -40,16 +43,17 @@ export const NavBar = () => {
             title="Thar 2023"
             className="inline-flex items-center lg:mx-auto"
           >
-            <Image
-              height={400}
-              width={400}
+            <img
+              height={imgSize}
+              width={imgSize}
               src="/assets/images/main/navBanner.png"
               alt="Thar 2023 Navigation Logo"
-              className="pointer-events-none w-auto sm:w-10/12 lg:w-auto"
+              // className="pointer-events-none w-auto sm:w-10/12 lg:w-auto"
+              className="tra transition-all ease-in-out scale-90 xl:scale-100 duration-300"
               draggable="false"
             />
           </Link>
-          <ul className="items-center justify-center hidden space-x-8 lg:flex">
+          <ul className="items-center justify-center hidden space-x-4 xl:space-x-8 lg:flex">
             <NavItemSecondary text="AMBASSADOR" href="/ca" />
             <NavItemSecondary text="TEAM" href="/team" />
             <NavItemSecondary text="SPONSORS" href="/sponsors" />

@@ -36,6 +36,7 @@ export default function Home() {
           <iframe
             src="https://www.youtube.com/embed/95RDe4rNQ_A"
             title="Thar 2020 Pronite"
+            loading="lazy"
             className="w-11/12 sm:w-10/12 md:w-8/12 aspect-video rounded framed p-4 sm:p-6 md:p-8 lg:p-10"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -46,7 +47,7 @@ export default function Home() {
         <Theme />
         <Latest />
         {/* TODO: */}
-        {/* <BottomNavBar /> */}
+        <BottomNavBar />
         <Footer />
         {isLoading && <Loader />}
       </div>
@@ -59,7 +60,7 @@ export default function Home() {
           className="w-[100vw] object-cover h-full pointer-events-none scale-110 brightness-[0.7]"
           id="bg-vid"
           preload="auto"
-          onLoadedData={() => setIsLoading(false)}
+          onLoadedMetadata={() => setIsLoading(false)}
         >
           <source src="/assets/videos/bg2.mp4" type="video/mp4" />
         </video>
