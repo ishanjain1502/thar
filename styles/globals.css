@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+
 /* Tailwind imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Importing Font */
+
 @font-face {
   font-family: "Space Boards";
   src: url("/assets/fonts/Space Boards.otf");
@@ -125,4 +128,12 @@ body:before {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* MUN part */
+/* Gokart */
+.gokart {
+  font-family: "Orbitron", sans-serif;
+}
+.gokart #home {
+  background-image: url("/assets/images/gokart/bg.png");
+  background-position: center;
+  background-size: cover;
+}
