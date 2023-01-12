@@ -21,7 +21,7 @@ export default function team() {
           <p className="font-spaceboards text-white text-5xl md:text-7xl mt-8">
             TEAM
           </p>
-          <div className="flex flex-col items-center w-8/12 mt-10">
+          <div className="flex flex-col items-center md:w-8/12 mt-10">
             <p className="font-spaceboards text-2xl underline underline-offset-4">
               ORGANIZING TEAM
             </p>
@@ -36,7 +36,7 @@ export default function team() {
                 name="Dr. A.K. Dwivedi"
                 pos="Dean Student Welfare"
               />
-              <div className="flex gap-3 sm:gap-10">
+              <div className="flex gap-12 pt-6 flex-wrap justify-center items-center">
                 <Member
                   src="ak"
                   name="Dr. D.K. Sambariya"
@@ -49,6 +49,11 @@ export default function team() {
                 />
               </div>
             </div>
+          </div>
+          <div className="flex flex-col items-center sm:max-w-sm mt-10">
+            <p className="font-spaceboards text-2xl underline underline-offset-4">
+              STUDENT ORGANIZERS
+            </p>
           </div>
         </div>
       </div>
