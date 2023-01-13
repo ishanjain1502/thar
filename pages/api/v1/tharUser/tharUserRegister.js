@@ -3,6 +3,7 @@ import withValidation from '../../../../middleware/withValidation'
 import validationSchema from '../../../../validators/v1/user/tharUser'
 import tharUser from '../../../../schema/tharUser/tharUsers'
 import user from '../../../../schema/ca/users'
+import withoutSpaces from '../../../../middleware/withoutSpaces';
 
 connectDB();  // connect to db
 
@@ -25,19 +26,23 @@ const handler = async (req, res) => {
         let tharID = "THAR23-";
         const random = generateString(6);
         tharID = tharID + random;
-     
-        const ca = await user.find({ referralCode : req.body.referredBy  })
+        req.body.referralCode = withoutSpaces(req.body.referralCode);
+
+        const ca = await user.find({ referralCode : req.body.referralCode  });
         
         if(ca.length != 0){
-            let referredCode = req.body.referredBy;
-            req.body.referredBy = ca[0]._id;
-            const data = await tharUser.create({ ...req.body, userTharID : tharID, referredCode: referredCode});
+            
+            let referredBy = ca[0]._id;
+            const data = await tharUser.create({ ...req.body, userTharID : tharID, referredBy: referredBy});
     
             const doc = await user.updateOne({_id : ca[0]._id}, {
                 referredTharUser : [...ca[0].referredTharUser, data._id]
             });
             res.status(200).json({ error: false, message: 'success', data: data.userTharID  })
         }else{
+
+            delete req.body.referralCode;
+
             const data = await tharUser.create({
                 ...req.body ,  userTharID : tharID
             })
