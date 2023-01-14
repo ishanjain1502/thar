@@ -18,7 +18,7 @@ const schema = new mongoose.Schema({
         type:String,
         required:true,
         minLength:10,
-        maxLength:10
+        maxLength:13
     },
     captainEmail:{
         type:String,
@@ -50,7 +50,7 @@ const schema = new mongoose.Schema({
     },
     additionalMembers:[
         {
-                  name:{
+                 name:{
                      type:String,
                      minLength:3,
                      maxLength:30
@@ -58,7 +58,7 @@ const schema = new mongoose.Schema({
                  phoneNo:{
                      type:String,
                      minLength:10,
-                     maxLength:10
+                     maxLength:13
                  },
                  email:{
                      type:String,
