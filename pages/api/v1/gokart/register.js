@@ -6,7 +6,7 @@ import { handleError } from '../../../../utility/handleError';
 
 connectDB();
 
-const handler = async() => {
+const handler = async(req,res) => {
     try{
 
         const newTeam = await goKart.create({ ...req.body})
@@ -14,7 +14,7 @@ const handler = async() => {
 
     }catch(err){
         console.log(err);
-        handleError(res , "error occured try again");
+        handleError(res , "error occurred try again!");
     }
 }
 

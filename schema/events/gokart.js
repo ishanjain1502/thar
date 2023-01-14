@@ -141,5 +141,5 @@ export const schema = new mongoose.Schema({
     timestamps: true,
 })
 
-const goKart = mongoose.model("gokart", schema);
+const goKart =  mongoose.models.gokart ||  mongoose.model("gokart", schema) ;
 export default goKart;
