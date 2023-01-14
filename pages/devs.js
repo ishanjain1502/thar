@@ -26,7 +26,7 @@ export default function Devs() {
           <div className="container mx-auto flex w-full flex-wrap justify-center gap-8">
             {/* Profile Block Start */}
             <ProfileBlock
-              src="https://pbs.twimg.com/profile_images/1559127771313348609/4mswsVBN_400x400.jpg"
+              src="https://pbs.twimg.com/profile_images/1612471674674483200/eHp3s1j7_400x400.jpg"
               name="Vishwa Gaurav"
               role="Frontend Developer"
               p="https://itsvg.in"

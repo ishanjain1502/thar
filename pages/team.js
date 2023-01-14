@@ -3,6 +3,8 @@ import React from "react";
 import Footer from "../components/globals/Footer";
 import { NavBar } from "../components/globals/NavBar";
 import Member from "../components/team/Member";
+import TeamCard from "../components/team/TeamCard";
+import { team_data } from "../data/team";
 
 export default function team() {
   return (
@@ -21,7 +23,7 @@ export default function team() {
           <p className="font-spaceboards text-white text-5xl md:text-7xl mt-8">
             TEAM
           </p>
-          <div className="flex flex-col items-center w-8/12 mt-10">
+          {/* <div className="flex flex-col items-center md:w-8/12 mt-10">
             <p className="font-spaceboards text-2xl underline underline-offset-4">
               ORGANIZING TEAM
             </p>
@@ -36,7 +38,7 @@ export default function team() {
                 name="Dr. A.K. Dwivedi"
                 pos="Dean Student Welfare"
               />
-              <div className="flex gap-3 sm:gap-10">
+              <div className="flex gap-12 pt-6 flex-wrap justify-center items-center">
                 <Member
                   src="ak"
                   name="Dr. D.K. Sambariya"
@@ -48,6 +50,23 @@ export default function team() {
                   pos="Coordinator THAR'23"
                 />
               </div>
+            </div>
+          </div> */}
+          <div className="flex flex-col items-center mt-10">
+            <p className="font-spaceboards text-2xl underline underline-offset-4 mb-10">
+              STUDENT ORGANIZERS
+            </p>
+            <div className="flex flex-row justify-center gap-8 lg:gap-10 flex-wrap w-full lg:max-w-4xl px-4">
+              {team_data.organizing.map((profile) => (
+                <TeamCard
+                  key={profile.name}
+                  name={profile.name}
+                  mob={profile.contact}
+                  mail={profile.email}
+                  insta={profile.instagram}
+                  linkedin={profile.linkedin}
+                />
+              ))}
             </div>
           </div>
         </div>
