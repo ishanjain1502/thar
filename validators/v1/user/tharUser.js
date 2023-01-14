@@ -20,7 +20,7 @@ const validationSchema = Joi.object({
     .required()
     .pattern(new RegExp("^[0-9]{6}$"))
     .message("Enter a valid 6 digit pincode"),
-  referralCode: Joi.string().optional(),
+  referralCode: Joi.string().allow('').optional(),
 });
 
 export default validationSchema;
