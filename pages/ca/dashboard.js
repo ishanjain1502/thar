@@ -6,7 +6,7 @@ import { NavBar } from "../../components/globals/NavBar";
 import Footer from "../../components/globals/Footer";
 import CaForm from "../../components/ca/CaForm";
 import ShowUser from "../../components/ca/ShowUser";
-import Processing from "../../components/ca/MicroComponents/Processing";
+import Processing from "../../components/MicroComponents/Processing";
 export default function Dashboard() {
   const router = useRouter();
   const { data } = useSession();

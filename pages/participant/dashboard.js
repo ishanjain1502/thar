@@ -5,6 +5,8 @@ import { NavBar } from "../../components/globals/NavBar";
 import Footer from "../../components/globals/Footer";
 import axios from "axios";
 import ParticipantForm from "../../components/participant/ParticipantForm";
+import Processing from "../../components/MicroComponents/Processing";
+import ShowParticipant from "../../components/participant/ShowParticipant";
 export default function Dashboard() {
   const router = useRouter();
   const { data } = useSession();
@@ -20,7 +22,6 @@ export default function Dashboard() {
   useEffect(() => {
     if (status === "authenticated") {
       axios.get("/api/v1/tharUser/getUser").then((res) => {
-        console.log(res);
         if (res.data.data == null) {
           setForm(true);
         } else {
@@ -29,7 +30,6 @@ export default function Dashboard() {
       });
     }
   }, [status]);
-  console.log(form);
   if (data != undefined) {
     return (
       <>
@@ -52,11 +52,11 @@ export default function Dashboard() {
                 Hello {data.user?.name}
               </div>
 
-              {/* {userData ? (
-                <ShowUser userData={userData} />
+              {userData ? (
+                <ShowParticipant userData={userData} />
               ) : (
                 <Processing text="Fetching Your data..." />
-              )} */}
+              )}
             </div>
           )}
         </div>
