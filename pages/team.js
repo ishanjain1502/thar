@@ -3,6 +3,8 @@ import React from "react";
 import Footer from "../components/globals/Footer";
 import { NavBar } from "../components/globals/NavBar";
 import Member from "../components/team/Member";
+import TeamCard from "../components/team/TeamCard";
+import { team_data } from "../data/team";
 
 export default function team() {
   return (
@@ -54,6 +56,15 @@ export default function team() {
             <p className="font-spaceboards text-2xl underline underline-offset-4">
               STUDENT ORGANIZERS
             </p>
+            {team_data.organizing.map((profile) => (
+              <TeamCard
+                name={profile.name}
+                mob={profile.contact}
+                mail={profile.email}
+                insta={profile.instagram}
+                linkedin={profile.linkedin}
+              />
+            ))}
           </div>
         </div>
       </div>
