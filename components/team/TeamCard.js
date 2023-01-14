@@ -13,13 +13,13 @@ export default function TeamCard({ name, mob, mail, insta, linkedin }) {
       <div className="relative w-60 aspect-[3/4] rounded-t-lg overflow-hidden">
         <Image src={`/assets/images/team/studentorg/${name}.jpg`} fill />
       </div>
-      <p className="font-spaceboards absolute w-full -translate-y-full flex flex-col justify-center items-center text-yellow-300 bg-black py-3 text-xl">
+      <p className="font-spaceboards absolute w-full -translate-y-full flex flex-col justify-center items-center text-yellow-300 bg-black py-3 text-lg">
         {name.toUpperCase()}
         <a
           href={`tel:${mob}`}
-          className="text-lg text-white flex items-center font-sans"
+          className="text-base text-white flex items-center font-sans"
         >
-          <BsTelephoneFill className="w-3.5 mr-1" /> {mob}
+          <BsTelephoneFill className="w-3 mr-1.5 -mb-0.5" /> {mob}
         </a>
       </p>
       <div className="flex w-full bg-yellow-300 py-3 text-black rounded-b-lg justify-center gap-4">
