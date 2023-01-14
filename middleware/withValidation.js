@@ -1,9 +1,8 @@
 
-const methods = ['POST']
 
-export default function withValidation(handler, schema) {
+export default function withValidation(handler, schema,method) {
     return (req, res) => {
-        if (!methods.includes(req.method)) {
+        if (method !== req.method) {
             return res.status(405).json({ error: true, message: 'Method not allowed' })
         }
         const { error, value } = schema.validate(req.body);

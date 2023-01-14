@@ -39,5 +39,5 @@ const handler = async (req, res) => {
 
 }
 
-export default withValidation(handler, validationSchema);
+export default withValidation(handler, validationSchema, 'POST');
 
