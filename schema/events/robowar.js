@@ -86,5 +86,5 @@ const schema = new mongoose.Schema({
     timestamps: true,
 })
 
-const roboWar = mongoose.model("robowar", schema);
+const roboWar = mongoose.models.robowar || mongoose.model("robowar", schema);
 export default roboWar;
