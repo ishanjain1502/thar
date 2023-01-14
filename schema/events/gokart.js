@@ -19,7 +19,7 @@ export const schema = new mongoose.Schema({
         type:String,
         required:true,
         minLength:10,
-        maxLength:10
+        maxLength:13
     },
     captainEmail:{
         type:String,
@@ -37,7 +37,7 @@ export const schema = new mongoose.Schema({
     driverPhoneNo:{
         type:String,
         minLength:10,
-        maxLength:10
+        maxLength:13
     },
     driverEmail:{
         type:String,
@@ -53,7 +53,7 @@ export const schema = new mongoose.Schema({
     coDriverPhoneNo:{
         type:String,
         minLength:10,
-        maxLength:10
+        maxLength:13
     },
     coDriverEmail:{
         type:String,
@@ -68,7 +68,7 @@ export const schema = new mongoose.Schema({
     coCaptainPhoneNo:{
         type:String,
         minLength:10,
-        maxLength:10
+        maxLength:13
     },
     coCaptainEmail:{
         type:String,
@@ -85,7 +85,7 @@ export const schema = new mongoose.Schema({
         type:String,
         required:true,
         minLength:10,
-        maxLength:10
+        maxLength:13
     },
     mentorEmail:{
         type:String,
@@ -113,7 +113,7 @@ export const schema = new mongoose.Schema({
             phoneNo:{
                 type:String,
                 minLength:10,
-                maxLength:10
+                maxLength:13
             },
             email:{
                 type:String,
