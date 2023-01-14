@@ -25,7 +25,6 @@ const schema = new mongoose.Schema({
         required:true,
         minLength: 16,
         maxLength: 50,
-        unique: true,
     },
     boatName:{
         type:String,
@@ -34,12 +33,9 @@ const schema = new mongoose.Schema({
         maxLength:30
     },
     category:{
-        KG15:{
-            type:Boolean,
-        },
-        KG30:{
-            type:Boolean,
-        }
+        type:String,
+        required:true,
+        enum:['15KG','30KG']
     },
     address:{
         type:String,
@@ -70,5 +66,25 @@ const schema = new mongoose.Schema({
                      maxLength: 50,
                  }
         }
-     ]
+     ],
+     payment:{
+        status:{
+            type:String,
+            default:"success"
+        },
+        txnId:{
+            type:String,
+            required:true
+        },
+        amount:{
+            type:String,
+            required:true
+        }
+    }
+},
+{
+    timestamps: true,
 })
+
+const roboWar = mongoose.model("robowar", schema);
+export default roboWar;

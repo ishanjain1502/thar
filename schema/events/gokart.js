@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-
+// Captain email is primary key
 
 export const schema = new mongoose.Schema({
     teamName:{
@@ -105,26 +105,41 @@ export const schema = new mongoose.Schema({
     },
     additionalMembers:[
        {
-                 name:{
-                    type:String,
-                    minLength:3,
-                    maxLength:30
-                },
-                phoneNo:{
-                    type:String,
-                    minLength:10,
-                    maxLength:10
-                },
-                email:{
-                    type:String,
-                    minLength: 16,
-                    maxLength: 50,
-                }
+            name:{
+                type:String,
+                minLength:3,
+                maxLength:30
+            },
+            phoneNo:{
+                type:String,
+                minLength:10,
+                maxLength:10
+            },
+            email:{
+                type:String,
+                minLength: 16,
+                maxLength: 50,
+            }
        }
-    ]
-    
-
+    ],
+    payment:{
+        status:{
+            type:String,
+            default:"success"
+        },
+        txnId:{
+            type:String,
+            required:true
+        },
+        amount:{
+            type:String,
+            required:true
+        },
+    }
+},
+{
+    timestamps: true,
 })
 
-const Gokart = mongoose.model("Gokart", schema);
-export default Gokart;
+const goKart = mongoose.model("gokart", schema);
+export default goKart;
