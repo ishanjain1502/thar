@@ -14,7 +14,7 @@ const handler = async (req, res) => {
       const data = await user
         .findOne({ email: session.user.email })
         .select(
-          "name email phone college degree year address referralCode referralCount referredTharUser"
+          "name email phone college degree year address referralCode referralCount"
         )
         .lean();
       return res.status(200).json({ error: false, message: "success", data });
