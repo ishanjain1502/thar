@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import React, { useEffect, useState } from "react";
 import { NavBar } from "../../components/globals/NavBar";
 import Footer from "../../components/globals/Footer";
