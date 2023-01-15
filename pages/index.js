@@ -11,6 +11,7 @@ import Footer from "../components/globals/Footer";
 import BottomNavBar from "../components/home/BottomNavBar";
 import Latest from "../components/home/Latest";
 import CountdownTimer from "../components/home/CountdownTimer";
+import Member from "../components/team/Member";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -46,6 +47,35 @@ export default function Home() {
 
         <Theme />
         <Latest />
+        <div className="flex flex-col items-center mt-10">
+          <p className="font-spaceboards text-2xl underline underline-offset-4">
+            ORGANIZING TEAM
+          </p>
+          <div className="flex flex-col gap-4 pt-6 flex-wrap justify-center items-center">
+            <Member
+              src="vc"
+              name="Dr. S.K. Singh"
+              pos="Hon'ble Vice Chancellor"
+            />
+            <Member
+              src="dk"
+              name="Dr. A.K. Dwivedi"
+              pos="Dean Student Welfare"
+            />
+            <div className="flex gap-10 pt-6 flex-wrap justify-center items-center">
+              <Member
+                src="ak"
+                name="Dr. D.K. Sambariya"
+                pos="Coordinator THAR'23"
+              />
+              <Member
+                src="rp"
+                name="Dr. Ritesh Patidar"
+                pos="Coordinator THAR'23"
+              />
+            </div>
+          </div>
+        </div>
         {/* TODO: */}
         <BottomNavBar />
         <Footer />
