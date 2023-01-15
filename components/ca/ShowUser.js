@@ -11,7 +11,7 @@ export default function ShowUser({ userData }) {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 p-2 gap-2 md:gap-4">
         <div className="bg-white rounded-lg text-center p-2 font-semibold">
-          {userData.referralCount} <br /> Referrals
+          {userData.referredTharUser.length} <br /> Referrals
         </div>
         <div className="bg-white rounded-lg text-center p-2 font-semibold">
           {userData.referralCode} <br /> Referral Code

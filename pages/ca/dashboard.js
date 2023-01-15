@@ -30,6 +30,7 @@ export default function Dashboard() {
       });
     }
   }, [status]);
+  console.log(userData);
   if (data != undefined) {
     return (
       <>
