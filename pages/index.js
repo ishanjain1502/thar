@@ -49,7 +49,7 @@ export default function Home() {
         <Latest />
         <div className="flex flex-col items-center mt-10">
           <p className="font-spaceboards text-2xl underline underline-offset-4">
-            ORGANIZING TEAM
+            OUR AUTHORITIES
           </p>
           <div className="flex flex-col gap-4 pt-6 flex-wrap justify-center items-center">
             <Member
