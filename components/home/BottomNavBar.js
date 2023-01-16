@@ -29,8 +29,8 @@ export default function BottomNavBar() {
           </Link>
         </div>
         <div className="p-2">
-          <Link href="/contact" legacyBehavior passHref>
-            <a>CONTACT</a>
+          <Link href="/sponsors" legacyBehavior passHref>
+            <a>SPONSORS</a>
           </Link>
         </div>
       </div>
