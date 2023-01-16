@@ -48,23 +48,17 @@ export default function Home() {
         <Theme />
         <Latest />
         <div className="flex flex-col items-center mt-10">
-          <p className="font-spaceboards text-2xl underline underline-offset-4">
-            OUR AUTHORITIES
-          </p>
-          <div className="flex flex-col gap-4 pt-6 flex-wrap justify-center items-center">
+          <p className="font-spaceboards text-2xl">CHIEF PATRON</p>
+          <div className="flex flex-col gap-4 pt-4 flex-wrap justify-center items-center">
             <Member
               src="vc"
-              name="Dr. S.K. Singh"
+              name="Prof. S.K. Singh"
               pos="Hon'ble Vice Chancellor"
-              des="Chief Patron THAR'23"
             />
-            <Member
-              src="dk"
-              name="Dr. A.K. Dwivedi"
-              pos="Dean SW & FA"
-              des="Patron THAR'23"
-            />
-            <div className="flex gap-10 pt-6 flex-wrap justify-center items-center">
+            <p className="font-spaceboards text-2xl">PATRON</p>
+            <Member src="dk" name="Prof. A.K. Dwivedi" pos="Dean SW & FA" />
+            <p className="font-spaceboards text-2xl">CONVENERS</p>
+            <div className="flex gap-10 pt-0 flex-wrap justify-center items-center">
               <Member
                 src="ak"
                 name="Dr. D.K. Sambariya"
