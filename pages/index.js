@@ -11,6 +11,7 @@ import Footer from "../components/globals/Footer";
 import BottomNavBar from "../components/home/BottomNavBar";
 import Latest from "../components/home/Latest";
 import CountdownTimer from "../components/home/CountdownTimer";
+
 import Participate from "../components/home/Participate";
 
 export default function Home() {
