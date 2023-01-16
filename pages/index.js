@@ -56,22 +56,24 @@ export default function Home() {
               src="vc"
               name="Dr. S.K. Singh"
               pos="Hon'ble Vice Chancellor"
+              des="Chief Patron THAR'23"
             />
             <Member
               src="dk"
               name="Dr. A.K. Dwivedi"
               pos="Dean Student Welfare"
+              des="Patron THAR'23"
             />
             <div className="flex gap-10 pt-6 flex-wrap justify-center items-center">
               <Member
                 src="ak"
                 name="Dr. D.K. Sambariya"
-                pos="Coordinator THAR'23"
+                des="Coordinator THAR'23"
               />
               <Member
                 src="rp"
                 name="Dr. Ritesh Patidar"
-                pos="Coordinator THAR'23"
+                des="Dy. Coordinator THAR'23"
               />
             </div>
           </div>
