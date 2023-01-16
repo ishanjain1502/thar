@@ -86,7 +86,7 @@ const tharUserSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "user" ,      
     },
-    referredCode: {
+    referralCode: {
         type: String,
         minLength: 9,
         maxLength: 9,     
