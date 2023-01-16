@@ -18,7 +18,17 @@ export default function ShowUser({ userData }) {
         </div>
         <div className="w-1/2 lg:w-1/4 p-2">
           <div className="rounded-lg text-center flex flex-col justify-center place-items-center p-2 font-semibold h-full bg-emerald-200 py-6 text-xl">
-            {userData.referralCode}
+            <div className="text-center">
+              {userData.referralCode}{" "}
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(userData.referralCode);
+                  alert(`CA id ${userData.referralCode} copied to clipboard`);
+                }}
+              >
+                📋
+              </button>
+            </div>
             <div className="font-normal pt-2 text-base">Referral Code</div>
           </div>
         </div>
