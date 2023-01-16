@@ -155,7 +155,7 @@ export const NavBar = () => {
                   {session ? (
                     <Link
                       type="button"
-                      className="text-black bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-sans shadow-xl hover:ring-2 ring-yellow-500"
+                      className="text-black bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center font-sans shadow-xl hover:ring-2 ring-yellow-500"
                       href="/participant/dashboard"
                     >
                       👤 Profile
@@ -163,7 +163,7 @@ export const NavBar = () => {
                   ) : (
                     <button
                       type="button"
-                      className="text-black bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-sans shadow-xl hover:ring-2 ring-yellow-500"
+                      className="text-black bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center font-sans shadow-xl hover:ring-2 ring-yellow-500"
                       onClick={() =>
                         signIn("google", {
                           callbackUrl: "/participant/dashboard",
