@@ -62,7 +62,7 @@ export const NavBar = () => {
             {session ? (
               <Link
                 type="button"
-                class="text-black bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-sans shadow-xl hover:ring-2 ring-yellow-500"
+                className="text-black bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-sans shadow-xl hover:ring-2 ring-yellow-500"
                 href="/participant/dashboard"
               >
                 👤 Profile
@@ -70,7 +70,7 @@ export const NavBar = () => {
             ) : (
               <button
                 type="button"
-                class="text-black bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-sans shadow-xl hover:ring-2 ring-yellow-500"
+                className="text-black bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-sans shadow-xl hover:ring-2 ring-yellow-500"
                 onClick={() =>
                   signIn("google", { callbackUrl: "/participant/dashboard" })
                 }
@@ -151,19 +151,33 @@ export const NavBar = () => {
                   <NavItemSecondary text="Campus Ambassador" href="/ca" />
                   <NavItemSecondary text="Team" href="/team" />
                   <NavItemSecondary text="Sponsors" href="/sponsors" />
-                  <button
-                    type="button"
-                    class="text-black bg-white font-medium rounded-lg text-sm px-10 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-sans shadow-xl hover:ring-2 ring-yellow-500"
-                    title="Coming Soon"
-                    onClick={() => alert("Coming Soon")}
-                  >
-                    <img
-                      src="/assets/images/main/google.png"
-                      alt=""
-                      className="w-4 mr-2"
-                    />
-                    Sign in
-                  </button>
+                  {/* Show button on the basis of session */}
+                  {session ? (
+                    <Link
+                      type="button"
+                      className="text-black bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-sans shadow-xl hover:ring-2 ring-yellow-500"
+                      href="/participant/dashboard"
+                    >
+                      👤 Profile
+                    </Link>
+                  ) : (
+                    <button
+                      type="button"
+                      className="text-black bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-sans shadow-xl hover:ring-2 ring-yellow-500"
+                      onClick={() =>
+                        signIn("google", {
+                          callbackUrl: "/participant/dashboard",
+                        })
+                      }
+                    >
+                      <img
+                        src="/assets/images/main/google.png"
+                        alt=""
+                        className="w-4 mr-2"
+                      />
+                      Sign in
+                    </button>
+                  )}
                 </ul>
               </nav>
             </div>
