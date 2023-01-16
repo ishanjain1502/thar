@@ -13,6 +13,8 @@ import Latest from "../components/home/Latest";
 import CountdownTimer from "../components/home/CountdownTimer";
 import Member from "../components/team/Member";
 
+import Participate from "../components/home/Participate";
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -31,6 +33,7 @@ export default function Home() {
         {!isLoading && <CountdownTimer />}
         <About />
         <BecomeCA />
+        <Participate />
         <Highlights />
         {/* Thar Pronite 2020 video */}
         <div className="flex justify-center w-full mb-10">

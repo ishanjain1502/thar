@@ -1,4 +1,4 @@
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signIn } from "next-auth/react";
 import Link from "next/link";
 
 export default function AuthenticationButton() {
@@ -6,18 +6,11 @@ export default function AuthenticationButton() {
   if (session) {
     return (
       <>
-        {/* <button
-          className="transition-all w-fit mx-auto bg-black text-white py-2 px-4 rounded-xl justify-center items-center mt-4 active:scale-95"
-          onClick={() => signOut()}
-        >
-          Sign out
-        </button> */}
-
         <Link
-          className="block transition-all w-fit bg-black text-white py-2 px-4 rounded-xl mt-8 active:scale-95 mx-auto"
-          href="/ca/dashboard"
+          className="block transition-all w-fit bg-white text-black py-2 px-4 rounded-xl mt-8 active:scale-95 mx-auto"
+          href="/participant/dashboard"
         >
-          CA Dashboard
+          Participant Dashboard
         </Link>
       </>
     );
@@ -25,8 +18,10 @@ export default function AuthenticationButton() {
   return (
     <>
       <button
-        className="transition-all w-fit mx-auto bg-white text-black py-2 px-4 rounded-md ring-2 ring-black/40 justify-center items-center mt-4 active:scale-95 flex flex-row gap-2"
-        onClick={() => signIn("google", { callbackUrl: "/ca/dashboard" })}
+        className="transition-all w-fit mx-auto bg-white text-black py-2 px-4 rounded-md justify-center items-center mt-4 active:scale-95 flex flex-row gap-2"
+        onClick={() =>
+          signIn("google", { callbackUrl: "/participant/dashboard" })
+        }
       >
         <GOOGLE_LOGO className="w-6 h-6" /> Continue with Google
       </button>

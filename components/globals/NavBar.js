@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { signIn, useSession } from "next-auth/react";
 export const NavBar = () => {
+  const { data: session } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [imgSize, setImgSize] = useState(485);
   useEffect(() => {
@@ -24,9 +26,6 @@ export const NavBar = () => {
       []
     );
   });
-  function signIn() {
-    alert("Coming Soon!");
-  }
 
   return (
     <div
@@ -59,19 +58,31 @@ export const NavBar = () => {
           <ul className="items-center justify-center hidden space-x-4 xl:space-x-8 lg:flex">
             <NavItemSecondary text="AMBASSADOR" href="/ca" />
             <NavItemSecondary text="TEAM" href="/team" />
-            <button
-              type="button"
-              class="text-black bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-sans shadow-xl hover:ring-2 ring-yellow-500"
-              title="Coming Soon"
-              onClick={() => signIn()}
-            >
-              <img
-                src="/assets/images/main/google.png"
-                alt=""
-                className="w-4 mr-2"
-              />
-              Sign in
-            </button>
+            {/* Show button on the basis of session */}
+            {session ? (
+              <Link
+                type="button"
+                class="text-black bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-sans shadow-xl hover:ring-2 ring-yellow-500"
+                href="/participant/dashboard"
+              >
+                👤 Profile
+              </Link>
+            ) : (
+              <button
+                type="button"
+                class="text-black bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-sans shadow-xl hover:ring-2 ring-yellow-500"
+                onClick={() =>
+                  signIn("google", { callbackUrl: "/participant/dashboard" })
+                }
+              >
+                <img
+                  src="/assets/images/main/google.png"
+                  alt=""
+                  className="w-4 mr-2"
+                />
+                Sign in
+              </button>
+            )}
           </ul>
           <div className="ml-auto lg:hidden">
             <button
