@@ -9,19 +9,30 @@ export default function ShowUser({ userData }) {
         🗺️ {userData.address} <br />
         📞 {userData.phone}
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 p-2 gap-2 md:gap-4">
-        <div className="bg-white rounded-lg text-center p-2 font-semibold">
-          {userData.referralCount} <br /> Referrals
+      <div className="flex flex-row flex-wrap flex-shrink-0 justify-center p-2">
+        <div className="w-1/2 lg:w-1/4 p-2">
+          <div className="rounded-lg text-center flex flex-col justify-center place-items-center p-2 font-semibold h-full bg-purple-200 py-6 text-xl">
+            {userData.referralCount}
+            <div className="font-normal pt-2 text-base">Referrals</div>
+          </div>
         </div>
-        <div className="bg-white rounded-lg text-center p-2 font-semibold">
-          {userData.referralCode} <br /> Referral Code
+        <div className="w-1/2 lg:w-1/4 p-2">
+          <div className="rounded-lg text-center flex flex-col justify-center place-items-center p-2 font-semibold h-full bg-emerald-200 py-6 text-xl">
+            {userData.referralCode}
+            <div className="font-normal pt-2 text-base">Referral Code</div>
+          </div>
         </div>
-        <div className="bg-white rounded-lg text-center p-2 font-semibold">
-          {userData.year} <br /> {userData.degree}
+        <div className="w-1/2 lg:w-1/4 p-2">
+          <div className="rounded-lg text-center flex flex-col justify-center place-items-center p-2 font-semibold h-full bg-sky-200 py-6 text-xl">
+            {userData.year}
+            <div className="font-normal pt-2 text-base">{userData.degree}</div>
+          </div>
         </div>
-        <div className="bg-white rounded-lg text-center p-2 font-semibold">
-          +91 7240732728 <br />
-          Support
+        <div className="w-1/2 lg:w-1/4 p-2">
+          <div className="rounded-lg text-center flex flex-col justify-center place-items-center p-2 font-semibold h-full bg-yellow-200 py-6 text-xl">
+            +91 7240732728{" "}
+            <div className="font-normal pt-2 text-base">Support</div>
+          </div>
         </div>
       </div>
       <button

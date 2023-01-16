@@ -38,12 +38,12 @@ export default function Dashboard() {
           {form ? (
             <ParticipantForm name={data.user?.name} email={data.user?.email} />
           ) : (
-            <div className="w-[95%] sm:w-[90%] md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl bg-black/10 backdrop-blur-2xl rounded-md text-white mx-auto ring-yellow-300/60 ring-4 md:ring-[5px] pb-6">
+            <div className="w-[95%] sm:w-[90%] md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl bg-white backdrop-blur-2xl rounded-md text-black mx-auto pb-12">
               <div className="relative pt-16 mt-16 rounded-t-md">
                 <img
                   src={data.user?.image}
                   referrerPolicy="no-referrer"
-                  className="w-28 aspect-square mx-auto rounded-full ring-yellow-300/60 ring-4 md:ring-[5px] absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2"
+                  className="w-28 aspect-square mx-auto rounded-full ring-white/80 ring-4 md:ring-[5px] absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2"
                   loading="lazy"
                   alt=""
                 />
