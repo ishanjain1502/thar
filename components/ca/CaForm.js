@@ -76,7 +76,7 @@ export default function CaForm({ email, name }) {
             <Processing />
           ) : // if not processing then check for submitted or not
           submitted ? (
-            <Submitted id={caId} />
+            <Submitted />
           ) : (
             <>
               <div>
