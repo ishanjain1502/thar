@@ -9,7 +9,7 @@ export const domains_data = {
     "Great functionality without good designing is like a car without engine and here lies the core idea of this sphere of events, providing a platform to contingent, for tracing up their imaginative innovations out of their minds to real life, carving up their manufacturing skills which are highly desired in the automobile and Machine Industry.",
   code_wars:
     "The war of the binary world. This term includes upholding events which help you improve your logical thinking skills by allowing you to see problems from a new perspective. Complex coding projects here are made up of smaller tasks and by breaking down those problems and adopting a methodological way of thinking, you can tackle any challenge.",
-  design_and_graphics:
+  combat_of_designs:
     "Creativity is within, we are designed to create, so let's connect through the language of designing, typography, colour, imagery and form. Compete with the most skilled graphic designers of your age and enhance your skills to create a unique identity for yourself in this progressive world through designing events at RTU THAR'23.",
   marketing_and_management:
     "The Marketing & Management territory reinforces the marketing and business skills of students. It nourishes those skills in order to make them competent enough to deal with real life circumstances. These skills help professionals understand consumers and organizational behaviour. They may include team management, leadership and  communication.",
