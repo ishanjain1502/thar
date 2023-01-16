@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [imgSize, setImgSize] = useState(485)
+  const [imgSize, setImgSize] = useState(485);
   useEffect(() => {
     window.addEventListener(
       "scroll",
@@ -13,24 +13,27 @@ export const NavBar = () => {
           document.getElementById("navbar").style.backgroundColor =
             "rgb(0 0 0 / 0.3)";
           document.getElementById("navbar").style.backdropFilter = "blur(24px)";
-          setImgSize(300)
+          setImgSize(300);
         } else {
           document.getElementById("navbar").style.backgroundColor =
             "transparent";
           document.getElementById("navbar").style.backdropFilter = "blur(0px)";
-          setImgSize(485)
+          setImgSize(485);
         }
       },
       []
     );
   });
+  function signIn() {
+    alert("Coming Soon!");
+  }
 
   return (
     <div
       id="navbar"
       className="font-spaceboards fixed z-40 transition-all ease-in-out w-full"
     >
-      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
+      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8 text-sm xl:text-base">
         <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
           <ul className="items-center justify-center hidden space-x-4 xl:space-x-8 lg:flex">
             <NavItemPrimary href="/events" text="EVENTS" />
@@ -56,7 +59,19 @@ export const NavBar = () => {
           <ul className="items-center justify-center hidden space-x-4 xl:space-x-8 lg:flex">
             <NavItemSecondary text="AMBASSADOR" href="/ca" />
             <NavItemSecondary text="TEAM" href="/team" />
-            <NavItemSecondary text="SPONSORS" href="/sponsors" />
+            <button
+              type="button"
+              class="text-black bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-sans shadow-xl hover:ring-2 ring-yellow-500"
+              title="Coming Soon"
+              onClick={() => signIn()}
+            >
+              <img
+                src="/assets/images/main/google.png"
+                alt=""
+                className="w-4 mr-2"
+              />
+              Sign in
+            </button>
           </ul>
           <div className="ml-auto lg:hidden">
             <button
@@ -125,6 +140,19 @@ export const NavBar = () => {
                   <NavItemSecondary text="Campus Ambassador" href="/ca" />
                   <NavItemSecondary text="Team" href="/team" />
                   <NavItemSecondary text="Sponsors" href="/sponsors" />
+                  <button
+                    type="button"
+                    class="text-black bg-white font-medium rounded-lg text-sm px-10 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-sans shadow-xl hover:ring-2 ring-yellow-500"
+                    title="Coming Soon"
+                    onClick={() => alert("Coming Soon")}
+                  >
+                    <img
+                      src="/assets/images/main/google.png"
+                      alt=""
+                      className="w-4 mr-2"
+                    />
+                    Sign in
+                  </button>
                 </ul>
               </nav>
             </div>
@@ -139,7 +167,7 @@ const NavItemPrimary = ({ href, text }) => {
     <li>
       <Link
         href={href}
-        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400 p-2 text-center"
+        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400 text-center"
         title={text}
       >
         {text}
