@@ -61,7 +61,7 @@ export default function Home() {
             <Member
               src="dk"
               name="Dr. A.K. Dwivedi"
-              pos="Dean Student Welfare"
+              pos="Dean SW & FA"
               des="Patron THAR'23"
             />
             <div className="flex gap-10 pt-6 flex-wrap justify-center items-center">
