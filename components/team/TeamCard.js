@@ -9,7 +9,10 @@ import {
 
 export default function TeamCard({ name, mob, mail, insta, linkedin }) {
   return (
-    <div key={name} className="relative ring-yellow-300 rounded-lg shadow-xl">
+    <div
+      key={name}
+      className="relative ring-yellow-300 rounded-lg shadow-xl hover:scale-[1.02] transition-all ease-in-out"
+    >
       <div className="relative w-60 aspect-[3/4] rounded-t-lg overflow-hidden">
         <Image src={`/assets/images/team/studentorg/${name}.jpg`} fill />
       </div>
