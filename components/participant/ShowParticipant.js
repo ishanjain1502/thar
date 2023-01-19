@@ -43,7 +43,7 @@ export default function ShowParticipant({ userData }) {
         </div>
         <div className="w-1/2 lg:w-1/4 p-2">
           <div className="rounded-lg text-center flex flex-col justify-center place-items-center p-2 font-semibold h-full bg-yellow-200 py-6 text-xl">
-            +91 7240732728{" "}
+            +91 90798 10261{" "}
             <div className="font-normal pt-2 text-base">Support</div>
           </div>
         </div>
