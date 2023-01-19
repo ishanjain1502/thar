@@ -49,7 +49,7 @@ export default function Dashboard() {
                 />
               </div>
               <div className="p-2 md:p-4 text-center text-2xl font-semibold">
-                Hello {data.user?.name}
+                Hello, {data.user?.name}
               </div>
 
               {userData ? (
