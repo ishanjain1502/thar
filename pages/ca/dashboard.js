@@ -6,7 +6,7 @@ import { NavBar } from "../../components/globals/NavBar";
 import Footer from "../../components/globals/Footer";
 import CaForm from "../../components/ca/CaForm";
 import ShowUser from "../../components/ca/ShowUser";
-import Processing from "../../components/ca/MicroComponents/Processing";
+import Processing from "../../components/MicroComponents/Processing";
 export default function Dashboard() {
   const router = useRouter();
   const { data } = useSession();
@@ -38,7 +38,7 @@ export default function Dashboard() {
           {form ? (
             <CaForm name={data.user?.name} email={data.user?.email} />
           ) : (
-            <div className="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[60%] xl:w-[50%] 2xl:w-[45%] bg-white/90 backdrop-blur-3xl text-black rounded-lg mx-auto px-2 md:px-4 py-4 mt-16">
+            <div className="w-[95%] sm:w-[90%] md:max-w-2xl lg:max-w-3xl xl:max-w-4xl  bg-white backdrop-blur-2xl rounded-md text-black mx-auto pb-12 px-2 md:px-4 mt-16">
               <div className="relative mb-16 flex justify-center items-center">
                 <img
                   src={data.user?.image}

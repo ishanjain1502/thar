@@ -67,11 +67,26 @@ const tharUserSchema = new mongoose.Schema({
         maxLength: 20,
         unique: true
     },
+    paymentStatus: {
+        type: Boolean,
+        required: true,
+        default: false,
+    },
+    credits: {
+        type: Number,
+        required: true,
+        default: 0
+    },
+    events: {
+        type: [String],
+        required: true,
+        default : []
+    },
     referredBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "user" ,      
     },
-    referredCode: {
+    referralCode: {
         type: String,
         minLength: 9,
         maxLength: 9,     

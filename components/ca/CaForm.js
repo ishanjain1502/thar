@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Processing from "./MicroComponents/Processing";
-import Submitted from "./MicroComponents/Submitted";
+import Processing from "../MicroComponents/Processing";
+import Submitted from "../MicroComponents/Submitted";
 import { useRouter } from "next/router";
+import { signOut } from "next-auth/react";
 
 export default function CaForm({ email, name }) {
   const router = useRouter();
@@ -75,7 +76,7 @@ export default function CaForm({ email, name }) {
             <Processing />
           ) : // if not processing then check for submitted or not
           submitted ? (
-            <Submitted id={caId} />
+            <Submitted />
           ) : (
             <>
               <div>
@@ -293,6 +294,12 @@ export default function CaForm({ email, name }) {
                   </div>
                 </form>
               </div>
+              <button
+                className="transition-all w-fit mx-auto bg-black ring-4 ring-black/80 text-white rounded-lg py-2 px-4  justify-center items-center mt-4 active:scale-95 flex flex-row gap-2"
+                onClick={() => signOut()}
+              >
+                Sign out
+              </button>
             </>
           )}
         </div>
