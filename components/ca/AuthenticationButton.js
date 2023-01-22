@@ -26,7 +26,7 @@ export default function AuthenticationButton() {
     <>
       <button
         className="transition-all w-fit mx-auto bg-white text-black py-2 px-4 rounded-md ring-2 ring-black/40 justify-center items-center mt-4 active:scale-95 flex flex-row gap-2"
-        onClick={() => signIn("google")}
+        onClick={() => signIn("google", { callbackUrl: "/ca/dashboard" })}
       >
         <GOOGLE_LOGO className="w-6 h-6" /> Continue with Google
       </button>

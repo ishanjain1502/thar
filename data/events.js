@@ -306,7 +306,7 @@ export let robotics = [];
 export let structures = [];
 export let automate = [];
 export let startup_hub = [];
-export let design_and_graphics = [];
+export let combat_of_designs = [];
 export let finance = [];
 export let marketing_and_management = [];
 export let aeromodelling = [];
@@ -329,7 +329,7 @@ for (let i = 0; i < events_data.length; i++) {
     startup_hub.push(events_data[i]);
   }
   if (events_data[i].domain.includes("Design")) {
-    design_and_graphics.push(events_data[i]);
+    combat_of_designs.push(events_data[i]);
   }
   if (events_data[i].domain.includes("Finance")) {
     finance.push(events_data[i]);
@@ -351,7 +351,7 @@ export let filtered_events = {
   structures: structures,
   automate: automate,
   startup_hub: startup_hub,
-  design_and_graphics: design_and_graphics,
+  combat_of_designs: combat_of_designs,
   finance: finance,
   marketing_and_management: marketing_and_management,
   aeromodelling: aeromodelling,
