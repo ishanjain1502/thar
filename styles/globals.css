@@ -138,6 +138,17 @@ body:before {
   background-position: center;
   background-size: cover;
 }
+.gokart #highlights {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(2, 0, 36, 0.5) 100%
+    ),
+    url("/assets/images/gokart/glimpse/1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 /* MUN */
 .mun {
   font-family: "Poppins", sans-serif;
