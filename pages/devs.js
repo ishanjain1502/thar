@@ -35,6 +35,15 @@ export default function Devs() {
               g="VishwaGauravIn"
             />
             <ProfileBlock
+              src="https://avatars.githubusercontent.com/u/59048004"
+              name="Aniruddh Soni"
+              role="Full Stack Developer"
+              p="https://aniruddhsoni.ml"
+              l="aniruddha-soni-7274261b9"
+              t="AnirudhSoni1012"
+              g="AniruddhaSoni"
+            />
+            <ProfileBlock
               src="https://pbs.twimg.com/profile_images/1603566962151690240/fP6RR4ag_400x400.jpg"
               name="Pushkar Yadav"
               role="Frontend Developer"

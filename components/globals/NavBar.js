@@ -146,8 +146,17 @@ export const NavBar = () => {
               <nav className="my-auto">
                 <ul className="space-y-10 py-6 flex-col justify-center items-center text-center">
                   <NavItemPrimary href="/events" text="Events" />
-                  <NavItemPrimary href="/gokart" text="Gokart" />
-                  <NavItemPrimary href="/robowar" text="Robowar" />
+                  <ul className="space-y-4">
+                    <li>
+                      <NavItemPrimary href="/mun" text="MUN" />
+                    </li>
+                    <li>
+                      <NavItemPrimary href="/gokart" text="Gokart" />
+                    </li>
+                    <li>
+                      <NavItemPrimary href="/robowar" text="Robowar" />
+                    </li>
+                  </ul>
                   <NavItemSecondary text="Campus Ambassador" href="/ca" />
                   <NavItemSecondary text="Team" href="/team" />
                   <NavItemSecondary text="Sponsors" href="/sponsors" />
