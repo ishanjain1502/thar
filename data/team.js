@@ -41,4 +41,26 @@ export const team_data = {
       instagram: "https://instagram.com/aka__wolfie",
     },
   ],
+  gokart: [
+    {
+      name: "Uttam Sharma",
+      contact: 7665047450,
+      email: "us5047450@gmail.com",
+      instagram: "https://www.instagram.com/sharma.ut.2305/",
+      linkedin: "https://www.linkedin.com/in/uttam-sharma-3354901a4",
+    },
+    {
+      name: "Ritik Rao",
+      contact: 7665047450,
+      email: "ritik.manraj@gmail.com",
+      instagram: "https://www.instagram.com/raoritik_68",
+    },
+    {
+      name: "Mohit Goyal",
+      contact: 7665047450,
+      email: "mogohy01@gmail.com",
+      instagram: "https://www.instagram.com/goyal8663/",
+      linkedin: "https://www.linkedin.com/in/mohit-goyal-711837193",
+    },
+  ],
 };
