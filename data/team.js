@@ -50,17 +50,38 @@ export const team_data = {
       linkedin: "https://www.linkedin.com/in/uttam-sharma-3354901a4",
     },
     {
-      name: "Ritik Rao",
-      contact: 7665047450,
+      name: "Ritik Yadav",
+      contact: 7734097782,
       email: "ritik.manraj@gmail.com",
       instagram: "https://www.instagram.com/raoritik_68",
     },
     {
       name: "Mohit Goyal",
-      contact: 7665047450,
+      contact: 7725919475,
       email: "mogohy01@gmail.com",
       instagram: "https://www.instagram.com/goyal8663/",
       linkedin: "https://www.linkedin.com/in/mohit-goyal-711837193",
+    },
+  ],
+  robo: [
+    {
+      name: "Shubham Jain",
+      contact: 9001426919,
+      email: "mog7725919475ohy01@gmail.com",
+      instagram: "https://www.instagram.com/goyal8663/",
+      linkedin: "https://www.linkedin.com/in/mohit-goyal-711837193",
+    },
+    {
+      name: "Rohit Kawlani",
+      contact: 9079255769,
+      email: "rohitkawlani7@gmail.com ",
+      instagram: "https://instagram.com/__.rohittt._?igshid=YmMyMTA2M2Y=/",
+    },
+    {
+      name: "Abhay Sharma",
+      contact: 9521380265,
+      email: "mog7725919475ohy01@gmail.com",
+      instagram: "https://www.instagram.com/Oye__abhay/",
     },
   ],
 };
