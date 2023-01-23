@@ -17,13 +17,13 @@ export default function Hero() {
               </div>
               <div className="flex flex-row flex-wrap gap-2">
                 <a
-                  href=""
+                  href="https://drive.google.com/file/d/1D5SFx9wd5FYXDPXNSJJsse-TIQrVizd2/view?usp=sharing"
                   className="rounded-md ring-2 ring-yellow-300 bg-yellow-300 text-black font-semibold px-4 py-2 self-start"
                 >
                   Rulebook
                 </a>
                 <a
-                  href=""
+                  href="#"
                   className="rounded-md ring-2 ring-yellow-300 text-yellow-300 px-2 py-2 self-start"
                 >
                   Register Now
