@@ -19,13 +19,13 @@ export default function GokartNavbar() {
           </a>
         </li>
         <li>
-          <a href="">Glimpse</a>
+          <a href="#highlight">Glimpse</a>
         </li>
         <li>
-          <a href="">Team</a>
+          <a href="#team">Team</a>
         </li>
         <li>
-          <a href="">FAQ</a>
+          <a href="#FAQ">FAQ</a>
         </li>
       </ul>
     </div>
