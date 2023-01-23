@@ -11,7 +11,7 @@ export default function gokart() {
     <>
       <div className="rcnitro">
         <Head>
-          <title>THAR Rc-Nitro Championship</title>
+          <title>THAR RC NITRO Championship</title>
         </Head>
         <NavBar />
         <Hero />

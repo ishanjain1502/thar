@@ -9,7 +9,7 @@ export default function Hero() {
           <div className="flex justify-between items-center flex-col md:flex-row w-full  gap-4 md:gap-0">
             <div className="flex flex-col">
               <div className="text-4xl md:text-6xl font-semibold">
-                <span className="text-yellow-300">Thar</span> Rc-Nitro
+                <span className="text-yellow-300">Thar</span> RC NITRO
                 Championship!
               </div>
               <div className="font-semibold py-4">
