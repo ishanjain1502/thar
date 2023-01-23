@@ -4,8 +4,10 @@ export default function RoboHero() {
   return (
     <div id="home" className="">
       <div className="md:w-10/12 flex flex-col md:justify-center m-auto min-h-screen justify-end py-8 w-11/12 ">
-        <span className="text-red-400 font-orbi font-black text-xl">THAR</span>
-        <h1 className="font-blackops text-6xl md:text-8xl text-yellow-400">
+        <span className="text-red-400 font-blackops font-black text-2xl">
+          THAR
+        </span>
+        <h1 className="font-blackops text-6xl md:text-9xl text-yellow-400">
           ROBOWAR
         </h1>
         <div className="flex gap-8 items-center text-lg font-semibold md:self-start">
