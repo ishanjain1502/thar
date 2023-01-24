@@ -17,7 +17,7 @@ export default function Hero() {
               </div>
               <div className="flex flex-row flex-wrap gap-2">
                 <a
-                  href="https://drive.google.com/file/d/1D5SFx9wd5FYXDPXNSJJsse-TIQrVizd2/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1b9S1ZdidrhSDC-Z3WUMtcNaEdnP667Fr/view?usp=sharing"
                   className="rounded-md ring-2 ring-yellow-300 bg-yellow-300 text-black font-semibold px-4 py-2 self-start"
                 >
                   Rulebook
