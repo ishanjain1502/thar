@@ -156,6 +156,9 @@ export const NavBar = () => {
                     <li>
                       <NavItemPrimary href="/robowar" text="Robowar" />
                     </li>
+                    <li>
+                      <NavItemPrimary text="RC NITRO" href="/rcnitro" />
+                    </li>
                   </ul>
                   <NavItemSecondary text="Campus Ambassador" href="/ca" />
                   <NavItemSecondary text="Team" href="/team" />
