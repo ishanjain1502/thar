@@ -11,7 +11,7 @@ export default function TeamCard({ name, mob, mail, insta, linkedin }) {
   return (
     <div
       key={name}
-      className="relative ring-red-400 rounded-lg shadow-xl hover:scale-[1.02] transition-all ease-in-out"
+      className="relative ring-yellow-300 rounded-lg shadow-xl hover:scale-[1.02] transition-all ease-in-out"
     >
       <div className="relative w-60 aspect-[3/4] rounded-t-lg overflow-hidden">
         <Image
@@ -20,7 +20,7 @@ export default function TeamCard({ name, mob, mail, insta, linkedin }) {
           className="object-cover object-center"
         />
       </div>
-      <p className="font-spaceboards absolute w-full -translate-y-full flex flex-col justify-center items-center text-red-400 bg-black py-3 text-lg">
+      <p className="font-spaceboards absolute w-full -translate-y-full flex flex-col justify-center items-center text-yellow-300 bg-black py-3 text-lg">
         {name.toUpperCase()}
         <a
           href={`tel:${mob}`}
@@ -29,7 +29,7 @@ export default function TeamCard({ name, mob, mail, insta, linkedin }) {
           <BsTelephoneFill className="w-3 mr-1.5 -mb-0.5" /> {mob}
         </a>
       </p>
-      <div className="flex w-full bg-red-400 py-3 text-black rounded-b-lg justify-center gap-4">
+      <div className="flex w-full bg-yellow-300 py-3 text-black rounded-b-lg justify-center gap-4">
         {mail && (
           <a href={`mailto:${mail}`}>
             <BsEnvelopeFill

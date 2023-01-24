@@ -4,7 +4,7 @@ import Footer from "../components/globals/Footer";
 import { NavBar } from "../components/globals/NavBar";
 import Faq from "../components/rcnitro/Faq";
 import Hero from "../components/rcnitro/Hero";
-// import Team from "../components/rcnitro/Team";
+import Team from "../components/rcnitro/Team";
 
 export default function gokart() {
   return (
@@ -15,7 +15,7 @@ export default function gokart() {
         </Head>
         <NavBar />
         <Hero />
-        {/* <Team /> */}
+        <Team />
         <Faq />
         <Footer />
       </div>

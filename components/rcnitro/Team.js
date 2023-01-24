@@ -4,9 +4,9 @@ import TeamCard from "./TeamCard";
 
 export default function Team() {
   return (
-    <div id="team" className="pt-20 pb-20">
-      <div className="flex flex-col items-center mt-14">
-        <p className="text-red-400 font-bold text-stroke-color text-stroke text-5xl md:text-7xl mt-8">
+    <div id="team">
+      <div className="flex flex-col items-center mt-14 pb-16">
+        <p className="text-yellow-300 font-bold text-stroke-color text-stroke text-5xl md:text-7xl mt-8">
           TEAM
         </p>
         <div className="flex flex-col items-center mt-10">
