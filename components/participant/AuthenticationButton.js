@@ -18,7 +18,7 @@ export default function AuthenticationButton() {
   return (
     <>
       <button
-        className="transition-all w-fit mx-auto bg-white text-black py-2 px-4 rounded-md justify-center items-center mt-4 active:scale-95 flex flex-row gap-2"
+        className="transition-all w-fit mx-auto bg-white text-black py-2 px-4 md:py-3 md:px-6 rounded-md justify-center items-center mt-4 active:scale-95 flex flex-row gap-2 text-base"
         onClick={() =>
           signIn("google", { callbackUrl: "/participant/dashboard" })
         }

@@ -33,7 +33,6 @@ export default function Home() {
         {!isLoading && <CountdownTimer />}
         <About />
         <BecomeCA />
-        <Participate />
         <Highlights />
         {/* Thar Pronite 2020 video */}
         <div className="flex justify-center w-full mb-10">
@@ -50,6 +49,7 @@ export default function Home() {
 
         <Theme />
         <Latest />
+        <Participate />
         <div className="flex flex-col items-center mt-10">
           <p className="font-spaceboards text-2xl">CHIEF PATRON</p>
           <div className="flex flex-col gap-4 pt-4 flex-wrap justify-center items-center">
