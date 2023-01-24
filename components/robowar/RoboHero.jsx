@@ -21,12 +21,20 @@ export default function RoboHero() {
             <p className="text-lg">Feb</p>
           </div>
         </div>
-        <a
-          href="#"
-          className="px-8 py-4 rounded-lg text-sm md:text-lg hover:bg-yellow-200 self-start mt-4 text-yellow-400 font-bold ring-1 ring-yellow-400 font-orbi "
-        >
-          REGISTER
-        </a>
+        <div className="flex flex-row flex-wrap gap-4 mt-6 lg:mt-6 lg:gap-6 lg:text-xl">
+          <a
+            href="https://drive.google.com/file/d/1A3nmjT58X3vbvfg4IeZKnflco-5r-1e_/view?usp=sharing"
+            className="rounded-md ring-2 ring-yellow-300 bg-yellow-300 text-black font-semibold px-4 py-2 self-start"
+          >
+            Rulebook 30kg
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1XVhvFowWJq09NTjmARdzVlrv6nlGCfw9/view?usp=sharing"
+            className="rounded-md ring-2 ring-yellow-300 bg-yellow-300 text-black font-semibold px-4 py-2 self-start"
+          >
+            Rulebook 15kg
+          </a>
+        </div>
       </div>
     </div>
   );
