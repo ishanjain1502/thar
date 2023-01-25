@@ -1,8 +1,6 @@
 import connectDB from "../../../../lib/mongodb";
-import { authOptions } from "../../auth/[...nextauth]";
 import { handleError } from "../../../../utility/handleError";
 import user from "../../../../schema/ca/users";
-import { unstable_getServerSession } from "next-auth/next"
 import withValidation from "../../../../middleware/withValidation";
 
 connectDB(); // connect to db
