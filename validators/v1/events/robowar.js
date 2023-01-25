@@ -4,9 +4,9 @@ const validationSchema = Joi.object({
     teamName: Joi.string().min(3).max(20).trim().required(),
     captainName: Joi.string().min(3).max(30).trim().required(),
     captainPhoneNo: Joi.string().min(10).max(13).trim().required(),
-    captainEmail: Joi.string().max(50).trim().lowercase().required()
-    .pattern(new RegExp('^[A-Za-z0-9](\.?[A-Za-z0-9]){5,}@gmail\.com$')) // accept only gmails
-    .message('Enter a valid Gmail address'),
+    // captainEmail: Joi.string().max(50).trim().lowercase().required()
+    // .pattern(new RegExp('^[A-Za-z0-9](\.?[A-Za-z0-9]){5,}@gmail\.com$')) // accept only gmails
+    // .message('Enter a valid Gmail address'),
     boatName: Joi.string().min(3).max(30).trim().required(),
     category: Joi.string().valid('15KG','30KG').required(),
     address: Joi.string().min(3).max(100).trim().required(),

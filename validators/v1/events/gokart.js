@@ -4,9 +4,9 @@ const validationSchema = Joi.object({
     teamName : Joi.string().trim().min(3).max(20).required(),
     captainName : Joi.string().trim().min(3).max(30).required(), 
     captainPhoneNo : Joi.string().trim().min(10).max(13).required(),
-    captainEmail : Joi.string().trim().min(16).max(50).required()
-    .pattern(new RegExp('^[A-Za-z0-9](\.?[A-Za-z0-9]){5,}@gmail\.com$'))
-    .message('Enter a valid Gmail address'),
+    // captainEmail : Joi.string().trim().min(16).max(50).required()
+    // .pattern(new RegExp('^[A-Za-z0-9](\.?[A-Za-z0-9]){5,}@gmail\.com$'))
+    // .message('Enter a valid Gmail address'),
     driverName : Joi.string().trim().min(3).max(30).required(),
     driverPhoneNo : Joi.string().trim().min(10).max(13).required(),
     driverEmail : Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).trim().min(16).max(50).required(),
