@@ -31,6 +31,9 @@ export default function MUNNavbar() {
   return (
     <header className="w-full fixed top-0 h-16 bg-black bg-opacity-30 backdrop-blur-3xl z-50">
       <nav className="h-full flex items-center justify-center w-full sm:w-10/12 m-auto">
+        <Link href={"/"}>
+          <img src="/logo64trans.png" alt="" />
+        </Link>
         <ul className="menu translate-x-full sm:translate-x-0 absolute  top-0 w-full sm:bg-transparent bg-black bg-opacity-75 backdrop-blur-3xl justify-center sm:h-[inherit] h-screen  flex flex-col sm:flex-row items-center gap-8 text-2xl">
           <li className="navEle">
             <Link href="/" className="flex font-bold items-center gap-4">
