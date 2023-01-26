@@ -1,9 +1,10 @@
+import Image from "next/image";
 import React from "react";
 
 export default function About() {
   return (
-    <section id="about" className="bg-[#1D1C41] py-8 ">
-      <div className="md:w-10/12 m-auto flex items-center justify-between flex-col md:flex-row md:gap-0 gap-4">
+    <section id="about" className="bg-[#1D1C41] py-20 ">
+      <div className="md:w-10/12 m-auto flex items-center justify-between flex-col-reverse md:flex-row md:gap-0 gap-4">
         <div className="w-10/12 md:w-8/12 flex flex-col gap-4">
           <h1 className="font-bold text-3xl">What is MUN-RTU?</h1>
           <div className="text-justify leading-relaxed">
@@ -40,9 +41,11 @@ export default function About() {
             </p>
           </div>
         </div>
-        <img
-          src="https://dummyimage.com/400x600/000000/0011ff.png&text=Dummy+Image"
-          alt=""
+        <Image
+          src={"/assets/images/mun/poster.png"}
+          height={512}
+          width={512}
+          quality={80}
         />
       </div>
     </section>

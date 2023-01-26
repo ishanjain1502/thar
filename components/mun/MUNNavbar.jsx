@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 
-export default function Navbar() {
+export default function MUNNavbar() {
   useEffect(() => {
     const closeBtn = document.querySelector(".mun .closeBtn");
     const openBtn = document.querySelector(".mun .openBtn");
