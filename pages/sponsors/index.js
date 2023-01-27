@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import Footer from "../../components/globals/Footer";
 import { NavBar } from "../../components/globals/NavBar";
+import Contact from "../../components/sponsors/Contact";
 
 export default function index() {
   return (
@@ -13,7 +14,7 @@ export default function index() {
       </Head>
       <main className="flex flex-col items-center">
         <NavBar />
-        <p className="pt-32 lg:pt-48 pb-6 text-center font-spaceboards text-yellow-300 text-5xl md:text-7xl">
+        <p className="pt-32 lg:pt-48 pb-6 text-center font-spaceboards text-yellow-300 text-5xl md:text-7xl text-stroke text-stroke-color">
           SPONSORS
           <br />
           <span className="text-xl text-white">Our Previous Sponsors</span>
@@ -26,7 +27,8 @@ export default function index() {
             <Image src="/assets/images/sponsors/categories.png" fill />
           </div>
         </div>
-        <Footer/>
+        <Contact />
+        <Footer />
       </main>
     </>
   );

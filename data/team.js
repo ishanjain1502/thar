@@ -41,4 +41,63 @@ export const team_data = {
       instagram: "https://instagram.com/aka__wolfie",
     },
   ],
+  gokart: [
+    {
+      name: "Uttam Sharma",
+      contact: 7665047450,
+      email: "us5047450@gmail.com",
+      instagram: "https://www.instagram.com/sharma.ut.2305/",
+      linkedin: "https://www.linkedin.com/in/uttam-sharma-3354901a4",
+    },
+    {
+      name: "Ritik Yadav",
+      contact: 7734097782,
+      email: "ritik.manraj@gmail.com",
+      instagram: "https://www.instagram.com/raoritik_68",
+    },
+    {
+      name: "Mohit Goyal",
+      contact: 7725919475,
+      email: "mogohy01@gmail.com",
+      instagram: "https://www.instagram.com/goyal8663/",
+      linkedin: "https://www.linkedin.com/in/mohit-goyal-711837193",
+    },
+  ],
+  robo: [
+    {
+      name: "Shubham Jain",
+      contact: 9001426919,
+      email: "mog7725919475ohy01@gmail.com",
+      instagram: "https://www.instagram.com/goyal8663/",
+      linkedin: "https://www.linkedin.com/in/mohit-goyal-711837193",
+    },
+    {
+      name: "Rohit Kawlani",
+      contact: 9079255769,
+      email: "rohitkawlani7@gmail.com ",
+      instagram: "https://instagram.com/__.rohittt._?igshid=YmMyMTA2M2Y=/",
+    },
+    {
+      name: "Abhay Sharma",
+      contact: 9521380265,
+      email: "mog7725919475ohy01@gmail.com",
+      instagram: "https://www.instagram.com/Oye__abhay/",
+    },
+  ],
+  rcnitro: [
+    {
+      name: "Divyanshu jain",
+      contact: 8107996387,
+      email: "jaind3010@gmail.com",
+      linkedin: "https://www.linkedin.com/in/divyanshu-jain-614a05197/",
+      instagram: "https://www.instagram.com/divyanshu4032/",
+    },
+    {
+      name: "Ishika Tiwari",
+      contact: 9413837690,
+      email: "tiwariishika1412@gmail.com",
+      linkedin: "https://www.linkedin.com/in/ishika-tiwari-8b7761191",
+      instagram: "https://www.instagram.com/ishika.Tiwari_",
+    },
+  ],
 };

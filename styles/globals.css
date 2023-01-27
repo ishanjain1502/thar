@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
 
 /* Tailwind imports */
 @tailwind base;
@@ -134,6 +136,97 @@ body:before {
 }
 .gokart #home {
   background-image: url("/assets/images/gokart/bg.png");
+  background-position: center;
+  background-size: cover;
+}
+.gokart #highlights {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(2, 0, 36, 0.5) 100%
+    ),
+    url("/assets/images/gokart/glimpse/1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.gokart #team {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(2, 0, 36, 0.6) 100%
+    ),
+    url("/assets/images/gokart/glimpse/2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.gokart #FAQ {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(2, 0, 36, 0.6) 100%
+    ),
+    url("/assets/images/gokart/glimpse/5.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.accordion-content {
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+/* MUN */
+.mun {
+  font-family: "Poppins", sans-serif;
+}
+.mun .home {
+  background: url("/assets/images/mun/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mun .show {
+  transform: translateX(0);
+}
+.mun .hide {
+  transform: translateX(100%);
+}
+/* Robowar */
+.font-blackops {
+  font-family: "Black Ops One", cursive;
+}
+.font-orbi {
+  font-family: "Orbitron", sans-serif;
+}
+.robo #home {
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(2, 0, 36, 0.4) 100%
+    ),
+    url("/assets/images/robowar/bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.robo #highlights {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(2, 0, 36, 0.7) 100%
+    ),
+    url("/assets/images/robowar/glimpse/2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.robo #team {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(2, 0, 36, 0.7) 100%
+    ),
+    url("/assets/images/robowar/glimpse/2.jpg");
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }

@@ -9,9 +9,16 @@ import {
 
 export default function TeamCard({ name, mob, mail, insta, linkedin }) {
   return (
-    <div key={name} className="relative ring-yellow-300 rounded-lg shadow-xl">
+    <div
+      key={name}
+      className="relative ring-yellow-300 rounded-lg shadow-xl hover:scale-[1.02] transition-all ease-in-out"
+    >
       <div className="relative w-60 aspect-[3/4] rounded-t-lg overflow-hidden">
-        <Image src={`/assets/images/team/studentorg/${name}.jpg`} fill />
+        <Image
+          src={`/assets/images/team/studentorg/${name}.jpg`}
+          fill
+          className="object-cover object-center"
+        />
       </div>
       <p className="font-spaceboards absolute w-full -translate-y-full flex flex-col justify-center items-center text-yellow-300 bg-black py-3 text-lg">
         {name.toUpperCase()}
