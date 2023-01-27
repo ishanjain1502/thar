@@ -17,12 +17,10 @@ export default function GokartFAQ() {
           }px`;
           header.querySelector(".fas").classList.remove("fa-plus");
           header.querySelector(".fas").classList.add("fa-minus");
-          header.parentElement.classList.add("bg-indigo-50");
         } else {
           accordionContent.style.maxHeight = `0px`;
           header.querySelector(".fas").classList.add("fa-plus");
           header.querySelector(".fas").classList.remove("fa-minus");
-          header.parentElement.classList.remove("bg-indigo-50");
         }
       });
     });
