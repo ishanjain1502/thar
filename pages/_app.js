@@ -6,6 +6,8 @@ import "../styles/loader.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/scrollbar";
+
 import { SessionProvider } from "next-auth/react";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
@@ -28,7 +30,11 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
             `,
         }}
       />
-      <SessionProvider session={session} refetchOnWindowFocus={false} refetchInterval={10*60}>
+      <SessionProvider
+        session={session}
+        refetchOnWindowFocus={false}
+        refetchInterval={10 * 60}
+      >
         <Component {...pageProps} />
       </SessionProvider>
     </>
