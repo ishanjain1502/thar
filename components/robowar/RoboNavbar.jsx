@@ -14,9 +14,6 @@ export default function RoboNavbar() {
           <a href="#">Home</a>
         </li>
         <li>
-          <a href="">Rulebook</a>
-        </li>
-        <li>
           <a href="#highlights">Glimpse</a>
         </li>
         <li>

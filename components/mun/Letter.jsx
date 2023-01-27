@@ -2,14 +2,14 @@ import React from "react";
 
 export default function Letter() {
   return (
-    <section className="bg-white text-black">
+    <section className="bg-white text-black py-16">
       <div className="sm:w-10/12 m-auto relative flex justify-center items-center py-6">
         <img
           src="/assets/images/mun/logo.png"
           alt=""
           className="w-12 sm:w-20 absolute left-0"
         />
-        <h1 className=" text-xl sm:text-4xl text-[#5C5C5C] border-b-2 border-b[#5C5C5C] w-max">
+        <h1 className="text-lg sm:text-4xl text-[#5C5C5C] border-b-2 border-b[#5C5C5C] w-max">
           Letter from Secretary-General
         </h1>
       </div>

@@ -1,3 +1,4 @@
+import { signIn } from "next-auth/react";
 import { useEffect, useState } from "react";
 
 function Hero() {
@@ -21,8 +22,17 @@ function Hero() {
           <br />
           Indelible
         </p>
+        <button
+          className="px-8 py-3 ring-yellow-300 ring text-yellow-300 mt-8 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out"
+          onClick={() =>
+            signIn("google", { callbackUrl: "/participant/dashboard" })
+          }
+        >
+          Register Now!
+        </button>
         {isScrollVisible && (
-          <a href="#about"
+          <a
+            href="#about"
             className="tracking-scroll fixed bottom-8 animate-pulse flex flex-col justify-center items-center"
           >
             SCROLL DOWN

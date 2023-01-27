@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { signIn, useSession } from "next-auth/react";
+
 export const NavBar = () => {
   const { data: session } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -155,6 +155,9 @@ export const NavBar = () => {
                     </li>
                     <li>
                       <NavItemPrimary href="/robowar" text="Robowar" />
+                    </li>
+                    <li>
+                      <NavItemPrimary text="RC NITRO" href="/rcnitro" />
                     </li>
                   </ul>
                   <NavItemSecondary text="Campus Ambassador" href="/ca" />
