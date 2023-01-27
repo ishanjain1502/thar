@@ -14,12 +14,15 @@ export default function GokartNavbar() {
           <a href="#">Home</a>
         </li>
         <li>
-          <a href="https://drive.google.com/file/d/1VxzDOubqE4xQovtSFa8gsj3cscCa7RbU/view?usp=sharing">
+          <a
+            href="https://drive.google.com/file/d/1VxzDOubqE4xQovtSFa8gsj3cscCa7RbU/view?usp=sharing"
+            target={"blank"}
+          >
             Rulebook
           </a>
         </li>
         <li>
-          <a href="#highlight">Glimpse</a>
+          <a href="#highlights">Glimpse</a>
         </li>
         <li>
           <a href="#team">Team</a>
