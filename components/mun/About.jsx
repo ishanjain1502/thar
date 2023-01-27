@@ -4,7 +4,7 @@ import React from "react";
 export default function About() {
   return (
     <section id="about" className="bg-[#1D1C41] py-20 ">
-      <div className="md:w-10/12 m-auto flex items-center justify-between flex-col-reverse md:flex-row md:gap-0 gap-4">
+      <div className="md:w-10/12 m-auto flex items-center justify-between flex-col-reverse lg:flex-row gap-4">
         <div className="w-10/12 md:w-8/12 flex flex-col gap-4">
           <h1 className="font-bold text-3xl">What is MUN-RTU?</h1>
           <div className="text-justify leading-relaxed">
@@ -44,8 +44,10 @@ export default function About() {
         <Image
           src={"/assets/images/mun/poster.png"}
           height={512}
-          width={512}
+          width={320}
           quality={80}
+          alt=""
+          className="flex-grow-0"
         />
       </div>
     </section>

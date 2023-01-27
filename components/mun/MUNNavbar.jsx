@@ -30,14 +30,14 @@ export default function MUNNavbar() {
 
   return (
     <header className="w-full fixed top-0 h-16 bg-black bg-opacity-30 backdrop-blur-3xl z-50">
-      <nav className="h-full flex items-center justify-center w-full md:w-10/12 m-auto">
+      <nav className="h-full flex items-center justify-center w-full lg:w-10/12 m-auto">
         <Link
           href={"/"}
-          className="md:hidden justify-start flex w-11/12 text-2xl"
+          className="lg:hidden justify-start flex w-11/12 text-2xl"
         >
           <img src="/logo64trans.png" alt="" />
         </Link>
-        <ul className="menu translate-x-full md:translate-x-0 absolute  top-0 w-full md:bg-transparent bg-black bg-opacity-75 backdrop-blur-3xl justify-center md:h-[inherit] h-screen  flex flex-col md:flex-row items-center gap-8 text-2xl">
+        <ul className="menu translate-x-full lg:translate-x-0 absolute  top-0 w-full lg:bg-transparent bg-black bg-opacity-75 backdrop-blur-3xl justify-center lg:h-[inherit] h-screen  flex flex-col lg:flex-row items-center gap-8 text-2xl">
           <li className="navEle">
             <Link href="/" className="flex font-bold items-center gap-4">
               <svg
@@ -72,9 +72,9 @@ export default function MUNNavbar() {
           <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl hover:font-extrabold">
             FAQs
           </li>
-          <li className="closeBtn md:hidden">x</li>
+          <li className="closeBtn lg:hidden">x</li>
         </ul>
-        <span className="openBtn md:hidden justify-end flex w-11/12 text-2xl">
+        <span className="openBtn lg:hidden justify-end flex w-11/12 text-2xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1em"

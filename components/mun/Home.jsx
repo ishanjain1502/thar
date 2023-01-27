@@ -1,6 +1,15 @@
+import { useEffect, useState } from "react";
 import CountdownTimer from "../home/CountdownTimer";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    window.onload = () => {
+      setIsLoading(false);
+    };
+  }, []);
+
   return (
     <section
       id="home"
@@ -11,7 +20,7 @@ export default function Home() {
           <a href="#" className="p-8 py-4 bg-yellow-600 rounded-xl text-xl">
             Register
           </a>
-          <CountdownTimer />
+          <div className="countdown">{!isLoading && <CountdownTimer />}</div>
         </div>
         <div className="flex flex-col items-center gap-4">
           <img src="/assets/images/mun/logo.png" alt="" className="w-48" />
