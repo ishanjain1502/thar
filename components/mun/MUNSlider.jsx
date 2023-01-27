@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper";
 
 export default function MUNSlider() {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   let arr = [1, 1, 1, 1, 1];
   return (
     <div
@@ -25,7 +26,7 @@ export default function MUNSlider() {
         >
           <Swiper
             slidesPerView={3}
-            spaceBetween={30}
+            spaceBetween={10}
             loop={true}
             autoplay={{
               delay: 2500,
@@ -34,6 +35,7 @@ export default function MUNSlider() {
             pagination={{
               dynamicBullets: true,
             }}
+            thumbs={{ swiper: thumbsSwiper }}
             // navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
             zoom={true}
