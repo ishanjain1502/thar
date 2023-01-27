@@ -33,7 +33,7 @@ export default function MUNNavbar() {
       <nav className="h-full flex items-center justify-center w-full md:w-10/12 m-auto">
         <Link
           href={"/"}
-          className="md:hidden justify-end flex w-11/12 text-2xl"
+          className="md:hidden justify-start flex w-11/12 text-2xl"
         >
           <img src="/logo64trans.png" alt="" />
         </Link>
