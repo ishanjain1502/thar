@@ -27,7 +27,7 @@ export default function Letter() {
           thought-provoking discussions.
         </p>
         <p>
-          This year’s conference will consist of five committees: The United
+          This year's conference will consist of five committees: The United
           Nations Security Council, The International Press, The Disarmament and
           International Security Committee, The All India Political Parties Meet
           and The Ministry of Magic to make things interesting. The conference

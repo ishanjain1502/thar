@@ -11,10 +11,10 @@ export default function GokartNavbar() {
           </Link>
         </li>
         <li>
-          <a href="#">Home</a>
+          <a href="#">Go Kart</a>
         </li>
         <li>
-          <a href="https://drive.google.com/file/d/1VxzDOubqE4xQovtSFa8gsj3cscCa7RbU/view?usp=sharing">
+          <a target="_blank" href="https://drive.google.com/file/d/1VxzDOubqE4xQovtSFa8gsj3cscCa7RbU/view?usp=sharing">
             Rulebook
           </a>
         </li>
