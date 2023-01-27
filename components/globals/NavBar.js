@@ -22,9 +22,10 @@ export const NavBar = () => {
           document.getElementById("navbar").style.backdropFilter = "blur(0px)";
           setImgSize(485);
         }
-      }
+      },
+      []
     );
-  }, []);
+  });
 
   return (
     <div
