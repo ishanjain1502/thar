@@ -67,8 +67,8 @@ export const team_data = {
     {
       name: "Shubham Jain",
       contact: 9001426919,
-      email: "mog7725919475ohy01@gmail.com",
-      instagram: "https://www.instagram.com/goyal8663/",
+      email: "mj.sj.16.12@gmail.com",
+      instagram: "https://www.instagram.com/mjsj1612/",
       linkedin: "https://www.linkedin.com/in/mohit-goyal-711837193",
     },
     {

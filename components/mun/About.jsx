@@ -44,11 +44,13 @@ export default function About() {
       </div>
       <div className="flex flex-row justify-center items-center mt-8 p-4">
         <Image
-            src={"/assets/images/mun/poster.png"}
-            height={512}
-            width={512}
-            quality={80}
-          />
+          src={"/assets/images/mun/poster.png"}
+          height={512}
+          width={320}
+          quality={80}
+          alt=""
+          className="flex-grow-0"
+        />
       </div>
     </section>
   );

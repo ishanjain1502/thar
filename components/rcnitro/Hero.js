@@ -22,12 +22,7 @@ export default function Hero() {
                 >
                   Rulebook
                 </a>
-                <a
-                  href="#"
-                  className="rounded-md ring-2 ring-yellow-300 text-yellow-300 px-2 py-2 self-start"
-                >
-                  Register Now
-                </a>
+                
               </div>
             </div>
             <div className="flex gap-8 items-center text-lg font-semibold md:self-start">
