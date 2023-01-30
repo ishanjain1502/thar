@@ -11,7 +11,7 @@ export default function Home() {
           <a href="#" className="p-8 py-4 bg-yellow-600 rounded-xl text-xl">
             Register
           </a>
-          <CountdownTimer />
+          {/* <CountdownTimer /> */}
         </div>
         <div className="flex flex-col items-center gap-4">
           <img src="/assets/images/mun/logo.png" alt="" className="w-48" />

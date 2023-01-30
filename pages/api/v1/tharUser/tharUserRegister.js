@@ -31,6 +31,7 @@ const handler = async (req, res) => {
     if (ca.length != 0) {
       let referredBy = ca[0]._id;
       const data = await tharUser.create({
+        email:req.session.user.email,
         ...req.body,
         userTharID: tharID,
         referredBy: referredBy,
@@ -52,6 +53,7 @@ const handler = async (req, res) => {
       delete req.body.referralCode;
 
       const data = await tharUser.create({
+        email:req.session.user.email,
         ...req.body,
         userTharID: tharID,
       });
@@ -70,4 +72,4 @@ const handler = async (req, res) => {
   }
 };
 
-export default withValidation(handler, validationSchema);
+export default withValidation(handler, validationSchema,'POST');

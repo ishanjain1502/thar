@@ -30,7 +30,6 @@ export default function CaForm({ email, name }) {
       .post("/api/v1/ca/register", {
         name: name,
         phone: formData.phone,
-        email: email,
         college: formData.college,
         rollNo: formData.rollNo,
         degree: formData.degree,
