@@ -18,7 +18,7 @@ export default function Expand() {
   }, [slug]);
   useEffect(() => {
     if (slugVal && slugVal.length !== 0) {
-      for (let i = 0; i < [events_data].length; i++) {
+      for (let i = 0; i < events_data.length; i++) {
         if (events_data[i].id === slugVal) {
           setEventData(events_data[i]);
         }
@@ -33,10 +33,10 @@ export default function Expand() {
       </Head>
       <main className="flex flex-col items-center">
         <NavBar />
-        {eventData && (
+        {eventData.id !== undefined ? (
           <>
             <p className="pt-32 lg:pt-48 pb-6 text-center font-spaceboards text-yellow-300 text-5xl md:text-7xl text-stroke text-stroke-color break-all">
-              {eventData.name}
+              {eventData.name.toUpperCase()}
             </p>
             <div className="flex max-w-5xl w-full mt-10 justify-evenly p-10 rounded-xl bg-black/50">
               <div className="flex w-5/12 relative rounded-lg overflow-hidden shadow-xl aspect-[1/1] max-h-96">
@@ -103,6 +103,8 @@ export default function Expand() {
               </div>
             </div>
           </>
+        ) : (
+          <p className="pt-32 lg:pt-48 pb-6 text-center font-spaceboards text-yellow-300 text-5xl md:text-7xl text-stroke text-stroke-color break-all"></p>
         )}
         <Footer />
       </main>
