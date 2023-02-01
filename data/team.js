@@ -68,7 +68,7 @@ export const team_data = {
       name: "Shubham Jain",
       contact: 9001426919,
       email: "mj.sj.16.12@gmail.com",
-      instagram: "https://www.instagram.com/mjsj1612/",
+      instagram: "http://Instagram.com/mjsj1612/",
       linkedin: "https://www.linkedin.com/in/shubham-jain-43357b192",
     },
     {
@@ -77,7 +77,7 @@ export const team_data = {
       email: "us5047450@gmail.com",
       instagram: "https://www.instagram.com/sharma.ut.2305/",
       linkedin: "https://www.linkedin.com/in/uttam-sharma-3354901a4",
-    },
+    },    
     {
       name: "Rohit Kawlani",
       contact: 9079255769,
