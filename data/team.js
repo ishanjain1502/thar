@@ -67,10 +67,17 @@ export const team_data = {
     {
       name: "Shubham Jain",
       contact: 9001426919,
-      email: "mog7725919475ohy01@gmail.com",
-      instagram: "https://www.instagram.com/goyal8663/",
-      linkedin: "https://www.linkedin.com/in/mohit-goyal-711837193",
+      email: "mj.sj.16.12@gmail.com",
+      instagram: "http://Instagram.com/mjsj1612/",
+      linkedin: "https://www.linkedin.com/in/shubham-jain-43357b192",
     },
+    {
+      name: "Uttam Sharma",
+      contact: 7665047450,
+      email: "us5047450@gmail.com",
+      instagram: "https://www.instagram.com/sharma.ut.2305/",
+      linkedin: "https://www.linkedin.com/in/uttam-sharma-3354901a4",
+    },    
     {
       name: "Rohit Kawlani",
       contact: 9079255769,
