@@ -6,8 +6,29 @@ import {MdClose , MdAdd,  MdOutlineRemove} from "react-icons/md"
 export default function GoKartForm({ setBtnClicked }) {
   const { data: session, status } = useSession();
   const [isSubmitting, setIsSubmitting] = useState(true);
-  const [additional, setAdditional] = useState([]);
-  const [formData, setFormData] = useState({});
+  const [additionalMembers, setAdditionalMembers] = useState([]);
+  const [formData, setFormData] = useState({
+    teamName: '',
+    captainName: '',
+    captainEmail: '',
+    captainPhoneNo: '',
+    driverName: '',
+    driverEmail: '',
+    driverPhoneNo: '' ,
+    coDriverName: '',
+    coDriverEmail: '',
+    coDriverPhoneNo: '',
+    coCaptainName: '',
+    coCaptainEmail: '',
+    coCaptainPhoneNo: '',
+    mentorName: '',
+    mentorPhoneNo: '',
+    mentorEmail: '',
+    address: '',
+    college: '',
+    additionalMembers:[],
+    payment: ''
+  });
 
   const addField = (e) => {
     e.preventDefault();
@@ -17,24 +38,27 @@ export default function GoKartForm({ setBtnClicked }) {
       email: "",
     };
 
-    setAdditional((additional) => [...additional, obj]);
-    console.log(additional);
+    setAdditionalMembers((additionalMembers) => [...additionalMembers, obj]);
+    console.log(additionalMembers);
+    setFormData({ ...formData , additionalMembers })
+    console.log(formData);
   };
 
   const removeLastField = (e) => {
     e.preventDefault();
-    let temp = [...additional];
+    let temp = [...additionalMembers];
     temp.pop();
-    setAdditional(temp);
+    setAdditionalMembers(temp);
   };
 
-  const handleChange = (e, index) => {
+  const handleChange = (e, key) => {
     const { id, value } = e.target;
-    const values = { ...formData };
+    console.log({value});
+    // const values = { ...formData };
 
-    values[additionalMembers][index][id];
+    // values[additionalMembers][key][id];
 
-    setFormData(values);
+    // setFormData(values);
   };
 
   const handleFormSubmit = async (e) => {
@@ -48,7 +72,7 @@ export default function GoKartForm({ setBtnClicked }) {
           Accept: "application.json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(input),
+        body: JSON.stringify(formData),
       };
       let res = await fetch("/api/v1/gokart/register", option);
       res = await res.json();
@@ -260,7 +284,7 @@ export default function GoKartForm({ setBtnClicked }) {
                     }}
                 />
                 <label className="block text-black text-sm font-bold mb-1">
-                    College
+                    College (optional)
                 </label>
                 <input
                     className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
@@ -280,7 +304,8 @@ export default function GoKartForm({ setBtnClicked }) {
                     }}
                 />
                 <div>
-                    {Object.entries(additional).map((val, key) => {
+                    {Object.entries(additionalMembers).map((val, key) => {
+                        console.log(key);
                     return (
                         <div key={key}>
                         {key === 0 ? (
@@ -301,7 +326,9 @@ export default function GoKartForm({ setBtnClicked }) {
                         <input
                             className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
                             value={val.name}
-                            onChange={(e) => handleChange(e, key)}
+                            onChange={(e) => 
+                                setFormData({...formData})
+                            }
                         />
 
                         <label className="block text-black text-sm font-bold mb-1">
@@ -310,7 +337,9 @@ export default function GoKartForm({ setBtnClicked }) {
                         <input
                             className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
                             value={val.phoneNo}
-                            onChange={(e) => handleChange(e, key)}
+                            onChange={(e)=> {
+                                setFormData({...formData})
+                            }}
                         />
 
                         <label className="block text-black text-sm font-bold mb-1">
@@ -319,7 +348,9 @@ export default function GoKartForm({ setBtnClicked }) {
                         <input
                             className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
                             value={val.email}
-                            onChange={(e) => handleChange(e, key)}
+                            onChange={(e)=> {
+                                setFormData({...formData})
+                            }}
                         />
                         <br/>
                         </div>
