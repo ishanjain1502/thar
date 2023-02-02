@@ -8,7 +8,7 @@ export default function GokartHero() {
         <div className="flex justify-between items-center flex-col md:flex-row w-full  gap-4 md:gap-0">
           <div className="flex flex-col">
             <div className="text-4xl md:text-6xl font-semibold">
-              <span className="text-red-400">Thar</span> Go-Kart Championship !
+              <span className="text-red-400">Thar</span> Go-Kart Championship&nbsp;!
             </div>
             <div className="font-semibold py-4">24 February to 26 February</div>
             <a

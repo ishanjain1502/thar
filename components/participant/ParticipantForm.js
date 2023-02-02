@@ -45,7 +45,6 @@ export default function ParticipantForm({ email, name }) {
       .post("/api/v1/tharUser/tharUserRegister", {
         name: name,
         phone: formData.phone,
-        email: email,
         college: formData.college,
         rollNo: formData.rollNo,
         degree: formData.degree,
