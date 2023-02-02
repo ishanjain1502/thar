@@ -26,7 +26,7 @@ const schema = new mongoose.Schema({
         minLength: 16,
         maxLength: 50,
     },
-    boatName:{
+    botName:{
         type:String,
         required:true,
         minLength:3,
@@ -45,7 +45,6 @@ const schema = new mongoose.Schema({
     },
     college:{
         type:String,
-        minLength:3,
         maxLength:100
     },
     additionalMembers:[
@@ -62,7 +61,7 @@ const schema = new mongoose.Schema({
                  },
                  email:{
                      type:String,
-                     minLength: 16,
+                     minLength: 3,
                      maxLength: 50,
                  }
         }
@@ -70,15 +69,17 @@ const schema = new mongoose.Schema({
      payment:{
         status:{
             type:String,
-            default:"success"
+            default:"NOTVERIFIED"
         },
         txnId:{
             type:String,
+            minLength:3,
+            maxLength:50,
             required:true
         },
         amount:{
             type:String,
-            required:true
+            default:''
         }
     }
 },
