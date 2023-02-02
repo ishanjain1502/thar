@@ -10,7 +10,7 @@ export default function GoKartForm({ setBtnClicked }) {
   const [formData, setFormData] = useState({
     teamName: '',
     captainName: '',
-    captainEmail: '',
+    // captainEmail: '',
     captainPhoneNo: '',
     driverName: '',
     driverEmail: '',
@@ -29,7 +29,6 @@ export default function GoKartForm({ setBtnClicked }) {
     // additionalMembers:[{}],
     payment:{
         txnId:'',
-        amount: '14500',
     }
   });
 
@@ -98,10 +97,10 @@ export default function GoKartForm({ setBtnClicked }) {
 
   return (
     <div className="fixed top-0 left-0 w-full h-screen z-100 p-6 px-6  overflow-scroll backdrop-blur-xl bg-transparent" >
-        <div className="flex justify-center items-center fixed inset-0 z-50 outline-none focus:outline-none ">
-        <div className="relative w-full md:w-9/12 lg:w-9/12 my-6 mx-auto ">
-            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none h-0">
-            <div className="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t ">
+        <div className="flex justify-center items-center fixed inset-0 z-50 outline-none focus:outline-none h-32">
+        <div className="relative w-full md:w-9/12 lg:w-9/12 my-6 mx-auto z-50">
+            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none h-0 z-50">
+            <div className="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t z-50">
                 <h3 className="text-3xl font=semibold">General Info</h3>
                 <div className="float-right" >
                     <MdClose style={{fontSize:'1.5rem',cursor:'pointer'}} onClick={()=>setBtnClicked(false)}/>
@@ -147,10 +146,8 @@ export default function GoKartForm({ setBtnClicked }) {
                 </label>
                 <input
                     className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    value={formData.captainEmail}
-                    onChange={(e) => {
-                    setFormData({ ...formData, captainEmail: e.target.value });
-                    }}
+                    value={session.user.email}
+                    disabled
                 />
                 <label className="block text-black text-sm font-bold mb-1">
                     Driver Name
@@ -363,6 +360,8 @@ export default function GoKartForm({ setBtnClicked }) {
                     );
                     })}
                 </div>
+                <br/>
+                {/* <div className="text-black" >Additional Members</div> */}
                 <span>
                     <button
                     className="w-16 h-8 my-4  text-black border-yellow-800 border-2 bg-yellow-200"

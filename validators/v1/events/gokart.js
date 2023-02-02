@@ -28,7 +28,7 @@ const validationSchema = Joi.object({
     }),
     payment : Joi.object({
         txnId : Joi.string().trim().min(3).max(100).required(),
-        amount : Joi.string().trim().min(1).max(6).required()
+        // amount : Joi.string().trim().min(1).max(6).required()
     })
 })
 
