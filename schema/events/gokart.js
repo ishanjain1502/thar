@@ -96,7 +96,6 @@ export const schema = new mongoose.Schema({
     },
     mentorEmail:{
         type:String,
-        required:true,
         minLength: 16,
         maxLength: 50,
     },
@@ -131,8 +130,20 @@ export const schema = new mongoose.Schema({
        }
     ],
     payment:{
+        status:{
             type:String,
+            default:"NOTVERIFIED"
+        },
+        txnId:{
+            type:String,
+            minLength:3,
+            maxLength:50,
             required:true
+        },
+        amount:{
+            type:String,
+            default:''
+        }
     }
 },
 {

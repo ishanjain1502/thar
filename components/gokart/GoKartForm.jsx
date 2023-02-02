@@ -26,8 +26,11 @@ export default function GoKartForm({ setBtnClicked }) {
     mentorEmail: '',
     address: '',
     college: '',
-    additionalMembers:[],
-    payment: ''
+    // additionalMembers:[{}],
+    payment:{
+        txnId:'',
+        amount: '14500',
+    }
   });
 
   const addField = (e) => {
@@ -39,9 +42,6 @@ export default function GoKartForm({ setBtnClicked }) {
     };
 
     setAdditionalMembers((additionalMembers) => [...additionalMembers, obj]);
-    console.log(additionalMembers);
-    setFormData({ ...formData , additionalMembers })
-    console.log(formData);
   };
 
   const removeLastField = (e) => {
@@ -53,12 +53,17 @@ export default function GoKartForm({ setBtnClicked }) {
 
   const handleChange = (e, key) => {
     const { id, value } = e.target;
-    console.log({value});
-    // const values = { ...formData };
+    console.log({id ,value});
+    const values = {...formData};
 
     // values[additionalMembers][key][id];
+    if(id === 'payment'){
+        values[id] = {
+            txnId: value
+        }
+    }
 
-    // setFormData(values);
+    setFormData(values);
   };
 
   const handleFormSubmit = async (e) => {
@@ -298,10 +303,11 @@ export default function GoKartForm({ setBtnClicked }) {
                 </label>
                 <input
                     className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    value={formData.payment}
-                    onChange={(e) => {
-                    setFormData({ ...formData, payment: e.target.value });
-                    }}
+                    // value={}
+                    id="payment"
+                    value={formData.payment.txnId}
+                    placeholder="Transaction Id"
+                    onChange={handleChange}
                 />
                 <div>
                     {Object.entries(additionalMembers).map((val, key) => {
@@ -376,13 +382,16 @@ export default function GoKartForm({ setBtnClicked }) {
                     {/* Payment details */}
                     <br />
                     <label className="block text-black text-sm font-bold mb-1">
-                    {process.env.NEXT_PUBLIC_THAR_ACCOUNT_NAME}
+                        Account Holder Name
+                        <p className=" text-sm">{process.env.NEXT_PUBLIC_THAR_ACCOUNT_NAME}</p>
                     </label>
                     <label className="block text-black text-sm font-bold mb-1">
-                    {process.env.NEXT_PUBLIC_THAR_ACCOUNT_NO}
+                        Account Number
+                        <p className=" text-sm">{process.env.NEXT_PUBLIC_THAR_ACCOUNT_NO}</p>
                     </label>
                     <label className="block text-black text-sm font-bold mb-1">
-                    {process.env.NEXT_PUBLIC_THAR_ACCOUNT_IFSC}
+                        IFSC Code
+                        <p className=" text-sm">{process.env.NEXT_PUBLIC_THAR_ACCOUNT_IFSC}</p>
                     </label>
                 </div>
 
