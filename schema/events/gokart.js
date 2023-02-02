@@ -123,18 +123,8 @@ export const schema = new mongoose.Schema({
        }
     ],
     payment:{
-        status:{
-            type:String,
-            default:"success"
-        },
-        txnId:{
             type:String,
             required:true
-        },
-        amount:{
-            type:String,
-            required:true
-        },
     }
 },
 {

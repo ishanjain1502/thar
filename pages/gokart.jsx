@@ -5,8 +5,14 @@ import GokartGlimpse from "../components/gokart/GokartGlimpse";
 import GokartHero from "../components/gokart/GokartHero";
 import GokartNavbar from "../components/gokart/GokartNavbar";
 import GokartTeam from "../components/gokart/GokartTeam";
+import GoKartForm from "../components/gokart/GoKartForm";
+
+import { useState } from "react";
 
 export default function gokart() {
+  
+  const [btnClicked,setBtnClicked] = useState(false);
+  
   return (
     <div className="gokart relative ">
       <Head>
@@ -17,9 +23,10 @@ export default function gokart() {
         />
       </Head>
       <GokartNavbar />
-      <GokartHero />
+      <GokartHero  setBtnClicked={setBtnClicked}  />
       <GokartGlimpse />
       <GokartTeam />
+      {btnClicked && <GoKartForm showModal={setBtnClicked}/>}
       <GokartFAQ />
     </div>
   );
