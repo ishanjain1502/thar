@@ -26,7 +26,7 @@ export default function gokart() {
       <GokartHero  setBtnClicked={setBtnClicked}  />
       <GokartGlimpse />
       <GokartTeam />
-      {btnClicked && <GoKartForm showModal={setBtnClicked}/>}
+      {btnClicked && <GoKartForm setBtnClicked={setBtnClicked}/>}
       <GokartFAQ />
     </div>
   );
