@@ -61,6 +61,22 @@ export default function MUNTeam() {
       </div>
       <div className="container py-4">
         <h1 className="text-3xl md:text-5xl text-slate-400 font-bold underline py-6">
+          USG Outreach
+        </h1>
+        <div className="flex flex-wrap gap-12 justify-center">
+          {teamData.outreach.map((member) => {
+            return (
+              <TeamCard
+                key={member.name}
+                name={member.name}
+                role={member.role}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <div className="container py-4">
+        <h1 className="text-3xl md:text-5xl text-slate-400 font-bold underline py-6">
           USG Technical Team
         </h1>
         <div className="flex flex-wrap gap-12 justify-center">

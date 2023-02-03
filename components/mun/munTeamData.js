@@ -61,7 +61,7 @@ export const teamData = {
       name: "Ashi Dubey",
     },
     {
-      role: "USG Conten Co-Head",
+      role: "USG Content Co-Head",
       name: "Pratham Kabra",
     },
     {
@@ -81,6 +81,24 @@ export const teamData = {
     {
       role: "USG Cinematography",
       name: "Yash Soni",
+    },
+  ],
+  outreach: [
+    {
+      role: "USG Outreach Head",
+      name: "Shayam Garg",
+    },
+    {
+      role: "USG Outreach",
+      name: "Animesh Sharma",
+    },
+    {
+      role: "USG Outreach",
+      name: "Govind Madan",
+    },
+    {
+      role: "USG Outreach",
+      name: "Pushkal Vashishtha",
     },
   ],
 };
