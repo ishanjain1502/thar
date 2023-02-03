@@ -14,7 +14,7 @@ const validationSchema = Joi.object({
     additionalMembers: Joi.array().items(
         Joi.object({ 
              name: Joi.string().min(3).max(30).trim(), 
-             email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
+             email: Joi.string().min(3).max(50).email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).trim(),
              phoneNo: Joi.string().min(10).max(13).trim()
         })
     ),

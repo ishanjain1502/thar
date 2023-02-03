@@ -6,7 +6,6 @@ import {MdClose , MdAdd,  MdOutlineRemove} from "react-icons/md"
 export default function GoKartForm({ setBtnClicked }) {
   const { data: session, status } = useSession();
   const [isSubmitting, setIsSubmitting] = useState(true);
-  const [additionalMembers, setAdditionalMembers] = useState([]);
   const [formData, setFormData] = useState({
     teamName: '',
     captainName: '',
@@ -26,7 +25,7 @@ export default function GoKartForm({ setBtnClicked }) {
     mentorEmail: '',
     address: '',
     college: '',
-    // additionalMembers:[{}],
+    additionalMembers:[],
     payment:{
         txnId:'',
     }
@@ -34,32 +33,29 @@ export default function GoKartForm({ setBtnClicked }) {
 
   const addField = (e) => {
     e.preventDefault();
-    const obj = {
-      name: "",
-      phone: "",
-      email: "",
-    };
-
-    setAdditionalMembers((additionalMembers) => [...additionalMembers, obj]);
+    const values ={...formData};
+    values.additionalMembers.push({name:'',email:'',phoneNo:''});
+    setFormData(values);
   };
 
   const removeLastField = (e) => {
     e.preventDefault();
-    let temp = [...additionalMembers];
-    temp.pop();
-    setAdditionalMembers(temp);
+    let temp = {...formData};
+    temp.additionalMembers.pop()
+    setFormData(temp)
   };
 
-  const handleChange = (e, key) => {
+  const handleChange = (e, index) => {
     const { id, value } = e.target;
-    console.log({id ,value});
     const values = {...formData};
+    const dataAttri = e.target.getAttribute("data-property");
 
-    // values[additionalMembers][key][id];
     if(id === 'payment'){
         values[id] = {
             txnId: value
         }
+    }else if(dataAttri === 'additionalMembers'){
+        values[dataAttri][index][id]=value;
     }
 
     setFormData(values);
@@ -296,7 +292,7 @@ export default function GoKartForm({ setBtnClicked }) {
                     }}
                 />
                 <label className="block text-black text-sm font-bold mb-1">
-                    Payment Recipt
+                    Transaction ID
                 </label>
                 <input
                     className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
@@ -307,7 +303,7 @@ export default function GoKartForm({ setBtnClicked }) {
                     onChange={handleChange}
                 />
                 <div>
-                    {Object.entries(additionalMembers).map((val, key) => {
+                    {Object.entries(formData.additionalMembers).map((val, key) => {
                         console.log(key);
                     return (
                         <div key={key}>
@@ -328,10 +324,9 @@ export default function GoKartForm({ setBtnClicked }) {
                         </label>
                         <input
                             className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
+                            data-property="additionalMembers"
                             value={val.name}
-                            onChange={(e) => 
-                                setFormData({...formData})
-                            }
+                            onChange={(e)=>handleChange(e,key)}
                         />
 
                         <label className="block text-black text-sm font-bold mb-1">
@@ -339,10 +334,9 @@ export default function GoKartForm({ setBtnClicked }) {
                         </label>
                         <input
                             className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
+                            data-property="additionalMembers"
                             value={val.phoneNo}
-                            onChange={(e)=> {
-                                setFormData({...formData})
-                            }}
+                            onChange={(e)=>handleChange(e,key)}
                         />
 
                         <label className="block text-black text-sm font-bold mb-1">
@@ -350,10 +344,9 @@ export default function GoKartForm({ setBtnClicked }) {
                         </label>
                         <input
                             className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
+                            data-property="additionalMembers"
                             value={val.email}
-                            onChange={(e)=> {
-                                setFormData({...formData})
-                            }}
+                            onChange={(e)=>handleChange(e,key)}
                         />
                         <br/>
                         </div>
