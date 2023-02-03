@@ -323,6 +323,7 @@ export default function GoKartForm({ setBtnClicked }) {
                             Name
                         </label>
                         <input
+                            id="name"
                             className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
                             data-property="additionalMembers"
                             value={val.name}
@@ -333,6 +334,7 @@ export default function GoKartForm({ setBtnClicked }) {
                             Phone No.
                         </label>
                         <input
+                            id="phoneNo"
                             className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
                             data-property="additionalMembers"
                             value={val.phoneNo}
@@ -343,6 +345,7 @@ export default function GoKartForm({ setBtnClicked }) {
                             Email
                         </label>
                         <input
+                            id="email"
                             className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
                             data-property="additionalMembers"
                             value={val.email}
