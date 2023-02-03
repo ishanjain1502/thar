@@ -21,7 +21,8 @@ export default function MUN() {
       <Letter />
       <About />
       <MUNSlider />
-      <MUNTeam />
+      {/* <MUNTeam /> */}
+      {/* FAQ */}
     </div>
   );
 }

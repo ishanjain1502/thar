@@ -31,7 +31,6 @@ export default function MUNSlider() {
       desc: "All India Political Party Meet is a non-technical but powerful committee. It is a meeting between all the political parties of the nation. Typically called before the session of the Parliament or before the introduction of a bill, this committee aims to arrive at a consensus before the sessions begin.",
     },
   ];
-  console.log(committees);
   return (
     <div
       id="committee"
