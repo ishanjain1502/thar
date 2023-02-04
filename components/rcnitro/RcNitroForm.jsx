@@ -2,10 +2,11 @@ import React from "react";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 import {MdClose , MdAdd,  MdOutlineRemove} from "react-icons/md"
+import Spinner from "../../utility/frontend/spinner";
 
-export default function rcNitroForm({ setBtnClicked }) {
+export default function RcNitroForm({ setBtnClicked }) {
   const { data: session, status } = useSession();
-  const [isSubmitting, setIsSubmitting] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     teamName: '',
     teamLeaderName: '',

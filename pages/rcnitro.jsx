@@ -8,7 +8,7 @@ import Team from "../components/rcnitro/Team";
 import RcNitroForm from "../components/rcnitro/RcNitroForm";
 
 
-export default function rcnitro() {
+export default function Rcnitro() {
 
   const [btnClicked,setBtnClicked] = useState(false);
 
