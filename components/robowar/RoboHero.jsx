@@ -1,6 +1,23 @@
 import React from "react";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
-export default function RoboHero() {
+export default function RoboHero({setBtnClicked}) {
+
+  const {data:session} = useSession();
+  const router = useRouter();
+
+  const handleRegisterBtnClick = () => {
+    if(!session){
+      alert('Login Required\nRedirecting to home page please wait...');
+      setTimeout(()=>{
+        router.replace('/');
+      },1000);
+      return;
+    }
+    setBtnClicked(true);
+  }
+  
   return (
     <div id="home" className="">
       <div className="md:w-10/12 flex flex-col md:justify-center m-auto min-h-screen justify-end py-8 w-11/12 ">
@@ -21,7 +38,7 @@ export default function RoboHero() {
             <p className="text-lg">Feb</p>
           </div>
         </div>
-        <div className="flex flex-row flex-wrap gap-4 mt-6 lg:mt-6 lg:gap-6 lg:text-xl">
+        {/* <div className="flex flex-row flex-wrap gap-4 mt-6 lg:mt-6 lg:gap-6 lg:text-xl">
           <a
             href="https://drive.google.com/file/d/1A3nmjT58X3vbvfg4IeZKnflco-5r-1e_/view?usp=sharing"
             className="rounded-md ring-2 ring-yellow-300 bg-yellow-300 text-black font-semibold px-4 py-2 self-start"
@@ -34,6 +51,14 @@ export default function RoboHero() {
           >
             Rulebook 15kg
           </a>
+        </div> */}
+        <div className="my-6">
+          <button 
+          className="rounded-md ring-2 ring-yellow-400 text-yellow-400 px-2 py-2 text-xl hover:bg-yellow-400 hover:text-black"
+          onClick={handleRegisterBtnClick}
+          >
+          Register NOW
+          </button>
         </div>
       </div>
     </div>

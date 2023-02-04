@@ -17,6 +17,14 @@ export default function RoboNavbar() {
           <a href="#highlights">Glimpse</a>
         </li>
         <li>
+          <a
+            href="https://drive.google.com/drive/folders/1R9lxyQNXZNq3ifL-RRkwQ3VQG3fZE2Ad?usp=sharing"
+            target={"blank"}
+          >
+            Rulebooks
+          </a>
+        </li>
+        <li>
           <a href="#team">Team</a>
         </li>
         <li>

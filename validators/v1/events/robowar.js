@@ -7,10 +7,10 @@ const validationSchema = Joi.object({
     // captainEmail: Joi.string().max(50).trim().lowercase().required()
     // .pattern(new RegExp('^[A-Za-z0-9](\.?[A-Za-z0-9]){5,}@gmail\.com$')) // accept only gmails
     // .message('Enter a valid Gmail address'),
-    boatName: Joi.string().min(3).max(30).trim().required(),
+    botName: Joi.string().min(3).max(30).trim().required(),
     category: Joi.string().valid('15KG','30KG').required(),
     address: Joi.string().min(3).max(100).trim().required(),
-    college: Joi.string().min(3).max(100).trim(),
+    college: Joi.string().min(0).max(100).trim(),
     additionalMembers: Joi.array().items(
         Joi.object({ 
              name: Joi.string().min(3).max(30).trim(), 
@@ -19,8 +19,7 @@ const validationSchema = Joi.object({
         })
     ),
     payment: Joi.object({
-        txnId: Joi.string().min(1).max(50).required(),
-        amount: Joi.string().min(1).max(6).required(),
+        txnId: Joi.string().min(3).max(50).trim().required(),
     })
 })
 

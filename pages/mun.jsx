@@ -15,12 +15,14 @@ export default function MUN() {
         <title>RTU MUN | Model United Nation</title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
+      {/* <NavBar className="hidden"/> */}
       <MUNNavbar />
       <Home />
       <Letter />
       <About />
       <MUNSlider />
       {/* <MUNTeam /> */}
+      {/* FAQ */}
     </div>
   );
 }
