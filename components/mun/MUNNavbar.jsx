@@ -54,22 +54,37 @@ export default function MUNNavbar() {
               THAR
             </Link>
           </li>
-          <li className="navEle flex items-center transition-colors py-2 px-4 bg-yellow-600 leading-none rounded-xl font-extrabold">
-            HOME
-          </li>
-          <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl hover:font-extrabold">
-            COMMMITTEES
-          </li>
-          <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl hover:font-extrabold">
-            ABOUT
-          </li>
-          <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl hover:font-extrabold">
-            TEAM
-          </li>
-          <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl hover:font-extrabold">
-            CONTACT
-          </li>
-          <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl hover:font-extrabold">
+          <Link href="#home">
+            <li className="navEle flex items-center transition-colors py-2 px-4 bg-yellow-600 leading-none rounded-xl">
+              HOME
+            </li>
+          </Link>
+          <Link href="#about">
+            <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
+              ABOUT
+            </li>
+          </Link>
+          <Link href="/mun#committees">
+            <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
+              COMMITTEES
+            </li>
+          </Link>
+          <Link href="/agendas">
+            <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
+              AGENDAS
+            </li>
+          </Link>
+          <Link href="mun/team">
+            <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
+              TEAM
+            </li>
+          </Link>
+          <Link href="mun/contact">
+            <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
+              CONTACT
+            </li>
+          </Link>
+          <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
             FAQs
           </li>
           <li className="closeBtn lg:hidden">x</li>
