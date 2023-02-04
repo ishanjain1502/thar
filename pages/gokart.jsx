@@ -6,7 +6,6 @@ import GokartHero from "../components/gokart/GokartHero";
 import GokartNavbar from "../components/gokart/GokartNavbar";
 import GokartTeam from "../components/gokart/GokartTeam";
 import GoKartForm from "../components/gokart/GoKartForm";
-
 import { useState } from "react";
 
 export default function Gokart() {
