@@ -17,7 +17,11 @@ export default function Home() {
     >
       <div className="bg-[#1D1C41] flex flex-col-reverse sm:flex-row gap-4 sm:gap-8 items-center p-8 py-16 sm:p-32 rounded-full ring-inset ring-8 ring-yellow-600">
         <div className="flex gap-4 sm:gap-4 flex-col items-center sm:items-start">
-          <a href="#" className="p-8 py-4 bg-yellow-600 rounded-xl text-xl">
+          <a
+            href="https://forms.gle/5oahCAGqJgGhviQD6"
+            target={"blank"}
+            className="p-8 py-4 bg-yellow-600 rounded-xl text-xl"
+          >
             Register
           </a>
           <div className="countdown">{!isLoading && <CountdownTimer />}</div>

@@ -13,8 +13,8 @@ export default function Letter() {
           Letter from Secretary-General
         </h1>
       </div>
-      <div className="w-10/12 sm:w-6/12 m-auto flex flex-col gap-4 text-justify">
-        <p className="font-bold ">
+      <div className="w-10/12 sm:w-6/12 m-auto flex flex-col gap-4 text-justify text-xs md:text-md">
+        <p className="font-bold text-lg">
           Dear Delegates, respected Faculty Advisors, and the Secretariat,
         </p>
         <p className="">
