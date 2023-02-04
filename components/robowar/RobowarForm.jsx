@@ -22,6 +22,7 @@ export default function RobowarForm({setBtnClicked}){
             txnId:''
         }
     });
+    // console.log('input',input);
     const [isSubmitting,setIsSubmitting]=useState(false);
 
     const handleChange=(e,index)=>{

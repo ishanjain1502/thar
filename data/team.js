@@ -93,18 +93,18 @@ export const team_data = {
   ],
   rcnitro: [
     {
-      name: "Divyanshu jain",
-      contact: 8107996387,
-      email: "jaind3010@gmail.com",
-      linkedin: "https://www.linkedin.com/in/divyanshu-jain-614a05197/",
-      instagram: "https://www.instagram.com/divyanshu4032/",
-    },
-    {
       name: "Ishika Tiwari",
       contact: 9413837690,
       email: "tiwariishika1412@gmail.com",
       linkedin: "https://www.linkedin.com/in/ishika-tiwari-8b7761191",
       instagram: "https://www.instagram.com/ishika.Tiwari_",
     },
+    {
+      name: "Divyanshu jain",
+      contact: 8107996387,
+      email: "jaind3010@gmail.com",
+      linkedin: "https://www.linkedin.com/in/divyanshu-jain-614a05197/",
+      instagram: "https://www.instagram.com/divyanshu4032/",
+    }
   ],
 };
