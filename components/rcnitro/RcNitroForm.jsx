@@ -2,27 +2,15 @@ import React from "react";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 import {MdClose , MdAdd,  MdOutlineRemove} from "react-icons/md"
+import Spinner from "../../utility/frontend/spinner";
 
-export default function GoKartForm({ setBtnClicked }) {
+export default function RcNitroForm({ setBtnClicked }) {
   const { data: session, status } = useSession();
-  const [isSubmitting, setIsSubmitting] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     teamName: '',
-    captainName: '',
-    // captainEmail: '',
-    captainPhoneNo: '',
-    driverName: '',
-    driverEmail: '',
-    driverPhoneNo: '' ,
-    coDriverName: '',
-    coDriverEmail: '',
-    coDriverPhoneNo: '',
-    coCaptainName: '',
-    coCaptainEmail: '',
-    coCaptainPhoneNo: '',
-    mentorName: '',
-    mentorPhoneNo: '',
-    mentorEmail: '',
+    teamLeaderName: '',
+    teamLeaderPhone: '',
     address: '',
     college: '',
     additionalMembers:[],
@@ -74,7 +62,7 @@ export default function GoKartForm({ setBtnClicked }) {
         },
         body: JSON.stringify(formData),
       };
-      let res = await fetch("/api/v1/gokart/register", option);
+      let res = await fetch("/api/v1/rcnitro/register", option);
       res = await res.json();
       if (!res.error) {
         alert(
@@ -118,158 +106,32 @@ export default function GoKartForm({ setBtnClicked }) {
                     }}
                 />
                 <label className="block text-black text-sm font-bold mb-1">
-                    Captain Name
+                Team Leader Name
                 </label>
                 <input
                     className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    value={formData.captainName}
+                    value={formData.teamLeaderName}
                     onChange={(e) => {
-                    setFormData({ ...formData, captainName: e.target.value });
+                    setFormData({ ...formData, teamLeaderName: e.target.value });
                     }}
                 />
                 <label className="block text-black text-sm font-bold mb-1">
-                    Captain Phone no.
+                Team Phone no.
                 </label>
                 <input
                     className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    value={formData.captainPhoneNo}
+                    value={formData.teamLeaderPhone}
                     onChange={(e) => {
-                    setFormData({ ...formData, captainPhoneNo: e.target.value });
+                    setFormData({ ...formData, teamLeaderPhone: e.target.value });
                     }}
                 />
                 <label className="block text-black text-sm font-bold mb-1">
-                    Captain Email
+                    Team Leader Email
                 </label>
                 <input
                     className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
                     value={session.user.email}
                     disabled
-                />
-                <label className="block text-black text-sm font-bold mb-1">
-                    Driver Name
-                </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    value={formData.driverName}
-                    onChange={(e) => {
-                    setFormData({ ...formData, driverName: e.target.value });
-                    }}
-                />
-                <label className="block text-black text-sm font-bold mb-1">
-                    Driver Phone No
-                </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    value={formData.driverPhoneNo}
-                    onChange={(e) => {
-                    setFormData({ ...formData, driverPhoneNo: e.target.value });
-                    }}
-                />
-                <label className="block text-black text-sm font-bold mb-1">
-                    Driver Email
-                </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    type="email"
-                    value={formData.driverEmail}
-                    onChange={(e) => {
-                    setFormData({ ...formData, driverEmail: e.target.value });
-                    }}
-                />
-                <label className="block text-black text-sm font-bold mb-1">
-                    Co-Driver Name
-                </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    value={formData.coDriverName}
-                    onChange={(e) => {
-                    setFormData({ ...formData, coDriverName: e.target.value });
-                    }}
-                />
-                <label className="block text-black text-sm font-bold mb-1">
-                    Co-Driver Phone No
-                </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    value={formData.coDriverPhoneNo}
-                    onChange={(e) => {
-                    setFormData({ ...formData, coDriverPhoneNo: e.target.value });
-                    }}
-                />
-                <label className="block text-black text-sm font-bold mb-1">
-                    Co-Driver Email
-                </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    type="email"
-                    value={formData.coDriverEmail}
-                    onChange={(e) => {
-                    setFormData({ ...formData, coDriverEmail: e.target.value });
-                    }}
-                />
-                <label className="block text-black text-sm font-bold mb-1">
-                    Co-Captain Name
-                </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    value={formData.coCaptainName}
-                    onChange={(e) => {
-                    setFormData({ ...formData, coCaptainName: e.target.value });
-                    }}
-                />
-                <label className="block text-black text-sm font-bold mb-1">
-                    Co-Captain Phone No.
-                </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    value={formData.coCaptainPhoneNo}
-                    onChange={(e) => {
-                    setFormData({
-                        ...formData,
-                        coCaptainPhoneNo: e.target.value,
-                    });
-                    }}
-                />
-                <label className="block text-black text-sm font-bold mb-1">
-                    Co-Captain Email
-                </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    type="email"
-                    value={formData.coCaptainEmail}
-                    onChange={(e) => {
-                    setFormData({ ...formData, coCaptainEmail: e.target.value });
-                    }}
-                />
-                <label className="block text-black text-sm font-bold mb-1">
-                    Mentor Name
-                </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    value={formData.mentorName}
-                    onChange={(e) => {
-                    setFormData({ ...formData, mentorName: e.target.value });
-                    }}
-                />
-                <label className="block text-black text-sm font-bold mb-1">
-                    Mentor Phone No.
-                </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    value={formData.mentorPhoneNo}
-                    onChange={(e) => {
-                    setFormData({ ...formData, mentorPhoneNo: e.target.value });
-                    }}
-                />
-                <label className="block text-black text-sm font-bold mb-1">
-                    Mentor Email
-                </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
-                    value={formData.mentorEmail}
-                    onChange={(e) => {
-                    setFormData({ ...formData, mentorEmail: e.target.value });
-                    }}
                 />
                 <label className="block text-black text-sm font-bold mb-1">
                     Address
@@ -378,6 +240,15 @@ export default function GoKartForm({ setBtnClicked }) {
                     -
                     </button>
                 </span>
+                <div>
+                            <h5 className="text-red-400 text-base">Amount</h5>
+                            <span className="text-black">&#8377;1000</span>                            
+                        </div>
+                        <div>
+                        <p className="text-sm text-black">Note: Currently we are accepting payment via bank transfers only.
+                            </p>
+                            <p className="text-sm text-black">After the payment, fill your transaction id here, otherwise we won&#39;t be able to verify your payment.</p>
+                            </div>
                 <div>
                     {/* Payment details */}
                     <br />
