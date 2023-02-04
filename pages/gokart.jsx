@@ -9,7 +9,7 @@ import GoKartForm from "../components/gokart/GoKartForm";
 
 import { useState } from "react";
 
-export default function gokart() {
+export default function Gokart() {
   
   const [btnClicked,setBtnClicked] = useState(false);
   
