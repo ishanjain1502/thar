@@ -36,11 +36,13 @@ export const schema = new mongoose.Schema({
     },
     driverPhoneNo:{
         type:String,
+        required: true,
         minLength:10,
         maxLength:13
     },
     driverEmail:{
         type:String,
+        required: true,
         minLength: 16,
         maxLength: 50
     },
@@ -52,26 +54,31 @@ export const schema = new mongoose.Schema({
     },
     coDriverPhoneNo:{
         type:String,
+        required:true,
         minLength:10,
         maxLength:13
     },
     coDriverEmail:{
         type:String,
+        required:true,
         minLength: 16,
         maxLength: 50,
     },
     coCaptainName:{
         type:String,
+        required:true,
         minLength:3,
         maxLength:30
     },
     coCaptainPhoneNo:{
         type:String,
+        required:true,
         minLength:10,
         maxLength:13
     },
     coCaptainEmail:{
         type:String,
+        required:true,
         minLength: 16,
         maxLength: 50,
     },
@@ -125,16 +132,18 @@ export const schema = new mongoose.Schema({
     payment:{
         status:{
             type:String,
-            default:"success"
+            default:"NOTVERIFIED"
         },
         txnId:{
             type:String,
+            minLength:3,
+            maxLength:50,
             required:true
         },
         amount:{
             type:String,
-            required:true
-        },
+            default:''
+        }
     }
 },
 {
