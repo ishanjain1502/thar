@@ -21,14 +21,16 @@ const validationSchema = Joi.object({
     mentorEmail : Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).trim().min(16).max(50).required(),
     address : Joi.string().trim().min(3).max(100).required(),
     college : Joi.string().trim().min(3).max(100).required(),
-    additionalMembers : Joi.object({
-        name : Joi.string().trim().min(3).max(30),
-        phoneNo : Joi.string().trim().min(10).max(13),
-        email : Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).trim().min(16).max(50),
-    }),
+    additionalMembers : Joi.array().items(
+        Joi.object({ 
+             name: Joi.string().min(3).max(30).trim(), 
+             email: Joi.string().min(3).max(50).email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).trim(),
+             phoneNo: Joi.string().min(10).max(13).trim()
+        })
+    ),
     payment : Joi.object({
         txnId : Joi.string().trim().min(3).max(100).required(),
-        amount : Joi.string().trim().min(1).max(6).required()
+        // amount : Joi.string().trim().min(1).max(6).required()
     })
 })
 
