@@ -23,7 +23,7 @@ export default function MUNSlider() {
       desc: "Instead of representing the interests of a single country, the International Press Delegation allows participants to act as unbiased journalists, reporting on the proceedings of each simulation in the Conference. International Press Members investigate committee debates, conduct interviews, edit articles, and cover press conferences.",
     },
     {
-      name: "DISEG",
+      name: "DISEC",
       desc: "The Disarmament and International Security Committee  is the First Committee of the United Nations General Assembly. The committee concerns itself with questions of international importance regarding the security and demilitarization throughout all countries and regions, along with ensuring that citizens across the globe remain protected.",
     },
     {
@@ -31,11 +31,10 @@ export default function MUNSlider() {
       desc: "All India Political Party Meet is a non-technical but powerful committee. It is a meeting between all the political parties of the nation. Typically called before the session of the Parliament or before the introduction of a bill, this committee aims to arrive at a consensus before the sessions begin.",
     },
   ];
-  console.log(committees);
   return (
     <div
       id="committee"
-      className="flex justify-center flex-col py-20 max-h-screen items-center bg-white"
+      className="flex justify-center flex-col py-20 items-center bg-white"
     >
       <span className="py-5 text-xl underline md:text-6xl font-bold text-slate-600 ">
         Our Comittees
