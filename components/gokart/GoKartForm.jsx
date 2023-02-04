@@ -105,7 +105,7 @@ export default function GoKartForm({ setBtnClicked }) {
             <div className="relative p-6 flex-auto">
                 <form
                 onSubmit={handleFormSubmit}
-                className="bg-gray-200 shadow-md rounded px-8 pt-6 pb-8 w-full"
+                className="bg-gray-200 shadow-md rounded px-8 pt-6 pb-8 w-full space-y-2"
                 >
                 <label className="block text-black text-sm font-bold mb-1">
                     Team Name
@@ -306,7 +306,10 @@ export default function GoKartForm({ setBtnClicked }) {
                     {Object.entries(formData.additionalMembers).map((val, key) => {
                         console.log(key);
                     return (
-                        <div key={key}>
+                        <div
+                        key={key}
+                        className="space-y-2"
+                        >
                         {key === 0 ? (
                             <>
                             {" "}
@@ -352,12 +355,14 @@ export default function GoKartForm({ setBtnClicked }) {
                             onChange={(e)=>handleChange(e,key)}
                         />
                         <br/>
+                        <br/><br/>
                         </div>
                     );
                     })}
                 </div>
                 <br/>
-                {/* <div className="text-black" >Additional Members</div> */}
+                <div className="text-black" >Additional Members</div>   
+                {}
                 <span>
                     <button
                     className="w-16 h-8 my-4  text-black border-yellow-800 border-2 bg-yellow-200"
@@ -376,18 +381,20 @@ export default function GoKartForm({ setBtnClicked }) {
                 <div>
                     {/* Payment details */}
                     <br />
-                    <label className="block text-black text-sm font-bold mb-1">
+                    <label className="block text-black text-sm font-bold mb-1 underline underline-offset-4  ">
                         Account Holder Name
-                        <p className=" text-sm">{process.env.NEXT_PUBLIC_THAR_ACCOUNT_NAME}</p>
-                    </label>
-                    <label className="block text-black text-sm font-bold mb-1">
+                       
+                    </label> <p className="text-black text-sm">{process.env.NEXT_PUBLIC_THAR_ACCOUNT_NAME}</p>
+                    <br/>
+                    <label className="block text-black text-sm font-bold mb-1  underline underline-offset-4">
                         Account Number
-                        <p className=" text-sm">{process.env.NEXT_PUBLIC_THAR_ACCOUNT_NO}</p>
-                    </label>
-                    <label className="block text-black text-sm font-bold mb-1">
+                        
+                    </label><p className="text-black text-sm">{process.env.NEXT_PUBLIC_THAR_ACCOUNT_NO}</p>
+                    <br/>
+                    <label className="block text-black text-sm font-bold mb-1  underline underline-offset-4">
                         IFSC Code
-                        <p className=" text-sm">{process.env.NEXT_PUBLIC_THAR_ACCOUNT_IFSC}</p>
-                    </label>
+                        
+                    </label><p className="text-black text-sm">{process.env.NEXT_PUBLIC_THAR_ACCOUNT_IFSC}</p>
                 </div>
 
                 <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
