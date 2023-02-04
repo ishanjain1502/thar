@@ -6,7 +6,7 @@ export default function MUNTeam() {
   return (
     <div
       id="team"
-      className="bg-[#1D1C41] text-black flex flex-col items-center justify-center"
+      className="pt-16 bg-[#1D1C41] text-black flex flex-col items-center justify-center"
     >
       <h1 className="text-xl underline md:text-6xl font-bold text-white py-12">
         Organizing Team

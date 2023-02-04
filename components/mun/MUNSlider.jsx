@@ -33,7 +33,7 @@ export default function MUNSlider() {
   ];
   return (
     <div
-      id="committee"
+      id="committees"
       className="flex justify-center flex-col py-20 items-center bg-white"
     >
       <span className="py-5 text-xl underline md:text-6xl font-bold text-slate-600 ">

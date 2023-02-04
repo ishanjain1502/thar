@@ -44,7 +44,7 @@ export default function Devs() {
               g="AniruddhaSoni"
             />
             <ProfileBlock
-              src="https://pbs.twimg.com/profile_images/1603566962151690240/fP6RR4ag_400x400.jpg"
+              src="https://pbs.twimg.com/profile_images/1619898601215504385/_esDGQ7R_400x400.jpg"
               name="Pushkar Yadav"
               role="Frontend Developer"
               p="https://pushkaryadav.in"

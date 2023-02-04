@@ -7,6 +7,7 @@ import MUNNavbar from "../components/mun/MUNNavbar";
 import { NavBar } from "../components/globals/NavBar";
 import MUNSlider from "../components/mun/MUNSlider";
 import MUNTeam from "../components/mun/MUNTeam";
+import Footer from "../components/globals/Footer";
 
 export default function MUN() {
   return (
@@ -21,8 +22,10 @@ export default function MUN() {
       <Letter />
       <About />
       <MUNSlider />
-      {/* <MUNTeam /> */}
       {/* FAQ */}
+      <div className="bg-[#1D1C41] -mt-10">
+        <Footer />
+      </div>
     </div>
   );
 }
