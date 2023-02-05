@@ -50,7 +50,7 @@ export default function Expand() {
                   <p className="text-2xl font-spaceboards text-yellow-300 mb-2">
                     DESCRIPTION
                   </p>
-                  <p className="text-justify">{eventData.lDesc}</p>
+                  <p className="text-justify text-sm sm:text-base lg:text-lg">{eventData.lDesc}</p>
                   <p className="text-2xl font-spaceboards text-yellow-300 mt-6 mb-2">
                     RULE BOOK
                   </p>
