@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Footer from "../../../components/globals/Footer";
@@ -55,9 +54,14 @@ export default function Expand() {
                   <p className="text-2xl font-spaceboards text-yellow-300 mt-6 mb-2">
                     RULE BOOK
                   </p>
-                  <p className="text-justify text-blue-400">
+                  <a
+                    href={eventData.rulebook}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="text-justify text-blue-400"
+                  >
                     Click Here to check !
-                  </p>
+                  </a>
                 </div>
               </div>
               <div className="flex flex-wrap w-full gap-10 md:justify-evenly mt-6">
