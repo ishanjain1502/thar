@@ -33,7 +33,7 @@ export default function MUNSlider() {
   ];
   return (
     <div
-      id="committee"
+      id="committees"
       className="flex justify-center flex-col py-20 items-center bg-white"
     >
       <span className="py-5 text-xl underline md:text-6xl font-bold text-slate-600 ">
@@ -53,10 +53,7 @@ export default function MUNSlider() {
               delay: 2500,
               disableOnInteraction: false,
             }}
-            pagination={{
-              dynamicBullets: true,
-            }}
-            navigation={true}
+            navigation={false}
             modules={[Autoplay, Pagination, Navigation]}
             zoom={true}
             className="mySwiper flex justify-center items-center"

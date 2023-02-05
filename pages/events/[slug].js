@@ -13,7 +13,6 @@ export default function Domains() {
   useEffect(() => {
     if (slug) {
       setSlugVal(slug);
-      console.log(filtered_events[slugVal]);
     }
   }, [slug]);
   return (
