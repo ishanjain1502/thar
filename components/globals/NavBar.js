@@ -7,25 +7,20 @@ export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [imgSize, setImgSize] = useState(485);
   useEffect(() => {
-    window.addEventListener(
-      "scroll",
-      () => {
-        let scrollYval = scrollY;
-        if (scrollYval > 50) {
-          document.getElementById("navbar").style.backgroundColor =
-            "rgb(0 0 0 / 0.3)";
-          document.getElementById("navbar").style.backdropFilter = "blur(24px)";
-          setImgSize(300);
-        } else {
-          document.getElementById("navbar").style.backgroundColor =
-            "transparent";
-          document.getElementById("navbar").style.backdropFilter = "blur(0px)";
-          setImgSize(485);
-        }
+    window.addEventListener("scroll", () => {
+      let scrollYval = scrollY;
+      if (scrollYval > 50) {
+        document.getElementById("navbar").style.backgroundColor =
+          "rgb(0 0 0 / 0.3)";
+        document.getElementById("navbar").style.backdropFilter = "blur(24px)";
+        setImgSize(300);
+      } else {
+        document.getElementById("navbar").style.backgroundColor = "transparent";
+        document.getElementById("navbar").style.backdropFilter = "blur(0px)";
+        setImgSize(485);
       }
-    );
-  },
-  []);
+    });
+  }, []);
 
   return (
     <div
@@ -144,25 +139,15 @@ export const NavBar = () => {
                 </div>
               </div>
               <nav className="my-auto">
-                <ul className="space-y-10 py-6 flex-col justify-center items-center text-center">
-                  <NavItemPrimary href="/events" text="Events" />
-                  <ul className="space-y-4">
-                    <li>
-                      <NavItemPrimary href="/mun" text="MUN" />
-                    </li>
-                    <li>
-                      <NavItemPrimary href="/gokart" text="Gokart" />
-                    </li>
-                    <li>
-                      <NavItemPrimary href="/robowar" text="Robowar" />
-                    </li>
-                    <li>
-                      <NavItemPrimary text="RC NITRO" href="/rcnitro" />
-                    </li>
-                  </ul>
-                  <NavItemSecondary text="Campus Ambassador" href="/ca" />
-                  <NavItemSecondary text="Team" href="/team" />
-                  <NavItemSecondary text="Sponsors" href="/sponsors" />
+                <ul className="space-y-6 py-6 flex-col justify-center items-center text-center">
+                  <NavItemPrimary href="/events" text="EVENTS" />
+                  <NavItemPrimary href="/gokart" text="GOKART" />
+                  <NavItemPrimary href="/robowar" text="ROBOWAR" />
+                  <NavItemPrimary href="/rcnitro" text="RC NITRO" />
+                  <NavItemPrimary href="/mun" text="MUN" />
+                  <NavItemSecondary href="/ca" text="CAMPUS AMBASSADOR" />
+                  <NavItemSecondary href="/team" text="TEAM" />
+                  <NavItemSecondary href="/sponsors" text="SPONSORS" />
                   {/* Show button on the basis of session */}
                   {session ? (
                     <Link
