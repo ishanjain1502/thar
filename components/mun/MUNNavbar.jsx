@@ -29,13 +29,13 @@ export default function MUNNavbar() {
   }, []);
 
   return (
-    <header className="w-full fixed top-0 h-16 bg-black bg-opacity-30 backdrop-blur-3xl z-50">
-      <nav className="h-full flex items-center justify-center w-full lg:w-10/12 m-auto">
+    <header className="w-full sticky top-0 h-16 bg-black bg-opacity-30 backdrop-blur-3xl z-50">
+      <nav className="h-full flex items-center justify-center w-full lg:w-10/12 m-auto p-2">
         <Link
           href={"/"}
           className="lg:hidden justify-start flex w-11/12 text-2xl"
         >
-          <img src="/logo64trans.png" alt="" />
+          <img src="/logo64trans.png" alt="" className="h-12 md:h-full"/>
         </Link>
         <ul className="menu translate-x-full lg:translate-x-0 absolute  top-0 w-full lg:bg-transparent bg-black bg-opacity-75 backdrop-blur-3xl justify-center lg:h-[inherit] h-screen  flex flex-col lg:flex-row items-center gap-8 text-2xl">
           <li className="navEle">

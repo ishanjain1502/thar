@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="home min-h-screen w-full flex items-center justify-center mt-10"
+      className="home min-h-screen w-full flex items-center justify-center p-10"
     >
       <div className="bg-[#1D1C41] flex flex-col-reverse sm:flex-row gap-4 sm:gap-8 items-center p-8 py-16 sm:p-32 rounded-full ring-inset ring-8 ring-yellow-600">
         <div className="flex gap-4 sm:gap-4 flex-col items-center sm:items-start">
