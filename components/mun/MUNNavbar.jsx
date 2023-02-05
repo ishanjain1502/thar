@@ -69,24 +69,24 @@ export default function MUNNavbar() {
               COMMITTEES
             </li>
           </Link>
-          <Link href="/agendas">
+          {/* <Link href="/agendas">
             <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
               AGENDAS
             </li>
-          </Link>
+          </Link> */}
           {/* <Link href="mun/team">
             <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
               TEAM
             </li>
           </Link> */}
-          <Link href="mun/contact">
+          {/* <Link href="mun/contact">
             <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
               CONTACT
             </li>
-          </Link>
-          <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
+          </Link> */}
+          {/* <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
             FAQs
-          </li>
+          </li> */}
           <li className="closeBtn lg:hidden">x</li>
         </ul>
         <span className="openBtn lg:hidden justify-end flex w-11/12 text-2xl">
