@@ -144,7 +144,7 @@ export const NavBar = () => {
                   <NavItemPrimary href="/gokart" text="GOKART" />
                   <NavItemPrimary href="/robowar" text="ROBOWAR" />
                   <NavItemPrimary href="/rcnitro" text="RC NITRO" />
-                  <NavItemPrimary href="/mun" text="MUN" />
+                  {/* <NavItemPrimary href="/mun" text="MUN" /> */}
                   <NavItemSecondary href="/ca" text="CAMPUS AMBASSADOR" />
                   <NavItemSecondary href="/team" text="TEAM" />
                   <NavItemSecondary href="/sponsors" text="SPONSORS" />
