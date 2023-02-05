@@ -34,7 +34,7 @@ export default function Expand() {
         <NavBar />
         {eventData.id !== undefined ? (
           <>
-            <p className="pt-32 lg:pt-48 pb-6 text-center font-spaceboards text-yellow-300 text-5xl md:text-7xl text-stroke text-stroke-color break-all">
+            <p className="pt-32 lg:pt-48 pb-6 text-center font-spaceboards text-yellow-300 text-3xl sm:text-5xl md:text-7xl text-stroke text-stroke-color break-all">
               {eventData.name.toUpperCase()}
             </p>
             <div className="flex flex-col md:max-w-4xl xl:max-w-5xl w-full mt-4 p-10 rounded-xl bg-black/80 backdrop-blur-xl">
