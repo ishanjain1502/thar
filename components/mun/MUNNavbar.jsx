@@ -35,7 +35,7 @@ export default function MUNNavbar() {
           href={"/"}
           className="lg:hidden justify-start flex w-11/12 text-2xl"
         >
-          <img src="/logo64trans.png" alt="" className="h-12 md:h-full"/>
+          <img src="/logo64trans.png" alt="" className="h-12 md:h-full" />
         </Link>
         <ul className="menu translate-x-full lg:translate-x-0 absolute  top-0 w-full lg:bg-transparent bg-black bg-opacity-75 backdrop-blur-3xl justify-center lg:h-[inherit] h-screen  flex flex-col lg:flex-row items-center gap-8 text-2xl">
           <li className="navEle">
@@ -74,11 +74,11 @@ export default function MUNNavbar() {
               AGENDAS
             </li>
           </Link>
-          <Link href="mun/team">
+          {/* <Link href="mun/team">
             <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
               TEAM
             </li>
-          </Link>
+          </Link> */}
           <Link href="mun/contact">
             <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
               CONTACT
