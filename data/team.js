@@ -25,7 +25,7 @@ export const team_data = {
       name: "Pranay Sharma",
       contact: 8000655515,
       email: "spranay1747@gmail.com",
-      instagram: "https://instagram.com/_.pranay._08",
+      instagram: "",
     },
     {
       name: "Priyanshu Sharma",
