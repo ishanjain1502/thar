@@ -53,10 +53,7 @@ export default function MUNSlider() {
               delay: 2500,
               disableOnInteraction: false,
             }}
-            pagination={{
-              dynamicBullets: true,
-            }}
-            navigation={true}
+            navigation={false}
             modules={[Autoplay, Pagination, Navigation]}
             zoom={true}
             className="mySwiper flex justify-center items-center"
