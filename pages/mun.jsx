@@ -11,7 +11,7 @@ import Footer from "../components/globals/Footer";
 
 export default function MUN() {
   return (
-    <div className="mun">
+    <div className="mun overflow-x-hidden">
       <Head>
         <title>RTU MUN | Model United Nation</title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
