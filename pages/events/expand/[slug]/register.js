@@ -3,11 +3,13 @@ import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import { NavBar } from "../../../../components/globals/NavBar";
 import Footer from "../../../../components/globals/Footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { events_data } from "../../../../data/events";
+import axios from "axios";
 
 export default function Payment() {
   const [event, setEvent] = useState("");
+  let tharId = null;
   const router = useRouter();
   const { data } = useSession({
     required: true,
@@ -15,6 +17,37 @@ export default function Payment() {
       router.push("/#participant");
     },
   });
+
+  async function register(e) {
+    e.preventDefault();
+    await axios.get("/api/v1/tharUser/getUser").then((res) => {
+      if (res.data.data == null) {
+        // User doesn't exist
+        // setForm(true);
+      } else {
+        console.log(res.data.data)
+        // User exists
+        tharId = res.data.data.userTharID
+      }
+    });
+
+    axios
+        .put("/api/v1/webhook/eventPayment", {
+          event: event,
+          participant: tharId
+          // additionalMembers
+        })
+        .then(function (response) {
+          if (response.status === 200) {
+            router.push("/participant/dashboard");
+          } else {
+            alert(response.body.message)
+          }
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+  }
 
   return (
     <>
@@ -29,7 +62,7 @@ export default function Payment() {
         </h1>
         <div className="flex flex-col max-w-xs md:max-w-4xl xl:max-w-5xl mt-4 p-10 lg:px-20 rounded-xl bg-black/80 backdrop-blur-xl">
           <div className="flex flex-col max-w-5xl w-full rounded-xl justify-evenly">
-            <form className="flex flex-col">
+            <form className="flex flex-col" onSubmit={register}>
               <label className="block text-yellow-300">Select event:</label>
               <select value={event} onChange={e => setEvent(e.target.value)} className="border-2 rounded w-full py-2 px-2 bg-black">
                 <option value={""} disabled>Select Event</option>
@@ -50,7 +83,6 @@ export default function Payment() {
               <button
                 className="px-8 py-3 ring-yellow-300 ring text-yellow-300 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out w-max self-center *animate-bounce*"
                 title="Register Now!"
-                //onClick={register}
               >
                 Register!
               </button>

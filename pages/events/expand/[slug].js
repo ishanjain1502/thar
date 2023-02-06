@@ -12,7 +12,6 @@ export default function Expand() {
   const [eventData, setEventData] = useState([]);
 
   const { status } = useSession();
-  const [credits, setCredits] = useState(null);
   const [clicked, setClicked] = useState(false);
 
   const router = useRouter();
@@ -47,8 +46,7 @@ export default function Expand() {
           // setForm(true);
         } else {
           // User exists
-          setCredits(res.data.data.credits);
-          if(credits > 0) {
+          if(res.data.data.credits > 0) {
             router.push(router.asPath+'/register')
           } else {
             alert("You have 0 credits. Please process a payment to get 3 credits.")
