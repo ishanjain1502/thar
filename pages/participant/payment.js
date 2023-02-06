@@ -8,11 +8,11 @@ import { useSession } from "next-auth/react";
 import { NavBar } from "../../components/globals/NavBar";
 import Footer from "../../components/globals/Footer";
 
-import qrcode from '../../public/assets/images/qrcode.png'
+import qrcode from '../../public/assets/images/qrcodes/qr500.png';
 
 export default function Payment() {
   const [trxnId, setTrxnId] = useState("");
-  const [tharID, setTharID] = useState("");
+  const [userData, setUserData] = useState("");
   const router = useRouter();
   const { status } = useSession({
     required: true,
@@ -26,9 +26,10 @@ export default function Payment() {
       axios.get("/api/v1/tharUser/getUser").then((res) => {
         if (res.data.data == null) {
           alert("Error: user data not found");
+          router.push("/participant/dashboard")
         } else {
           // User exists
-          setTharID(res.data.data.userTharID);
+          setUserData(res.data.data);
         }
       });
     }
@@ -39,8 +40,8 @@ export default function Payment() {
       // console.log(`Trxn ID: ${trxnId}`)
       axios
         .post("/api/v1/webhook/paymentInitial", {
-          tharID: tharID,
-          amount: 550,
+          userData: userData.userTharID,
+          amount: 500,
           transactionId: trxnId
         })
         .then(function (response) {
@@ -57,7 +58,6 @@ export default function Payment() {
           } else {
             alert(response.body.message)
           }
-          
         });
     } else {
       console.log("Confirmation cancelled")
@@ -81,7 +81,7 @@ export default function Payment() {
               </p>
               <ol>
                 <li>
-                  1. Scan the QR Code and make a payment of ₹550/-
+                  1. Scan the QR Code and make a payment of ₹500/-
                 </li>
                 <li>
                   2. Copy the transaction ID from UPI App and paste it in the input box.
@@ -95,13 +95,13 @@ export default function Payment() {
               </p>
               <ol>
                 <li>
-                  1. Please pay exactly <b>₹550/-</b> only.
+                  1. Please pay exactly <b>₹500/-</b> only.
                 </li>
                 <li>
                   2. This is a non-refundable transaction.
                 </li>
                 <li>
-                  3. If you fail to pay exactly ₹550/- then your transaction will not be considered. You will have to re-register and pay the correct amount.
+                  3. If you fail to pay exactly ₹500/- then your transaction will not be considered. You will have to re-register and pay the correct amount.
                 </li>
               </ol>
             </div>
@@ -114,7 +114,7 @@ export default function Payment() {
                   alt="QR Code"
                 />
               </div>
-              <p className="text-sm text-gray-300">Scan the QR Code above and pay <span className="text-base font-bold text-yellow-300">₹550</span> using any UPI Payments App</p>
+              <p className="text-sm text-gray-300">Scan the QR Code above and pay <span className="text-base font-bold text-yellow-300">₹500</span> using any UPI Payments App</p>
               <input
                 autoComplete="off"
                 className="border-2 rounded w-full py-2 px-2 text-sm bg-black"

@@ -104,7 +104,7 @@ export default function Expand() {
                   <p className="text-2xl font-spaceboards text-yellow-300 mt-6 mb-2">
                     PRIZES
                   </p>
-                  <p className="flex flex-col">
+                  <div className="flex flex-col">
                     {eventData.total_price && (
                       <>
                         <p className="text-xl font-bold">
@@ -128,7 +128,7 @@ export default function Expand() {
                         </p>
                       </>
                     )}
-                  </p>
+                  </div>
                 </div>
                 <div className="">
                   <p className="text-2xl font-spaceboards text-yellow-300 mt-6 mb-2">
