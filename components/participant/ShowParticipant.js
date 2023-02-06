@@ -1,7 +1,9 @@
 import { signOut } from "next-auth/react";
+import { useRouter } from "next/router";
 import React from "react";
 
 export default function ShowParticipant({ userData }) {
+  const router = useRouter();
   return (
     <>
       <div className="text-center">
@@ -35,7 +37,8 @@ export default function ShowParticipant({ userData }) {
           <div
             className="rounded-lg text-center flex flex-col justify-center place-items-center p-2 font-semibold h-full bg-sky-200 py-6 text-xl cursor-pointer"
             onClick={() => {
-              alert("this option is currently unavailable");
+              router.push('/participant/payment')
+              // alert("this option is currently unavailable");
             }}
           >
             Buy Credits
