@@ -5,9 +5,9 @@ import { handleError } from "../utility/handleError";
 export default function withValidation(handler, schema,method) {
     return async(req, res) => {
         const session = await unstable_getServerSession(req, res, authOptions);
-        // if(!session){
-        //     return handleError(res,"unauthroized");
-        // }
+        if(!session){
+            return handleError(res,"unauthroized");
+        }
         req.session=session;
 
         if (method !== req.method) {
