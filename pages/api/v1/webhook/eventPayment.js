@@ -36,14 +36,17 @@ const handler = async(req,res) => {
 
         const {event, participant , additionalMembers} = req.body;
         let resp = await creditAndEventChecker(participant);
-    
+ 
         if(resp < 400){
-            for(let i=0; i<additionalMembers.length ; i++){
-                resp = await creditAndEventChecker(additionalMembers[i].tharId);
-                if(resp > 400) break;
+ 
+            if(additionalMembers){
+                for(let i=0; i<additionalMembers.length ; i++){
+                    resp = await creditAndEventChecker(additionalMembers[i].tharId);
+                    if(resp > 400) break;
+                }
             }
         }
-    
+
         if(resp === 401 ){
             return res.status(401).json({
                 code : 401,
@@ -57,12 +60,13 @@ const handler = async(req,res) => {
                 message : "User does not have enough credits --transaction aborted"
             })
         }
-    
+        
         await deductCreditAndAddEvent(participant, event);
-        for(let i=0; i<additionalMembers.length ; i++){
-            await deductCreditAndAddEvent(additionalMembers[i].tharId, event)
+        if(additionalMembers){
+            for(let i=0; i<additionalMembers.length ; i++){
+                await deductCreditAndAddEvent(additionalMembers[i].tharId, event)
+            }
         }
-    
     
         return res.status(200).json({
             code : 200,
