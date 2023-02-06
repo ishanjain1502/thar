@@ -1,5 +1,7 @@
+import { signIn, useSession } from "next-auth/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Footer from "../../../components/globals/Footer";
 import { NavBar } from "../../../components/globals/NavBar";
@@ -8,6 +10,11 @@ import { events_data } from "../../../data/events";
 export default function Expand() {
   const [slugVal, setSlugVal] = useState(null);
   const [eventData, setEventData] = useState([]);
+
+  const { status } = useSession();
+  const [credits, setCredits] = useState(null);
+  const [clicked, setClicked] = useState(false);
+
   const router = useRouter();
   const { slug } = router.query;
   useEffect(() => {
@@ -24,6 +31,34 @@ export default function Expand() {
       }
     }
   }, [slugVal !== null]);
+
+  // store current page in localhost to be redirected to after payment
+  function onRegister() {
+    localStorage.setItem('prevURL', router.asPath);
+    setClicked(true);
+  }
+
+  // get user coins and redirect to /register if coins > 0 else to payment
+  useEffect(() => {
+    if (status === "authenticated" && clicked) {
+      axios.get("/api/v1/tharUser/getUser").then((res) => {
+        if (res.data.data == null) {
+          // User doesn't exist
+          // setForm(true);
+        } else {
+          // User exists
+          setCredits(res.data.data.credits);
+          if(credits > 0) {
+            router.push(router.asPath+'/register')
+          } else {
+            alert("You have 0 credits. Please process a payment to get 3 credits.")
+            router.push('/participant/payment')
+          }
+        }
+      });
+    }
+  }, [status, clicked]);
+
   return (
     <>
       <Head>
@@ -117,16 +152,24 @@ export default function Expand() {
                   </p>
                 </div>
               </div>
-              {/* TODO: Enable button and apply registration logic */}
-              <button
+              {status !== "authenticated"
+              ? <button
                 className="px-8 py-3 ring-yellow-300 ring text-yellow-300 mt-8 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out w-max self-center *animate-bounce*"
                 title="Opening Soon"
-                // onClick={() =>
-                //   signIn("google", { callbackUrl: "/participant/dashboard" })
-                // }
+                onClick={() =>
+                  signIn("google", { callbackUrl: `/events/expand/${slugVal}` })
+                }
               >
-                Registration Opening Soon
+                Login to register
               </button>
+              : <button
+                className="px-8 py-3 ring-yellow-300 ring text-yellow-300 mt-8 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out w-max self-center *animate-bounce*"
+                title="Register Now!"
+                onClick={onRegister}
+              >
+                Register Now!
+              </button>
+              }
             </div>
           </>
         ) : (
