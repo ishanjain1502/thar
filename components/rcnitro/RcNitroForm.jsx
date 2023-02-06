@@ -268,15 +268,17 @@ export default function RcNitroForm({ setBtnClicked }) {
                     </label><p className="text-black text-sm">{process.env.NEXT_PUBLIC_THAR_ACCOUNT_IFSC}</p>
                 </div>
 
-                <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                <div className="flex flex-row-reverse py-6 border-t border-solid border-blueGray-200 rounded-b">
                     <button
-                    className="text-white bg-yellow-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                    type="submit"
+                    className="w-1/2 sm:w-1/4 flex justify-center items-center text-gray-900 bg-yellow-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                    
                     >
-                    Submit
+                    {
+                                isSubmitting ? <Spinner/> : 'Submit'
+                            }
                     </button>
-                </div>
-                </form>
+                </div>                
+             </form>
             </div>
             </div>
         </div>
