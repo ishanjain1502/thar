@@ -7,7 +7,7 @@ export default function team() {
   return (
     <div className="mun">
       <MUNNavbar />
-      <MUNTeam />
+      {/* <MUNTeam /> */}
       <div className="bg-[#1D1C41] -mt-10">
         <Footer />
       </div>

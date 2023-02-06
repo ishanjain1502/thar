@@ -41,9 +41,9 @@ export default function BottomNavBar() {
           </Link>
         </div>
         <div className="p-2">
-          {/* <Link href="/mun" legacyBehavior passHref>
+          <Link href="/mun" legacyBehavior passHref>
             <a> MUN</a>
-          </Link> */}
+          </Link>
         </div>
       </div>
     </div>
