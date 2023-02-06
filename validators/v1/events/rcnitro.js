@@ -6,7 +6,7 @@ const validationSchema = Joi.object({
     teamLeaderPhone : Joi.string().trim().min(10).max(13).required(),
     // teamLeaderEmail : Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).trim().min(16).max(50).required(),
     address : Joi.string().trim().min(3).max(100).required(),
-    college : Joi.string().trim().min(3).max(100).required(),
+    college : Joi.string().trim().min(0).max(100),
     additionalMembers : Joi.array().items(
         Joi.object({ 
              name: Joi.string().min(3).max(30).trim(), 

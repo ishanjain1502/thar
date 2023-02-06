@@ -34,7 +34,6 @@ const schema = new mongoose.Schema({
     },
     college:{
         type:String,
-        minLength:3,
         maxLength:100
     },
     additionalMembers:[
@@ -59,7 +58,7 @@ const schema = new mongoose.Schema({
      payment:{
         status:{
             type:String,
-            default:"unVerified"
+            default:"NOTVERIFIED"
         },
         txnId:{
             type:String,
