@@ -6,7 +6,6 @@ import Letter from "../components/mun/Letter";
 import MUNNavbar from "../components/mun/MUNNavbar";
 import { NavBar } from "../components/globals/NavBar";
 import MUNSlider from "../components/mun/MUNSlider";
-import MUNTeam from "../components/mun/MUNTeam";
 import Footer from "../components/globals/Footer";
 
 export default function MUN() {
@@ -16,7 +15,9 @@ export default function MUN() {
         <title>RTU MUN | Model United Nation</title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
-      {/* <NavBar className="hidden"/> */}
+      <div className="hidden">
+        <NavBar className="hidden" />
+      </div>
       <MUNNavbar />
       <Home />
       <Letter />
