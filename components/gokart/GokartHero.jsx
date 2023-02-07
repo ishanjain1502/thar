@@ -50,7 +50,7 @@ export default function GokartHero({setBtnClicked}) {
         
       </div>
       <div className="text-5xl px-5 py-5 " > 
-              Early Bird offer upto 6th Feb &nbsp;<p className="line-through inline text-red-700" > &#8377;17500</p>&nbsp; &#8377;15000
+              Early Bird offer upto 16th Feb &nbsp;<p className="line-through inline text-red-700" > &#8377;17500</p>&nbsp; &#8377;15000
       </div>
     </div>
   );
