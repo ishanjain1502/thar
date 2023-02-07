@@ -110,7 +110,14 @@ export default function Payment() {
                 2. This is a non-refundable transaction.
               </li>
               <li>
-                3. If you fail to pay exactly ₹500/- then your transaction will not be considered. You will have to re-register and pay the correct amount.
+                3. You will get 3 credits for ₹500/-.
+              </li>
+              <li>
+                4. If you fail to pay exactly ₹500/- then your transaction will not be considered. You will have to re-register and pay the correct amount.
+              </li>
+              <br/>
+              <li className="text-yellow-300">
+                Note: Avail early bird offer till 15th february 2023 to get one extra credit 🎉🎉
               </li>
             </ol>
           </div>
