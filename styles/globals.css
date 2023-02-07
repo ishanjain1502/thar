@@ -230,3 +230,10 @@ body:before {
   background-position: center;
   background-size: cover;
 }
+
+.team-frame {
+  background-image: url("/assets/images/team/team_frame.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
