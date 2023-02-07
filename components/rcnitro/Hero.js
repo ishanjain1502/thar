@@ -1,6 +1,22 @@
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 import React from "react";
 
-export default function Hero() {
+export default function Hero({setBtnClicked}) {
+
+  const {data:session} = useSession();
+  const router = useRouter();
+
+  const handleRegisterBtnClick = () => {
+    if(!session){
+      alert('Login Required\nRedirecting to home page please wait...');
+      setTimeout(()=>{
+        router.replace('/');
+      },1000);
+      return;
+    }
+    setBtnClicked(true);
+  }
   return (
     <>
       <div className="min-h-screen grid grid-rows-1 md:grid-rows-2" id="home">
@@ -15,6 +31,12 @@ export default function Hero() {
               <div className="font-semibold py-4">
                 24 February to 26 February
               </div>
+              <button 
+              className="rounded-md ring-2 ring-yellow-400 text-yellow-400 px-2 py-2 text-xl hover:bg-yellow-400 hover:text-black w-52"
+              onClick={handleRegisterBtnClick}
+              >
+              Register NOW
+              </button> <br/>
               <div className="flex flex-row flex-wrap gap-2">
                 <a
                   href="https://drive.google.com/file/d/1b9S1ZdidrhSDC-Z3WUMtcNaEdnP667Fr/view?usp=sharing"
