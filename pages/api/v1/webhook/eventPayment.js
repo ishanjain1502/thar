@@ -7,7 +7,7 @@ import normalEvent from "../../../../schema/events/normalEvent";
 
 connectDB(); // connecting to db
 
-const creditAndEventChecker = async(tharId) => {
+const creditAndEventChecker = async(tharId, event) => {
     const user = await tharUser.findOne({
         userTharID: tharId
     })
@@ -18,6 +18,10 @@ const creditAndEventChecker = async(tharId) => {
         if(user.credits == 0){
             return 402
         }
+        if(user.events.includes(event)){
+            return 403
+        }
+
         return 200
     }    
 }
@@ -36,7 +40,7 @@ const handler = async(req,res) => {
     try{
 
         const {event, participant , additionalMembers} = req.body;
-        let resp = await creditAndEventChecker(participant);
+        let resp = await creditAndEventChecker(participant,event);
  
         if(resp < 400){
  
@@ -52,13 +56,19 @@ const handler = async(req,res) => {
             return res.status(401).json({
                 code : 401,
                 error : true,
-                message : "Thar id does not exists --transaction aborted"
+                message : "One of the Thar ID does not exists"
             })
         }else if(resp === 402 ){
             return res.status(402).json({
                 code : 402,
                 error : true,
-                message : "User does not have enough credits --transaction aborted"
+                message : "Leader or one of the members do not have enough credits"
+            })
+        }else if(resp === 403){
+            return res.status(403).json({
+                code: 403,
+                error: true,
+                message: "Leader or one of the member have already registered for the event"
             })
         }
         

@@ -8,7 +8,7 @@ import { useSession } from "next-auth/react";
 import { NavBar } from "../../components/globals/NavBar";
 import Footer from "../../components/globals/Footer";
 
-import qrcode from '../../public/assets/images/qrcodes/qr500.png';
+import qrcode from "../../public/assets/images/qrcodes/qr500.png";
 
 export default function Payment() {
   const [trxnId, setTrxnId] = useState("");
@@ -26,7 +26,7 @@ export default function Payment() {
       axios.get("/api/v1/tharUser/getUser").then((res) => {
         if (res.data.data == null) {
           alert("Error: user data not found");
-          router.push("/participant/dashboard")
+          router.push("/participant/dashboard");
         } else {
           // User exists
           setUserData(res.data.data);
@@ -44,16 +44,16 @@ export default function Payment() {
         .post("/api/v1/webhook/paymentInitial", {
           tharId: userData.userTharID,
           amount: "500",
-          transactionId: trxnId
+          transactionId: trxnId,
         })
         .then(function (response) {
           // redirect to event registration page
-          const prevURL = localStorage.getItem('prevURL');
-          localStorage.removeItem('prevUrRL');
+          const eventID = localStorage.getItem("eventID");
+          localStorage.removeItem("eventID");
 
           if (response.status === 200) {
-            if (prevURL) {
-              router.push(prevURL + '/register');
+            if (eventID) {
+              router.push(`/events/register?eventID=${eventID}`);
             } else {
               router.push("/participant/dashboard");
             }
@@ -62,9 +62,9 @@ export default function Payment() {
           }
         })
         .catch(function (error) {
-          if(error.response.status === 403) {
+          if (error.response.status === 403) {
             alert("You can't make more than one payment");
-            router.push('/participant/dashboard');
+            router.push("/participant/dashboard");
           }
           console.log(error);
         });
@@ -89,15 +89,12 @@ export default function Payment() {
               How-to
             </p>
             <ol>
+              <li>1. Scan the QR Code and make a payment of ₹500/-</li>
               <li>
-                1. Scan the QR Code and make a payment of ₹500/-
+                2. Copy the transaction ID from UPI App and paste it in the
+                input box.
               </li>
-              <li>
-                2. Copy the transaction ID from UPI App and paste it in the input box.
-              </li>
-              <li>
-                3. Submit the transaction ID.
-              </li>
+              <li>3. Submit the transaction ID.</li>
             </ol>
             <p className="text-lg font-spaceboards text-yellow-300 mt-2 mb-2">
               Rules
@@ -106,37 +103,41 @@ export default function Payment() {
               <li>
                 1. Please pay exactly <b>₹500/-</b> only.
               </li>
+              <li>2. This is a non-refundable transaction.</li>
+              <li>3. You will get 3 credits for ₹500/-.</li>
               <li>
-                2. This is a non-refundable transaction.
+                4. If you fail to pay exactly ₹500/- then your transaction will
+                not be considered. You will have to re-register and pay the
+                correct amount.
               </li>
-              <li>
-                3. You will get 3 credits for ₹500/-.
-              </li>
-              <li>
-                4. If you fail to pay exactly ₹500/- then your transaction will not be considered. You will have to re-register and pay the correct amount.
-              </li>
-              <br/>
+              <br />
               <li className="text-yellow-300">
-                Note: Avail early bird offer till 15th february 2023 to get one extra credit 🎉🎉
+                Note: Avail early bird offer till 15th february 2023 to get one
+                extra credit 🎉🎉
               </li>
             </ol>
           </div>
           <div className="flex flex-col gap-4 text-center items-center p-6 lg:px-10 max-w-5xl rounded-xl bg-black/80 justify-evenly">
             <div className="h-40 w-40 object-contain rounded overflow-hidden relative">
-              <Image
-                src={qrcode}
-                fill
-                quality={75}
-                alt="QR Code"
-              />
+              <Image src={qrcode} fill quality={75} alt="QR Code" />
             </div>
-            <p className="text-sm text-gray-300">Scan the QR Code above and pay <span className="text-base font-bold text-yellow-300">₹500</span> using any UPI Payments App</p>
+            <p className="text-sm text-gray-300">
+              Scan the QR Code above and pay{" "}
+              <span className="text-base font-bold text-yellow-300">₹500</span>{" "}
+              using any UPI Payments App
+            </p>
+            <p className="text-yellow-300">
+              Note: UD RTU students don&apos;t have to pay, you will get credits
+              later
+            </p>
             <form className="flex flex-col" onSubmit={submitTrxn}>
               <input
                 autoComplete="off"
                 placeholder="Paste transaction ID here"
                 value={trxnId}
-                onChange={(e) => {setTrxnId(e.target.value)}}
+                onChange={(e) => {
+                  setTrxnId(e.target.value);
+                }}
                 minLength={12}
                 required
                 className="border-2 rounded w-full py-2 px-2 text-sm bg-black"
