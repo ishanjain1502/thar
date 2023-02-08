@@ -23,7 +23,7 @@ export default function ShowParticipant({ userData }) {
               {userData.userTharID}{" "}
               <button
                 onClick={() => {
-                  navigator.clipboard.writeText(userData.referralCode);
+                  navigator.clipboard.writeText(userData.userTharID);
                   alert(`User id ${userData.userTharID} copied to clipboard`);
                 }}
               >
@@ -37,7 +37,7 @@ export default function ShowParticipant({ userData }) {
           <div
             className="rounded-lg text-center flex flex-col justify-center place-items-center p-2 font-semibold h-full bg-sky-200 py-6 text-xl cursor-pointer"
             onClick={() => {
-              router.push('/participant/payment')
+              router.push("/participant/payment");
               // alert("this option is currently unavailable");
             }}
           >
