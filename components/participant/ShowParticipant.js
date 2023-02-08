@@ -76,7 +76,7 @@ export default function ShowParticipant({ userData }) {
             {user_events.map((event, index) => (
               <li key={event.id} className="text-lg">
                 {index + 1}. {event.name}{" "}
-                <span className="bg-sky-500 text-white px-2 text-sm rounded-full">
+                <span className="bg-sky-500 text-white px-2 py-1 text-sm rounded-full">
                   {event.event_type}
                 </span>
               </li>
