@@ -46,7 +46,7 @@ export default function ShowUser({ userData }) {
           </div>
         </div>
       </div>
-      <div className="bg-emerald-200 m-4 p-2 lg:p-4 rounded-md">
+      <div className="bg-emerald-200 m-4 p-4 rounded-md">
         <div className="flex justify-between items-center flex-wrap mb-2">
           <div className="text-slate-900 text-lg font-semibold">
             Message Template
@@ -79,7 +79,7 @@ export default function ShowUser({ userData }) {
             userData.referralCode
           }
           data-action="share/whatsapp/share"
-          className="transition-all bg-emerald-900 ring-2 ring-emerald-700 text-white py-1 px-2 rounded-md flex flex-row items-center gap-2 active:scale-90 text-center w-fit mx-auto mt-6 mb-2"
+          className="transition-all bg-emerald-900 ring-2 ring-emerald-700 text-white py-1 px-2 rounded-md flex flex-row items-center gap-2 active:scale-90 text-center w-fit mx-auto mt-6"
           target="_blank"
           rel="noreferrer noopener"
         >
