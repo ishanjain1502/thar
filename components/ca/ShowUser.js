@@ -81,6 +81,7 @@ export default function ShowUser({ userData }) {
           data-action="share/whatsapp/share"
           className="transition-all bg-emerald-900 ring-2 ring-emerald-700 text-white py-1 px-2 rounded-md flex flex-row items-center gap-2 active:scale-90 text-center w-fit mx-auto mt-6 mb-2"
           target="_blank"
+          rel="noreferrer noopener"
         >
           Share to WhatsApp
         </a>
