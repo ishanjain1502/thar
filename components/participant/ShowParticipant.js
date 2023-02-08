@@ -52,8 +52,7 @@ export default function ShowParticipant({ userData }) {
         </div>
       </div>
       <div className="text-slate-700 font-semibold px-4 py-2 md:text-center">
-        Credits are used to participate in events. We will soon let you buy
-        credits, till then check out our amazing events!
+        Credits are used to participate in events.
       </div>
       <button
         className="transition-all w-fit mx-auto bg-black font-semibold text-white rounded-lg py-2 px-4  justify-center items-center mt-4 active:scale-95 flex flex-row gap-2"
