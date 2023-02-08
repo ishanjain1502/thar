@@ -41,7 +41,11 @@ export default function Dashboard() {
         <NavBar />
         <div className="pt-32 md:pt-36 lg:pt-44">
           {form ? (
-            <ParticipantForm name={data.user?.name} email={data.user?.email} />
+            <ParticipantForm
+              name={data.user?.name}
+              email={data.user?.email}
+              referral={referral}
+            />
           ) : (
             <div className="w-[95%] sm:w-[90%] md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl bg-white backdrop-blur-2xl rounded-md text-black mx-auto pb-12">
               <div className="relative pt-16 mt-16 rounded-t-md">

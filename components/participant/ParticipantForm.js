@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Processing from "../MicroComponents/Processing";
 import Submitted from "../MicroComponents/Submitted";
 import { useRouter } from "next/router";
 import { signOut } from "next-auth/react";
 
-export default function ParticipantForm({ email, name }) {
+export default function ParticipantForm({ email, name, referral }) {
   const router = useRouter();
   /* Sample data
   {
@@ -78,6 +78,11 @@ export default function ParticipantForm({ email, name }) {
 
     /* TODO: Load data with a single ref to optimise extra memory usage */
   }
+  useEffect(() => {
+    if (referral != undefined) {
+      setFormData({ ...formData, referralCode: referral });
+    }
+  }, [referral]);
   return (
     <div
       className="w-full py-6 flex flex-col justify-center sm:py-12"
