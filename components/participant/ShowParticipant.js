@@ -1,19 +1,22 @@
 import { signOut } from "next-auth/react";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { events_data } from "../../data/events";
 
 export default function ShowParticipant({ userData }) {
   const router = useRouter();
-
-  /* Array of filtered events of user on basis of event id recieved from db */
-  var user_events = [];
-  userData.events.forEach((event) => {
-    let event_data = events_data.filter((obj) => obj.id == event);
-    if (!user_events.includes(event_data[0])) {
-      user_events.push(event_data[0]);
-    }
-  });
+  const [userEvents, setUserEvents] = useState([]);
+  /* Array of filtered events of user on basis of event id recieved from db and then set to state for re rendering of page on client side */
+  useEffect(() => {
+    var user_events = [];
+    userData.events.forEach((event) => {
+      let event_data = events_data.filter((obj) => obj.id == event);
+      if (!user_events.includes(event_data[0])) {
+        user_events.push(event_data[0]);
+      }
+    });
+    setUserEvents(user_events);
+  }, [userData]);
   // console.log(user_events);
 
   return (
@@ -73,7 +76,7 @@ export default function ShowParticipant({ userData }) {
           <p className="text-lg text-emerald-900 font-semibold">Your events:</p>
           <ul className="mt-2 list-none">
             {/* {events_data[0].name} */}
-            {user_events.map((event, index) => (
+            {userEvents.map((event, index) => (
               <li key={event.id} className="text-lg">
                 {index + 1}. {event.name}{" "}
                 <span className="bg-sky-500 text-white px-2 py-[0.1rem] text-sm rounded-full">
