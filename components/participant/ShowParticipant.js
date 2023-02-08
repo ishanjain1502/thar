@@ -14,7 +14,7 @@ export default function ShowParticipant({ userData }) {
       user_events.push(event_data[0]);
     }
   });
-  console.log(user_events);
+  // console.log(user_events);
 
   return (
     <>
