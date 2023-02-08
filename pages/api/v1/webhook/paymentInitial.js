@@ -45,7 +45,8 @@ const handler = async(req,res) => {
                 let updatedUser = await tharUser.findByIdAndUpdate(
                     user._id,
                     {
-                        credits : 3,
+                        // credits : 3,
+                        credits : 4,
                         paymentStatus: true
                     },{new:true}
                 )
