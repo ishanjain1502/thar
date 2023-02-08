@@ -33,7 +33,7 @@ export default function Expand() {
 
   // store current page in localhost to be redirected to after payment
   function onRegister() {
-    localStorage.setItem('prevURL', router.asPath);
+    localStorage.setItem('eventID', slugVal);
     setClicked(true);
   }
 
@@ -47,7 +47,7 @@ export default function Expand() {
         } else {
           // User exists
           if(res.data.data.credits > 0) {
-            router.push(router.asPath+'/register')
+            router.push(`/events/register?eventID=${slugVal}`)
           } else {
             alert("You have 0 credits. Please process a payment to get 3 credits.")
             router.push('/participant/payment')

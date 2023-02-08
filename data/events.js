@@ -244,33 +244,6 @@ export const events_data = [
       "Taking up inspiration from the reality show shark tank we put forward our event shark tank rtu where investors may directly invest in your startup. Pitching your idea in the best possible way is  what you have to do on your part. Only 5 startups will be given a chance to pitch, out of which only 3 will be rewarded with prize money.",
   },
   {
-    id: "DG3",
-    name: "Designathon",
-    domain: "Design and Graphics",
-    min_participants: 1,
-    max_participants: 4,
-    event_type: "Team",
-    total_price: 5000,
-    first_prize: 3000,
-    second_prize: 2000,
-    rulebook:
-      "https://drive.google.com/file/d/1eLxgf7P21qJGUOdaQRxEmvyWCYrtLq8D/view?usp=share_link",
-    c1_name: "Murli Manohar Kumawat",
-    c1_mobile: "7023610789",
-    c2_name: "Rupali Kumari",
-    c2_mobile: 7357346973,
-    c3_name: "Diya Vijay",
-    c3_mobile: 9414869051,
-    c4_name: "Divisha Tahiliani",
-    c4_mobile: 8112209847,
-    c5_name: "Karan Vaishnav",
-    c5_mobile: 9799132380,
-    sDesc:
-      "Designathon is a no - code designing competition in which participants form teams and innovate.",
-    lDesc:
-      '" Designs are beyond crafting pretty screens, it\'s also about how you go about solving intricate problems!". Designathon is a 3-day sprint to activate your artistic muscles to design interfaces. In the first round, the problem statement would be given to a team and they would have to submit their solution by the end of the day. In the second round, the chosen team will have to complete the UI/UX design of their idea. And for the last round, the team needs to complete the UI design with a prototype and pitch their idea with the prototype. Designathon gives designers a unique chance of meeting, connect and discuss. It also helps in getting a high-fidelity interactive prototype of the idea.',
-  },
-  {
     id: "DG1",
     name: "Design Battles",
     domain: "Design and Graphics",
@@ -705,28 +678,6 @@ export const events_data = [
       "CSS Battles is a competition that aims to observe the CSS skills of participants in competition. The purpose of the event is to allow participants to show their skills and knowledge of CSS.This event will held under the biggest techno-management fest of Rajasthan.",
     lDesc:
       "The CSS wars are back, and this time they're bigger than ever. We're spreading oneself a CSS battles competition on campus. We want to see how your skills compare to others' in an all-out battle of CSS speed and creativity. Suppose If you're a student at IIT Kharagpur, and you have the skills to back it up, then you should get in on this! The battles will be organized in two sections, where candidates will be put in a pair of 2 and will compete with one another on a design. The winners will be selected after this on the basis of least time taken. We will select fastest 16 people and put them in knockout tournament. Participants will compete for prizes, which include 1st prize of 10000/- and 2nd prize of 5000/- for 1st runner up , Participants should not participate virtually as well as get registered . -if you want a chance at glory, then you should get into this .",
-  },
-  {
-    id: "CW1",
-    name: "CS Funda",
-    domain: "Code wars ",
-    min_participants: 1,
-    max_participants: 3,
-    event_type: "Team",
-    total_price: 5000,
-    first_prize: 3000,
-    second_prize: 2000,
-    rulebook:
-      "https://drive.google.com/file/d/1wK_1C3YUx9bA3iFDrgJuB6vPOyvQQHRd/view?usp=share_link",
-    c1_name: "Gulshan Aggarwal",
-    c1_mobile: 6378880357,
-    c2_name: "Bharti Kumari,",
-    c2_mobile: 9001434984,
-    c3_name: "Shruti Garg",
-    sDesc:
-      "CS Funda is a quiz event where the participants will be tested on their basic knowledge of computer fundamentals.",
-    lDesc:
-      "The event will be held in at University departments of Rajasthan technical University, Kota on 23 Feb 2023 In the first round, teams will get questions to answer within 30 minutes. The team with the highest score will be declared the winner.&nbsp;In Round 2, there will be a buzzer round, Teams are scored based on the marks of their members attempting the quiz round.&nbsp;It's mandatory for each team member to attempt quize The most accurate team will win prize money of ₹8000 for winner&nbsp; ₹4000 for 1st runner up ₹2000 for 2nd runner up.",
   },
   {
     id: "CW7",
