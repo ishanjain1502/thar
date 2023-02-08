@@ -3,6 +3,7 @@ import tharUser from "../../../../schema/tharUser/tharUsers";
 import payment from "../../../../schema/payment/payment";
 import withValidation from "../../../../middleware/withValidation";
 import validationSchema from "../../../../validators/v1/payment/eventPayment";
+import normalEvent from "../../../../schema/events/normalEvent";
 
 connectDB(); // connecting to db
 
@@ -67,7 +68,14 @@ const handler = async(req,res) => {
                 await deductCreditAndAddEvent(additionalMembers[i].tharId, event)
             }
         }
-    
+
+        // create team for event --
+        const createTeam = await normalEvent.create({
+            captainTharId: participant,
+            eventName: event,
+            additionalMembers: additionalMembers
+        })
+
         return res.status(200).json({
             code : 200,
             error: false,
