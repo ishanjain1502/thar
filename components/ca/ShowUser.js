@@ -55,7 +55,7 @@ export default function ShowUser({ userData }) {
             className="transition-all bg-sky-600 text-white py-1 px-2 rounded-md flex flex-row items-center gap-2 active:scale-90"
             onClick={() => {
               navigator.clipboard.writeText(
-                `Hello Everyone, want to take part in most awaited technical fest of Rajasthan. \nRTU is back with THAR'23, with lots of amazing events, workshops, pronites, exhibitions and guest lectures. Register now and get early bird offer. \nUse my referral: https://www.rtuthar.in/participant/dashboard?referral=${userData.referralCode}`
+                `Hello Everyone! \nGet ready and pack your bags for the most awaited technical fest of Rajasthan.\nRajasthan Technical University is back with THAR'23, offering lots of amazing events, workshops, pronites, exhibitions and guest lectures.\nRegister now and get early bird offer!\nUse my referral: https://www.rtuthar.in/participant/dashboard?referral=${userData.referralCode}`
               );
             }}
           >
@@ -63,19 +63,24 @@ export default function ShowUser({ userData }) {
           </button>
         </div>
         <div className="text-black font-semibold text-base break-words">
-          Hello Everyone, want to take part in most awaited technical fest of
-          Rajasthan. <br />
-          RTU is back with THAR&apos;23, with lots of amazing events, workshops,
-          pronites, exhibitions and guest lectures. Register now and get early
-          bird offer. <br /> Use my referral:
+          Hello Everyone! <br />
+          Get ready and pack your bags for the most awaited technical fest of
+          Rajasthan.
+          <br />
+          Rajasthan Technical University is back with THAR&apos;23, offering
+          lots of amazing events, workshops, pronites, exhibitions and guest
+          lectures.
+          <br />
+          Register now and get early bird offer! <br />
+          Use my referral:
           https://www.rtuthar.in/participant/dashboard?referral=
           {userData.referralCode}
         </div>
-
+        {/* %0a - for new line in link href */}
         <a
           href={
             "whatsapp://send?text=" +
-            "Hello Everyone, want to take part in most awaited technical fest of Rajasthan. \nRTU is back with THAR'23, with lots of amazing events, workshops, pronites, exhibitions and guest lectures. Register now and get early bird offer. \nUse my referral: https://www.rtuthar.in/participant/dashboard?referral=" +
+            "Hello Everyone! %0aGet ready and pack your bags for the most awaited technical fest of Rajasthan. %0aRajasthan Technical University is back with THAR'23, offering lots of amazing events, workshops, pronites, exhibitions and guest lectures. %0aRegister now and get early bird offer! %0aUse my referral: https://www.rtuthar.in/participant/dashboard?referral=" +
             userData.referralCode
           }
           data-action="share/whatsapp/share"
