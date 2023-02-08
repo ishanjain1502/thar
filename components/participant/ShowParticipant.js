@@ -56,7 +56,7 @@ export default function ShowParticipant({ userData }) {
       </div>
       <button
         className="transition-all w-fit mx-auto bg-black font-semibold text-white rounded-lg py-2 px-4  justify-center items-center mt-4 active:scale-95 flex flex-row gap-2"
-        onClick={() => signOut()}
+        onClick={() => signOut({ callbackUrl: "/" })}
       >
         Sign out
       </button>

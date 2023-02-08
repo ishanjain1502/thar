@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Processing from "../MicroComponents/Processing";
 import Submitted from "../MicroComponents/Submitted";
 import { useRouter } from "next/router";
 import { signOut } from "next-auth/react";
 
-export default function ParticipantForm({ email, name }) {
+export default function ParticipantForm({ email, name, referral }) {
   const router = useRouter();
   /* Sample data
   {
@@ -78,6 +78,11 @@ export default function ParticipantForm({ email, name }) {
 
     /* TODO: Load data with a single ref to optimise extra memory usage */
   }
+  useEffect(() => {
+    if (referral != undefined) {
+      setFormData({ ...formData, referralCode: referral });
+    }
+  }, [referral]);
   return (
     <div
       className="w-full py-6 flex flex-col justify-center sm:py-12"
@@ -337,7 +342,7 @@ export default function ParticipantForm({ email, name }) {
               </div>
               <button
                 className="transition-all w-fit mx-auto bg-black ring-4 ring-black/80 text-white rounded-lg py-2 px-4  justify-center items-center mt-4 active:scale-95 flex flex-row gap-2"
-                onClick={() => signOut()}
+                onClick={() => signOut({ callbackUrl: "/" })}
               >
                 Sign out
               </button>
