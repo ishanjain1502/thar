@@ -65,7 +65,7 @@ export default function ShowUser({ userData }) {
         <div className="text-black font-semibold text-base break-words">
           Hello Everyone, want to take part in most awaited technical fest of
           Rajasthan. <br />
-          RTU is back with THAR'23, with lots of amazing events, workshops,
+          RTU is back with THAR&apos;23, with lots of amazing events, workshops,
           pronites, exhibitions and guest lectures. Register now and get early
           bird offer. <br /> Use my referral:
           https://www.rtuthar.in/participant/dashboard?referral=
