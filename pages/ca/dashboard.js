@@ -15,7 +15,7 @@ export default function Dashboard() {
   const { status } = useSession({
     required: true,
     onUnauthenticated() {
-      router.push("/ca");
+      signIn("google");
     },
   });
 

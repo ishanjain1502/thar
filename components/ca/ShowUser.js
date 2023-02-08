@@ -87,7 +87,7 @@ export default function ShowUser({ userData }) {
       </div>
       <button
         className="transition-all w-fit mx-auto bg-black text-white rounded-lg py-2 px-4  justify-center items-center mt-8 active:scale-95 flex flex-row gap-2"
-        onClick={() => signOut()}
+        onClick={() => signOut({ callbackUrl: "/" })}
       >
         Sign out
       </button>
