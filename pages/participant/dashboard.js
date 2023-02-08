@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import React, { useEffect, useState } from "react";
 import { NavBar } from "../../components/globals/NavBar";
 import Footer from "../../components/globals/Footer";
@@ -9,13 +9,18 @@ import Processing from "../../components/MicroComponents/Processing";
 import ShowParticipant from "../../components/participant/ShowParticipant";
 export default function Dashboard() {
   const router = useRouter();
+
+  // adding referral in query
+  const { referral } = router.query;
+  // console.log(referral);
+
   const { data } = useSession();
   const [userData, setUserData] = useState(null);
   const [form, setForm] = useState(false);
   const { status } = useSession({
     required: true,
     onUnauthenticated() {
-      router.push("/#participant");
+      signIn("google");
     },
   });
 
