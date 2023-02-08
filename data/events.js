@@ -689,28 +689,6 @@ export const events_data = [
       "The CSS wars are back, and this time they're bigger than ever. We're spreading oneself a CSS battles competition on campus. We want to see how your skills compare to others' in an all-out battle of CSS speed and creativity. Suppose If you're a student at IIT Kharagpur, and you have the skills to back it up, then you should get in on this! The battles will be organized in two sections, where candidates will be put in a pair of 2 and will compete with one another on a design. The winners will be selected after this on the basis of least time taken. We will select fastest 16 people and put them in knockout tournament. Participants will compete for prizes, which include 1st prize of 10000/- and 2nd prize of 5000/- for 1st runner up , Participants should not participate virtually as well as get registered . -if you want a chance at glory, then you should get into this .",
   },
   {
-    id: "CW1",
-    name: "CS Funda",
-    domain: "Code wars ",
-    min_participants: 1,
-    max_participants: 3,
-    event_type: "Team",
-    total_price: 5000,
-    first_prize: 3000,
-    second_prize: 2000,
-    rulebook:
-      "https://drive.google.com/file/d/1wK_1C3YUx9bA3iFDrgJuB6vPOyvQQHRd/view?usp=share_link",
-    c1_name: "Gulshan Aggarwal",
-    c1_mobile: 6378880357,
-    c2_name: "Bharti Kumari,",
-    c2_mobile: 9001434984,
-    c3_name: "Shruti Garg",
-    sDesc:
-      "CS Funda is a quiz event where the participants will be tested on their basic knowledge of computer fundamentals.",
-    lDesc:
-      "The event will be held in at University departments of Rajasthan technical University, Kota on 23 Feb 2023 In the first round, teams will get questions to answer within 30 minutes. The team with the highest score will be declared the winner.&nbsp;In Round 2, there will be a buzzer round, Teams are scored based on the marks of their members attempting the quiz round.&nbsp;It's mandatory for each team member to attempt quize The most accurate team will win prize money of ₹8000 for winner&nbsp; ₹4000 for 1st runner up ₹2000 for 2nd runner up.",
-  },
-  {
     id: "CW7",
     name: "Mind storm",
     domain: "Code wars ",
