@@ -48,12 +48,12 @@ export default function Payment() {
         })
         .then(function (response) {
           // redirect to event registration page
-          const prevURL = localStorage.getItem("prevURL");
-          localStorage.removeItem("prevUrRL");
+          const eventID = localStorage.getItem("eventID");
+          localStorage.removeItem("eventID");
 
           if (response.status === 200) {
-            if (prevURL) {
-              router.push(prevURL + "/register");
+            if (eventID) {
+              router.push(`/events/register?eventID=${eventID}`);
             } else {
               router.push("/participant/dashboard");
             }

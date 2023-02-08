@@ -2,27 +2,27 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import { MdAdd, MdOutlineRemove } from "react-icons/md"
-import { NavBar } from "../../../../components/globals/NavBar";
-import Footer from "../../../../components/globals/Footer";
+import { NavBar } from "../../components/globals/NavBar";
+import Footer from "../../components/globals/Footer";
 import { useEffect, useState } from "react";
-import { events_data } from "../../../../data/events";
+import { events_data } from "../../data/events";
 import axios from "axios";
 
 function Members({ min, max, formData, setFormData }) {
   // number of members to add in additional members except min members
   // max-1 is the highest we can go and min-1 is the lowest
-  const [memberCount, setMemberCount] = useState(min-1);
+  const [memberCount, setMemberCount] = useState(min - 1);
 
   function handleCount(type) {
     if (type === "add" && memberCount < max - 1) {
       setFormData({
         ...formData,
-        additionalMembers: formData.additionalMembers.concat([{tharId: ''}])
+        additionalMembers: formData.additionalMembers.concat([{ tharId: '' }])
       })
       setMemberCount(memberCount + 1);
 
     } else if (type === "remove" && memberCount > min - 1) {
-      setFormData({...formData, additionalMembers: formData.additionalMembers.slice(0, -1)});
+      setFormData({ ...formData, additionalMembers: formData.additionalMembers.slice(0, -1) });
       setMemberCount(memberCount - 1);
     }
   }
@@ -43,7 +43,8 @@ function Members({ min, max, formData, setFormData }) {
         key={i}
         minLength={13}
         value={formData.additionalMembers[i].tharId}
-        onChange={(e) => handleChange(e,i)}
+        onChange={(e) => handleChange(e, i)}
+        required
         placeholder="THAR ID of member"
         className="border-2 rounded w-full py-2 px-2 bg-black"
       />)}
@@ -61,16 +62,24 @@ function Members({ min, max, formData, setFormData }) {
 }
 
 export default function Register() {
+  // get the eventID from slug
+  const router = useRouter();
+  let eventID;
+
+  useEffect(() => {
+    if (router.isReady) {
+      eventID = router.query.eventID;
+      selectEvent({ target: { value: eventID } });
+    }
+  }, [router.isReady]);
+
   const [eventData, setEventData] = useState({});
   const [formData, setFormData] = useState({
-    event: "",
+    event: eventID,
     participant: "",
     additionalMembers: []
   })
-  console.log(formData);
 
-  // let tharId = null;
-  const router = useRouter();
   const { data } = useSession({
     required: true,
     onUnauthenticated() {
@@ -79,19 +88,18 @@ export default function Register() {
   });
 
   function selectEvent(e) {
-
     const event = events_data.find(data => data.id === e.target.value);
-
     setEventData({
       id: event.id,
       event_type: event.event_type,
       max_participants: event.max_participants,
       min_participants: event.min_participants
     });
+
     setFormData({
       ...formData,
       event: e.target.value,
-      additionalMembers: Array(event.min_participants-1).fill({tharId: ''})
+      additionalMembers: Array(event.min_participants - 1).fill({ tharId: '' })
     });
   }
 
@@ -106,7 +114,7 @@ export default function Register() {
         } else {
           // User exists
           // tharId = res.data.data.userTharID
-          setFormData({ ...formData, participant: res.data.data.userTharID });
+          setFormData(formData => ({ ...formData, participant: res.data.data.userTharID }));
         }
       });
   }, []);
