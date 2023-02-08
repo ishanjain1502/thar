@@ -53,7 +53,7 @@ export const events_data = [
   },
   {
     id: "RO3",
-    name: "Hydrazone ",
+    name: "Ambuotics ",
     domain: "Robotics ",
     min_participants: 2,
     max_participants: 4,
@@ -108,9 +108,11 @@ export const events_data = [
     rulebook:
       "https://drive.google.com/file/d/1aVz9u_UEN0S3xLHYMJXIqgUNAUrbufCH/view?usp=share_link",
     c1_name: "ISHIKA GOYAL",
+    c1_mobile: "9571147016",
     c2_name: "ASHWIN KOTIYA",
-    c3_name: "POOJA VERMA",
-    c4_name: "LAXMI KUMARI",
+    c2_mobile: "9166942632",
+    c3_name: "LAXMI KUMARI",
+    c3_mobile: "8405935764",
     sDesc:
       "Track O mania is an event that challenges intellectuals to create a robot that can truly push the limits of their technical skills.",
     lDesc:
@@ -196,7 +198,9 @@ export const events_data = [
     c1_name: "YASH PANCHAL",
     c1_mobile: 7023281427,
     c2_name: "NIMISHA DWIVEDI",
+    c2_mobile: 977288088,
     c3_name: "PRIYANSHU MATHUR",
+
     sDesc:
       "Cad wars is an event providing a platform to designers to present their designs through solid works software.",
     lDesc:
@@ -252,7 +256,7 @@ export const events_data = [
     rulebook:
       "https://drive.google.com/file/d/1eLxgf7P21qJGUOdaQRxEmvyWCYrtLq8D/view?usp=share_link",
     c1_name: "Murli Manohar Kumawat",
-    c1_mobile: "70236 10789",
+    c1_mobile: "7023610789",
     c2_name: "Rupali Kumari",
     c2_mobile: 7357346973,
     c3_name: "Diya Vijay",
@@ -339,7 +343,7 @@ export const events_data = [
       "https://drive.google.com/file/d/1BX6WwP5FCocjfQKsdsbvE7LKJAuqHi8T/view?usp=share_link",
     c1_name: "Ashutosh Sharma ",
     c2_name: "Devesh Sattavan",
-    c3_name: "Shaurya Tewatia ",
+    c3_name: "Shaurya Teotia  ",
     sDesc:
       "Creo3d is a test of imagination and skill, that pushes the competitors to fuse creativity with technology.",
     lDesc:
@@ -356,10 +360,15 @@ export const events_data = [
     first_prize: 1800,
     second_prize: 1200,
     c1_name: "Chakshu Chaturvedi",
+    c1_mobile: "9571350489",
     c2_name: "Khushi Sharma",
+    c2_mobile: "9829702226",
     c3_name: "Arundhati Sharma",
+    c3_mobile: "9602045500",
     c4_name: "Mansha Raisinghani",
+    c4_mobile: "9461507032",
     c5_name: "Gaurav Purohit",
+    c5_mobile: "8740974566",
     sDesc:
       "This event creates a virtual environment to provide our participants with a real experience of the auction.",
     lDesc:
@@ -378,10 +387,15 @@ export const events_data = [
     rulebook:
       "https://drive.google.com/file/d/1SKGGo3U0HWS5kHcyeBlxZNaEmAQ6CyYM/view?usp=share_link",
     c1_name: "Manu Gautam",
+    c1_mobile: "8003674915",
     c2_name: "Ishita Gupta",
+    c2_mobile: "9588079403",
     c3_name: "Aditya Shekhawat",
+    c3_mobile: "6375588128",
     c4_name: "Nimika Gupta",
+    c4_mobile: "8764764224",
     c5_name: "Anish Soni",
+    c5_mobile: "9829713757",
     sDesc:
       "Quizzes evaluate the knowledge of the participants within academics as well as beyond academics ",
     lDesc:
@@ -428,7 +442,7 @@ export const events_data = [
     c1_name: "HIMANSHI KHANDELWAL",
     c2_name: "FAIZ KHAN",
     c3_name: "HITESH PARETA",
-    c4_name: "PRIYAL MAHESHWARI",
+    c4_name: "Dev Kataria",
     c5_name: "AYUSHI PATNI",
     sDesc:
       "If you're looking for a place where you can practice your skills, get feedback on your work, and have fun with other students in the industry, then Baskets of Golden Events is for you.",
@@ -523,10 +537,14 @@ export const events_data = [
       "https://drive.google.com/file/d/1olgTd5woQN6pcQ2PNTxMOX3GIjRjSSe_/view?usp=share_link",
     c1_name: "Kamal Upadhyay",
     c1_mobile: 7297029234,
-    c2_name: "Aryan Sharma",
-    c2_mobile: 8619253327,
+    c2_name: "Isha Bhargava",
+    c2_mobile: 8764430524,
     c3_name: "Bharat Ola",
     c3_mobile: 6367209042,
+    c4_name: "Shubham Dadhich",
+    c4_mobile: 9982518161,
+    c5_name: "Srishiti panchal",
+    c5_mobile: 8619232856,
     lDesc:
       "The Improve-challenge is a competition that pits your creativity, improvisation skills, and teamwork against a toy figure named Zoro. You'll need to use nothing but your creativity and some random materials placed beside the obstacles to help Zoro cross a path full of obstacles in order to reach a Treasure Island. Each team will try to cross the arena with obstacles in the least amount of time. There will be 3 obstacles (stages) coming one after another and some random stationary supplies and objects will be placed beside each obstacle from which the teams have to improvise a solution. Failing to cooperate with the requests of the organisers will make a team liable for instant disqualification. Using any material other than what is provided at each stage will result in instant disqualification. Causing damage to the arena or materials provided will result in disqualified teams being banned from participating in future events hosted by [organiser name]. Disturbing others by not keeping a minimum specified distance will make them eligible for disqualification. In this challenge, you'll use your creativity, improvisation skills, and teamwork to help Zoro get through his obstacles. But don't worry, we've got your back—we're still going to be there if something goes wrong. If you fail to cooperate with the organizers or cause damage to the arena or any of its supplies (or if you break any rules), we will respond by disqualification. There are three stages of obstacles coming one after another—use them as inspiration when creating your own solution! There will also be stationary supplies and objects placed alongside each obstacle that teams can improvise solutions with",
   },
