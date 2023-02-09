@@ -702,7 +702,7 @@ export const events_data = [
   {
     id: "CW7",
     name: "Mind storm",
-    domain: "CODE WARS",
+    domain: "Code wars",
     min_participants: 1,
     max_participants: 1,
     event_type: "Individual",
@@ -727,7 +727,7 @@ export const events_data = [
   {
     id: "CW4",
     name: "Code lapse",
-    domain: "CODE WARS",
+    domain: "Code wars",
     min_participants: 1,
     max_participants: 1,
     event_type: "Individual",
@@ -754,7 +754,7 @@ export const events_data = [
   {
     id: "CW2",
     name: "Blind forces",
-    domain: "code wars",
+    domain: "Code wars",
     min_participants: 1,
     max_participants: 1,
     event_type: "Individual",
