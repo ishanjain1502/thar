@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "../../../components/globals/Footer";
 import { NavBar } from "../../../components/globals/NavBar";
 import { events_data } from "../../../data/events";
+import Vader from "../../../components/events/extras/Vader";
 
 export default function Expand() {
   const [slugVal, setSlugVal] = useState(null);
@@ -76,6 +77,13 @@ export default function Expand() {
             <p className="pt-32 lg:pt-48 pb-6 text-center font-spaceboards text-yellow-300 text-3xl sm:text-5xl md:text-7xl text-stroke text-stroke-color break-all">
               {eventData.name.toUpperCase()}
             </p>
+            <div
+              className={
+                eventData.id === "CW3" ? `flex scale-75 sm:scale-100` : `hidden`
+              }
+            >
+              <Vader />
+            </div>
             <div className="flex flex-col md:max-w-4xl xl:max-w-5xl w-full mt-4 p-10 rounded-xl bg-black/80 backdrop-blur-xl">
               <div className="flex flex-col md:flex-row max-w-5xl w-full rounded-xl justify-evenly">
                 <div className="w-full md:w-5/12 flex md:block justify-center">

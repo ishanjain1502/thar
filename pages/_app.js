@@ -1,6 +1,7 @@
 import Script from "next/script";
 import "../styles/globals.css";
 import "../styles/loader.css";
+import "../styles/vader.css";
 
 // Import Swiper styles
 import "swiper/css";
