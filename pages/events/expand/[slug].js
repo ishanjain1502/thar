@@ -170,11 +170,7 @@ export default function Expand() {
                 <button
                   className="px-8 py-3 ring-yellow-300 ring text-yellow-300 mt-8 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out w-max self-center *animate-bounce*"
                   title="Opening Soon"
-                  onClick={() =>
-                    signIn("google", {
-                      callbackUrl: `/events/expand/${slugVal}`,
-                    })
-                  }
+                  onClick={() => router.push("/participant/dashboard")}
                 >
                   Login to register
                 </button>
