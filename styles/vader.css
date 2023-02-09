@@ -1,12 +1,3 @@
-
-a {
-  color: #6172ba;
-  text-decoration: none;
-  cursor: pointer;
-}
-a:hover {
-  text-decoration: underline;
-}
 .vader {
   position: relative;
 }
