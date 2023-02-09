@@ -18,18 +18,23 @@ function Members({ min, max, formData, setFormData }) {
       setFormData({
         ...formData,
         additionalMembers: formData.additionalMembers.concat([{ tharId: '' }])
-      })
+      });
       setMemberCount(memberCount + 1);
 
     } else if (type === "remove" && memberCount > min - 1) {
-      setFormData({ ...formData, additionalMembers: formData.additionalMembers.slice(0, -1) });
+      setFormData({
+        ...formData,
+        additionalMembers: formData.additionalMembers.slice(0, -1)
+      });
       setMemberCount(memberCount - 1);
     }
   }
 
   function handleChange(e, i) {
-    const arr = [...formData.additionalMembers]
-    arr[i].tharId = e.target.value
+    const arr = [...formData.additionalMembers];
+    // arr[i].tharId = e.target.value;
+    arr[i] = { tharId: e.target.value };
+
     setFormData({
       ...formData,
       additionalMembers: arr
@@ -42,7 +47,7 @@ function Members({ min, max, formData, setFormData }) {
       {formData.additionalMembers.map((member, i) => <input
         key={i}
         minLength={13}
-        value={formData.additionalMembers[i].tharId}
+        value={member.tharId}
         onChange={(e) => handleChange(e, i)}
         required
         placeholder="THAR ID of member"
@@ -56,7 +61,6 @@ function Members({ min, max, formData, setFormData }) {
           <MdOutlineRemove style={{ color: 'white', fontSize: '1rem' }} />
         </button>
       </div>
-
     </>
   )
 }
@@ -121,16 +125,6 @@ export default function Register() {
 
   async function register(e) {
     e.preventDefault();
-    // await axios.get("/api/v1/tharUser/getUser").then((res) => {
-    //   if (res.data.data == null) {
-    //     // User doesn't exist
-    //   } else {
-    //     console.log(res.data.data)
-    //     // User exists
-    //     tharId = res.data.data.userTharID
-    //   }
-    // });
-
     axios
       .put("/api/v1/webhook/eventPayment", formData.additionalMembers.length
         ? formData
@@ -184,7 +178,6 @@ export default function Register() {
                   setFormData={setFormData}
                 />
               }
-              <br />
               <button
                 className="px-8 py-3 ring-yellow-300 ring text-yellow-300 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out w-max self-center *animate-bounce*"
                 title="Register Now!"
