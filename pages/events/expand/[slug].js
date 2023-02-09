@@ -33,7 +33,7 @@ export default function Expand() {
 
   // store current page in localhost to be redirected to after payment
   function onRegister() {
-    localStorage.setItem('eventID', slugVal);
+    localStorage.setItem("eventID", slugVal);
     setClicked(true);
   }
 
@@ -46,11 +46,13 @@ export default function Expand() {
           // setForm(true);
         } else {
           // User exists
-          if(res.data.data.credits > 0) {
-            router.push(`/events/register?eventID=${slugVal}`)
+          if (res.data.data.credits > 0) {
+            router.push(`/events/register?eventID=${slugVal}`);
           } else {
-            alert("You have 0 credits. Please process a payment to get 3 credits.")
-            router.push('/participant/payment')
+            alert(
+              "You have 0 credits. Please process a payment to get 3 credits."
+            );
+            router.push("/participant/payment");
           }
         }
       });
@@ -63,7 +65,11 @@ export default function Expand() {
         <link rel="icon" href="/favicon.ico" />
         <title>Events - Thar 2023</title>
       </Head>
-      <main className="flex flex-col items-center">
+      <main
+        className={`flex flex-col items-center ${
+          eventData.id === "CW3" && `sword-cursor`
+        }`}
+      >
         <NavBar />
         {eventData.id !== undefined ? (
           <>
@@ -83,7 +89,9 @@ export default function Expand() {
                   <p className="text-2xl font-spaceboards text-yellow-300 mb-2">
                     DESCRIPTION
                   </p>
-                  <p className="text-justify text-sm sm:text-base lg:text-lg">{eventData.lDesc}</p>
+                  <p className="text-justify text-sm sm:text-base lg:text-lg">
+                    {eventData.lDesc}
+                  </p>
                   <p className="text-2xl font-spaceboards text-yellow-300 mt-6 mb-2">
                     RULE BOOK
                   </p>
@@ -150,24 +158,27 @@ export default function Expand() {
                   </p>
                 </div>
               </div>
-              {status !== "authenticated"
-              ? <button
-                className="px-8 py-3 ring-yellow-300 ring text-yellow-300 mt-8 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out w-max self-center *animate-bounce*"
-                title="Opening Soon"
-                onClick={() =>
-                  signIn("google", { callbackUrl: `/events/expand/${slugVal}` })
-                }
-              >
-                Login to register
-              </button>
-              : <button
-                className="px-8 py-3 ring-yellow-300 ring text-yellow-300 mt-8 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out w-max self-center *animate-bounce*"
-                title="Register Now!"
-                onClick={onRegister}
-              >
-                Register Now!
-              </button>
-              }
+              {status !== "authenticated" ? (
+                <button
+                  className="px-8 py-3 ring-yellow-300 ring text-yellow-300 mt-8 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out w-max self-center *animate-bounce*"
+                  title="Opening Soon"
+                  onClick={() =>
+                    signIn("google", {
+                      callbackUrl: `/events/expand/${slugVal}`,
+                    })
+                  }
+                >
+                  Login to register
+                </button>
+              ) : (
+                <button
+                  className="px-8 py-3 ring-yellow-300 ring text-yellow-300 mt-8 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out w-max self-center *animate-bounce*"
+                  title="Register Now!"
+                  onClick={onRegister}
+                >
+                  Register Now!
+                </button>
+              )}
             </div>
           </>
         ) : (
