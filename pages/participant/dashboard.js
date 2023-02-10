@@ -30,7 +30,13 @@ export default function Dashboard() {
         if (res.data.data == null) {
           setForm(true);
         } else {
-          setUserData(res.data.data);
+          const eventID = localStorage.getItem('eventID');
+          if (eventID && res.data.data.credits > 0) {
+            localStorage.removeItem('eventID');
+            router.push(`/events/register?eventID=${eventID}`);
+          } else {
+            setUserData(res.data.data);
+          }
         }
       });
     }
