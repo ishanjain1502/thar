@@ -43,10 +43,10 @@ export default function Expand() {
     if (status === "authenticated" && clicked) {
       axios.get("/api/v1/tharUser/getUser").then((res) => {
         if (res.data.data == null) {
-          // User doesn't exist
-          // setForm(true);
+          // User data doesn't exist
+          router.push('/participant/dashboard');
         } else {
-          // User exists
+          // User data exists
           if (res.data.data.credits > 0) {
             router.push(`/events/register?eventID=${slugVal}`);
           } else {
@@ -169,8 +169,13 @@ export default function Expand() {
               {status !== "authenticated" ? (
                 <button
                   className="px-8 py-3 ring-yellow-300 ring text-yellow-300 mt-8 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out w-max self-center *animate-bounce*"
-                  title="Opening Soon"
-                  onClick={() => router.push("/participant/dashboard")}
+                  title="Login to register"
+                  onClick={() => {
+                    localStorage.setItem("eventID", slugVal);
+                    signIn("google", {
+                      callbackUrl: `/participant/dashboard`,
+                    })
+                  }}
                 >
                   Login to register
                 </button>
