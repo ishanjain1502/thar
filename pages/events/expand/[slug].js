@@ -171,7 +171,7 @@ export default function Expand() {
                   className="px-8 py-3 ring-yellow-300 ring text-yellow-300 mt-8 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out w-max self-center *animate-bounce*"
                   title="Login to register"
                   onClick={() => {
-                    localStorage.setItem('prevURL', router.asPath)
+                    localStorage.setItem("eventID", slugVal);
                     signIn("google", {
                       callbackUrl: `/participant/dashboard`,
                     })

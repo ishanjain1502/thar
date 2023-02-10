@@ -31,8 +31,8 @@ export default function Dashboard() {
           setForm(true);
         } else {
           const eventID = localStorage.getItem('eventID');
+          localStorage.removeItem('eventID');
           if (eventID && res.data.data.credits > 0) {
-            localStorage.removeItem('eventID');
             router.push(`/events/register?eventID=${eventID}`);
           } else {
             setUserData(res.data.data);
