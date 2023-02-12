@@ -52,14 +52,14 @@ export default function RoboHero({setBtnClicked}) {
             Rulebook 15kg
           </a>
         </div> */}
-        <div className="my-6">
+        {/* <div className="my-6">
           <button 
           className="rounded-md ring-2 ring-yellow-400 text-yellow-400 px-2 py-2 text-xl hover:bg-yellow-400 hover:text-black"
           onClick={handleRegisterBtnClick}
           >
           Register NOW
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

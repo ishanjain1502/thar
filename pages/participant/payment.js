@@ -2,9 +2,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
-
 import { useRouter } from "next/router";
-import { useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { NavBar } from "../../components/globals/NavBar";
 import Footer from "../../components/globals/Footer";
 
@@ -17,23 +16,28 @@ export default function Payment() {
   const { status } = useSession({
     required: true,
     onUnauthenticated() {
-      router.push("/#participant");
+      // router.push("/#participant");
+      signIn("google", { callbackUrl: "/participant/dashboard" })
     },
   });
 
-  useEffect(() => {
-    if (status === "authenticated") {
-      axios.get("/api/v1/tharUser/getUser").then((res) => {
-        if (res.data.data == null) {
-          alert("Error: user data not found");
-          router.push("/participant/dashboard");
-        } else {
-          // User exists
-          setUserData(res.data.data);
-        }
-      });
-    }
-  }, [status]);
+  // useEffect(() => {
+  //   if (status === "authenticated") {
+  //     axios.get("/api/v1/tharUser/getUser").then((res) => {
+  //       if (res.data.data == null) {
+  //         // alert("Error: user data not found");
+  //         router.push("/participant/dashboard");
+  //       } else {
+  //         // User exists
+  //         setUserData(res.data.data);
+  //       }
+  //     });
+  //   }
+  // }, [status]); 
+   
+    useEffect(()=>{
+      router.replace("/404");
+    },[])
 
   function submitTrxn(e) {
     e.preventDefault();
