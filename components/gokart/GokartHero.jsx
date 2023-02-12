@@ -27,13 +27,13 @@ export default function GokartHero({setBtnClicked}) {
             <div className="text-4xl md:text-6xl font-semibold">
               <span className="text-red-400">Thar</span> Go-Kart Championship&nbsp;!
             </div>
-            <div className="font-semibold py-4">24 February to 26 February</div>
-                <button 
+            {/* <div className="font-semibold py-4">24 February to 26 February</div> */}
+                {/* <button 
               className="rounded-md ring-2 ring-yellow-400 text-yellow-400 px-2 py-2 text-xl hover:bg-yellow-400 hover:text-black w-52"
               onClick={handleRegisterBtnClick}
               >
               Register NOW
-              </button>
+              </button> */}
           </div>
           <div className="flex gap-8 items-center text-lg font-semibold md:self-start">
             <div className="h-24 w-24 md:h-32 md:w-32 bg-white rounded-lg bg-opacity-20 backdrop-blur-3xl flex justify-center items-center flex-col">
@@ -49,9 +49,9 @@ export default function GokartHero({setBtnClicked}) {
         </div>
         
       </div>
-      <div className="text-5xl px-5 py-5 " > 
+      {/* <div className="text-5xl px-5 py-5 " > 
               Early Bird offer upto 16th Feb &nbsp;<p className="line-through inline text-red-700" > &#8377;17500</p>&nbsp; &#8377;15000
-      </div>
+      </div> */}
     </div>
   );
 }

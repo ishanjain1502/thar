@@ -51,10 +51,10 @@ export default function ShowParticipant({ userData }) {
         <div className="w-1/2 lg:w-1/4 p-2">
           <div
             className="rounded-lg text-center flex flex-col justify-center place-items-center p-2 font-semibold h-full bg-sky-200 py-6 text-xl cursor-pointer"
-            onClick={() => {
-              router.push("/participant/payment");
-              // alert("this option is currently unavailable");
-            }}
+            // onClick={() => {
+            //   router.push("/participant/payment");
+            //   // alert("this option is currently unavailable");
+            // }}
           >
             Buy Credits
           </div>
