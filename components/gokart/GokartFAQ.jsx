@@ -27,8 +27,8 @@ export default function GokartFAQ() {
   }, []);
 
   return (
-    <div id="FAQ" className="h-screen grid place-items-center ">
-      <div className="md:w-6/12 mx-auto rounded border">
+    <div id="FAQ" className="grid place-items-center py-16">
+      <div className="md:w-6/12 mx-auto rounded border ">
         <div className="bg-white/40  p-10 shadow-sm">
           <span className="text-4xl font-bold text-red-400">FAQs</span>
           <div className="h-1 w-full mx-auto border-b my-5"></div>

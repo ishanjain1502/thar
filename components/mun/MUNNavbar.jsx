@@ -30,15 +30,15 @@ export default function MUNNavbar() {
 
   return (
     <header className="w-full sticky top-0 h-16 bg-black bg-opacity-30 backdrop-blur-3xl z-50">
-      <nav className="h-full flex items-center justify-center w-full lg:w-10/12 m-auto p-2">
+      <nav className="backdrop-blur-xl h-full flex items-center justify-center w-full lg:w-10/12 m-auto p-2">
         <Link
           href={"/"}
           className="lg:hidden justify-start flex w-11/12 text-2xl"
         >
           <img src="/logo64trans.png" alt="" className="h-12 md:h-full" />
         </Link>
-        <ul className="menu translate-x-full lg:translate-x-0 absolute  top-0 w-full lg:bg-transparent bg-black bg-opacity-75 backdrop-blur-3xl justify-center lg:h-[inherit] h-screen  flex flex-col lg:flex-row items-center gap-8 text-2xl">
-          <li className="navEle">
+        <ul className="menu translate-x-full lg:translate-x-0 absolute  top-0 w-full lg:bg-transparent bg-black bg-opacity-75  justify-center md:justify-start lg:h-[inherit] h-screen  flex flex-col lg:flex-row items-center gap-8">
+          <li className="navEle md:ml-4">
             <Link href="/" className="flex font-bold items-center gap-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -55,25 +55,20 @@ export default function MUNNavbar() {
             </Link>
           </li>
           <Link href="#home">
-            <li className="navEle flex items-center transition-colors py-2 px-4 bg-yellow-600 leading-none rounded-xl">
+            <li className="navEle flex items-center transition-colors py-2 px-4 bg-yellow-600 leading-none rounded-lg">
               HOME
             </li>
           </Link>
           <Link href="#about">
-            <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
+            <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-lg ">
               ABOUT
             </li>
           </Link>
           <Link href="/mun#committees">
-            <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
-              COMMITTEES
+            <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-lg ">
+              COMMITTEES & AGENDAS
             </li>
           </Link>
-          {/* <Link href="/agendas">
-            <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
-              AGENDAS
-            </li>
-          </Link> */}
           {/* <Link href="mun/team">
             <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
               TEAM
@@ -87,7 +82,22 @@ export default function MUNNavbar() {
           {/* <li className="navEle flex items-center transition-colors py-2 px-4 hover:bg-yellow-600 leading-none rounded-xl ">
             FAQs
           </li> */}
-          <li className="closeBtn lg:hidden">x</li>
+          <li className="closeBtn lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </li>
         </ul>
         <span className="openBtn lg:hidden justify-end flex w-11/12 text-2xl">
           <svg
