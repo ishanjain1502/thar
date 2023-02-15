@@ -2,21 +2,20 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import React from "react";
 
-export default function Hero({setBtnClicked}) {
-
-  const {data:session} = useSession();
+export default function Hero({ setBtnClicked }) {
+  const { data: session } = useSession();
   const router = useRouter();
 
   const handleRegisterBtnClick = () => {
-    if(!session){
-      alert('Login Required\nRedirecting to home page please wait...');
-      setTimeout(()=>{
-        router.replace('/');
-      },1000);
+    if (!session) {
+      alert("Login Required\nRedirecting to home page please wait...");
+      setTimeout(() => {
+        router.replace("/");
+      }, 1000);
       return;
     }
     setBtnClicked(true);
-  }
+  };
   return (
     <>
       <div className="min-h-screen grid grid-rows-1 md:grid-rows-2" id="home">
@@ -28,9 +27,7 @@ export default function Hero({setBtnClicked}) {
                 <span className="text-yellow-300">Thar</span> RC NITRO
                 Championship!
               </div>
-              <div className="font-semibold py-4">
-                24 February to 26 February
-              </div>
+              <div className="font-semibold py-4">17 March to 19 March</div>
               {/* <button 
               className="rounded-md ring-2 ring-yellow-400 text-yellow-400 px-2 py-2 text-xl hover:bg-yellow-400 hover:text-black w-52"
               onClick={handleRegisterBtnClick}
@@ -44,7 +41,6 @@ export default function Hero({setBtnClicked}) {
                 >
                   Rulebook
                 </a>
-                
               </div>
             </div>
             <div className="flex gap-8 items-center text-lg font-semibold md:self-start">

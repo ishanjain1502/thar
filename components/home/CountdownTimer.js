@@ -43,7 +43,7 @@ export default function CountdownTimer() {
       <p className="text-2xl sm:text-4xl font-spaceboards text-stroke text-stroke-color">
         EMBARKING IN
       </p>
-      <Countdown renderer={renderer} date={1677252600000} />
+      <Countdown renderer={renderer} date={"2023-03-17T00:00:00"} />
     </div>
   );
 }
