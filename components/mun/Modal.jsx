@@ -28,7 +28,27 @@ export default function Modal({ modalState, data }) {
                           </h1>
                         </p>
                       </h3>
-                      <div className="mt-2">{data.agenda}</div>
+                      <div className="mt-2 text-base 2xl:text-lg leading-tight tracking-tight">
+                        {data.agenda}
+                      </div>
+                      <div className="flex w-full items-start justify-center space-x-4 mt-4 ">
+                        {data.chair.map((i) => (
+                          <div
+                            key={i}
+                            className="flex flex-col items-center w-2/5"
+                          >
+                            <img
+                              src={`/assets/images/mun/EB/${i.name}.png`}
+                              alt=""
+                              srcset=""
+                              className=""
+                            />
+                            <p className="text-base 2xl:text-lg leading-tight tracking-tight capitalize">
+                              {i.name}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

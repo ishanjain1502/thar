@@ -28,7 +28,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-center gap-4">
           <img src="/assets/images/mun/logo.png" alt="" className="w-48" />
-          <h1 className="text-6xl sm:text-8xl underline underline-offset-8 font-medium">
+          <h1 className="text-5xl sm:text-8xl underline underline-offset-8 font-medium w-full text-center">
             MUN RTU
           </h1>
           <p className="sm:text-2xl">The Delegates’ Symposium</p>
