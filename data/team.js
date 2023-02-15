@@ -42,13 +42,13 @@ export const team_data = {
     },
   ],
   gokart: [
-    {
-      name: "Uttam Sharma",
-      contact: 7665047450,
-      email: "us5047450@gmail.com",
-      instagram: "https://www.instagram.com/sharma.ut.2305/",
-      linkedin: "https://www.linkedin.com/in/uttam-sharma-3354901a4",
-    },
+    // {
+    //   name: "Uttam Sharma",
+    //   contact: 7665047450,
+    //   email: "us5047450@gmail.com",
+    //   instagram: "https://www.instagram.com/sharma.ut.2305/",
+    //   linkedin: "https://www.linkedin.com/in/uttam-sharma-3354901a4",
+    // },
     {
       name: "Ritik Yadav",
       contact: 7734097782,
@@ -71,13 +71,13 @@ export const team_data = {
       instagram: "http://Instagram.com/mjsj1612/",
       linkedin: "https://www.linkedin.com/in/shubham-jain-43357b192",
     },
-    {
-      name: "Uttam Sharma",
-      contact: 7665047450,
-      email: "us5047450@gmail.com",
-      instagram: "https://www.instagram.com/sharma.ut.2305/",
-      linkedin: "https://www.linkedin.com/in/uttam-sharma-3354901a4",
-    },    
+    // {
+    //   name: "Uttam Sharma",
+    //   contact: 7665047450,
+    //   email: "us5047450@gmail.com",
+    //   instagram: "https://www.instagram.com/sharma.ut.2305/",
+    //   linkedin: "https://www.linkedin.com/in/uttam-sharma-3354901a4",
+    // },    
     {
       name: "Rohit Kawlani",
       contact: 9079255769,

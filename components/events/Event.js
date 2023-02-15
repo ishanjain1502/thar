@@ -9,7 +9,9 @@ export default function Event({ id, timeLeft, name, sDesc }) {
       <a
         // Disable it currently as we don't have all the info
         key={id}
-        className="col-span-1 group relative p-4 pb-5 flex flex-col items-center border-2  rounded-xl bg-zinc-900 hover:shadow-xl border-yellow-300"
+        className={`col-span-1 group relative p-4 pb-5 flex flex-col items-center border-2  rounded-xl bg-zinc-900 hover:shadow-xl border-yellow-300 ${
+          id === "CW3" && `sword-cursor`
+        }`}
       >
         {/* ::Image */}
         <div className="relative  rounded-2xl overflow-hidden w-full">

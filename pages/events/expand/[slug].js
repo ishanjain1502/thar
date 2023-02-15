@@ -1,13 +1,20 @@
+import { signIn, useSession } from "next-auth/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Footer from "../../../components/globals/Footer";
 import { NavBar } from "../../../components/globals/NavBar";
 import { events_data } from "../../../data/events";
+import Vader from "../../../components/events/extras/Vader";
 
 export default function Expand() {
   const [slugVal, setSlugVal] = useState(null);
   const [eventData, setEventData] = useState([]);
+
+  const { status } = useSession();
+  const [clicked, setClicked] = useState(false);
+
   const router = useRouter();
   const { slug } = router.query;
   useEffect(() => {
@@ -24,19 +31,59 @@ export default function Expand() {
       }
     }
   }, [slugVal !== null]);
+
+  // store current page in localhost to be redirected to after payment
+  function onRegister() {
+    localStorage.setItem("eventID", slugVal);
+    setClicked(true);
+  }
+
+  // get user coins and redirect to /register if coins > 0 else to payment
+  useEffect(() => {
+    if (status === "authenticated" && clicked) {
+      axios.get("/api/v1/tharUser/getUser").then((res) => {
+        if (res.data.data == null) {
+          // User data doesn't exist
+          router.push('/participant/dashboard');
+        } else {
+          // User data exists
+          if (res.data.data.credits > 0) {
+            router.push(`/events/register?eventID=${slugVal}`);
+          } else {
+            alert(
+              "You have 0 credits. Please process a payment to get 3 credits."
+            );
+            router.push("/participant/payment");
+          }
+        }
+      });
+    }
+  }, [status, clicked]);
+
   return (
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <title>Events - Thar 2023</title>
       </Head>
-      <main className="flex flex-col items-center">
+      <main
+        className={`flex flex-col items-center ${
+          eventData.id === "CW3" && `sword-cursor`
+        }`}
+      >
         <NavBar />
         {eventData.id !== undefined ? (
           <>
             <p className="pt-32 lg:pt-48 pb-6 text-center font-spaceboards text-yellow-300 text-3xl sm:text-5xl md:text-7xl text-stroke text-stroke-color break-all">
               {eventData.name.toUpperCase()}
             </p>
+            <div
+              className={
+                eventData.id === "CW3" ? `flex scale-75 sm:scale-100` : `hidden`
+              }
+            >
+              <Vader />
+            </div>
             <div className="flex flex-col md:max-w-4xl xl:max-w-5xl w-full mt-4 p-10 rounded-xl bg-black/80 backdrop-blur-xl">
               <div className="flex flex-col md:flex-row max-w-5xl w-full rounded-xl justify-evenly">
                 <div className="w-full md:w-5/12 flex md:block justify-center">
@@ -50,7 +97,9 @@ export default function Expand() {
                   <p className="text-2xl font-spaceboards text-yellow-300 mb-2">
                     DESCRIPTION
                   </p>
-                  <p className="text-justify text-sm sm:text-base lg:text-lg">{eventData.lDesc}</p>
+                  <p className="text-justify text-sm sm:text-base lg:text-lg">
+                    {eventData.lDesc}
+                  </p>
                   <p className="text-2xl font-spaceboards text-yellow-300 mt-6 mb-2">
                     RULE BOOK
                   </p>
@@ -69,7 +118,7 @@ export default function Expand() {
                   <p className="text-2xl font-spaceboards text-yellow-300 mt-6 mb-2">
                     PRIZES
                   </p>
-                  <p className="flex flex-col">
+                  <div className="flex flex-col">
                     {eventData.total_price && (
                       <>
                         <p className="text-xl font-bold">
@@ -93,7 +142,7 @@ export default function Expand() {
                         </p>
                       </>
                     )}
-                  </p>
+                  </div>
                 </div>
                 <div className="">
                   <p className="text-2xl font-spaceboards text-yellow-300 mt-6 mb-2">
@@ -117,16 +166,28 @@ export default function Expand() {
                   </p>
                 </div>
               </div>
-              {/* TODO: Enable button and apply registration logic */}
-              <button
-                className="px-8 py-3 ring-yellow-300 ring text-yellow-300 mt-8 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out w-max self-center *animate-bounce*"
-                title="Opening Soon"
-                // onClick={() =>
-                //   signIn("google", { callbackUrl: "/participant/dashboard" })
-                // }
-              >
-                Registration Opening Soon
-              </button>
+              {/* {status !== "authenticated" ? (
+                <button
+                  className="px-8 py-3 ring-yellow-300 ring text-yellow-300 mt-8 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out w-max self-center *animate-bounce*"
+                  title="Login to register"
+                  onClick={() => {
+                    localStorage.setItem("eventID", slugVal);
+                    signIn("google", {
+                      callbackUrl: `/participant/dashboard`,
+                    })
+                  }}
+                >
+                  Login to register
+                </button>
+              ) : (
+                <button
+                  className="px-8 py-3 ring-yellow-300 ring text-yellow-300 mt-8 bg-black/30 backdrop-blur-3xl font-semibold hover:bg-yellow-300 hover:text-yellow-900 hover:rounded-md transition-all ease-in-out w-max self-center *animate-bounce*"
+                  title="Register Now!"
+                  onClick={onRegister}
+                >
+                  Register Now!
+                </button>
+              )} */}
             </div>
           </>
         ) : (

@@ -1,5 +1,6 @@
 import { signOut } from "next-auth/react";
 import React from "react";
+import { MdContentCopy } from "react-icons/md";
 
 export default function ShowUser({ userData }) {
   return (
@@ -45,9 +46,54 @@ export default function ShowUser({ userData }) {
           </div>
         </div>
       </div>
+      <div className="bg-emerald-200 m-4 p-4 rounded-md">
+        <div className="flex justify-between items-center flex-wrap mb-2">
+          <div className="text-slate-900 text-lg font-semibold">
+            Message Template
+          </div>
+          <button
+            className="transition-all bg-sky-600 text-white py-1 px-2 rounded-md flex flex-row items-center gap-2 active:scale-90"
+            onClick={() => {
+              navigator.clipboard.writeText(
+                `Hello Everyone! \nGet ready and pack your bags for the most awaited technical fest of Rajasthan.\nRajasthan Technical University is back with THAR'23, offering lots of amazing events, workshops, pronites, exhibitions and guest lectures.\nRegister now and get early bird offer!\nUse my referral: https://www.rtuthar.in/participant/dashboard?referral=${userData.referralCode}`
+              );
+            }}
+          >
+            Copy <MdContentCopy style={{ color: "white" }} />
+          </button>
+        </div>
+        <div className="text-black font-semibold text-base break-words">
+          Hello Everyone! <br />
+          Get ready and pack your bags for the most awaited technical fest of
+          Rajasthan.
+          <br />
+          Rajasthan Technical University is back with THAR&apos;23, offering
+          lots of amazing events, workshops, pronites, exhibitions and guest
+          lectures.
+          <br />
+          Register now and get early bird offer! <br />
+          Use my referral:
+          https://www.rtuthar.in/participant/dashboard?referral=
+          {userData.referralCode}
+        </div>
+        {/* %0a - for new line in link href */}
+        <a
+          href={
+            "whatsapp://send?text=" +
+            "Hello Everyone! %0aGet ready and pack your bags for the most awaited technical fest of Rajasthan. %0aRajasthan Technical University is back with THAR'23, offering lots of amazing events, workshops, pronites, exhibitions and guest lectures. %0aRegister now and get early bird offer! %0aUse my referral: https://www.rtuthar.in/participant/dashboard?referral=" +
+            userData.referralCode
+          }
+          data-action="share/whatsapp/share"
+          className="transition-all bg-emerald-900 ring-2 ring-emerald-700 text-white py-1 px-2 rounded-md flex flex-row items-center gap-2 active:scale-90 text-center w-fit mx-auto mt-6"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Share to WhatsApp
+        </a>
+      </div>
       <button
-        className="transition-all w-fit mx-auto bg-black text-white rounded-lg py-2 px-4  justify-center items-center mt-4 active:scale-95 flex flex-row gap-2"
-        onClick={() => signOut()}
+        className="transition-all w-fit mx-auto bg-black text-white rounded-lg py-2 px-4  justify-center items-center mt-8 active:scale-95 flex flex-row gap-2"
+        onClick={() => signOut({ callbackUrl: "/" })}
       >
         Sign out
       </button>
