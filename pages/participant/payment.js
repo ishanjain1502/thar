@@ -21,23 +21,23 @@ export default function Payment() {
     },
   });
 
-  // useEffect(() => {
-  //   if (status === "authenticated") {
-  //     axios.get("/api/v1/tharUser/getUser").then((res) => {
-  //       if (res.data.data == null) {
-  //         // alert("Error: user data not found");
-  //         router.push("/participant/dashboard");
-  //       } else {
-  //         // User exists
-  //         setUserData(res.data.data);
-  //       }
-  //     });
-  //   }
-  // }, [status]); 
+  useEffect(() => {
+    if (status === "authenticated") {
+      axios.get("/api/v1/tharUser/getUser").then((res) => {
+        if (res.data.data == null) {
+          // alert("Error: user data not found");
+          router.push("/participant/dashboard");
+        } else {
+          // User exists
+          setUserData(res.data.data);
+        }
+      });
+    }
+  }, [status]); 
    
-    useEffect(()=>{
-      router.replace("/404");
-    },[])
+    // useEffect(()=>{
+    //   router.replace("/404");
+    // },[])
 
   function submitTrxn(e) {
     e.preventDefault();

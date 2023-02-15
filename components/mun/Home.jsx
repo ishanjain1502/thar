@@ -17,6 +17,7 @@ export default function Home() {
             Register
           </a> */}
           <div className="countdown">
+            {" "}
             <CountdownTimer />
           </div>
         </div>
