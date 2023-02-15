@@ -20,11 +20,11 @@ export default function Letter() {
         <p className="">
           It is my distinct honor and pleasure to invite you to Rajasthan
           Technical University Model United Nations Conference set to occur from
-          February 26th-28th, 2023. MUN challenges students to think outside the
-          box, and come up with creative solutions while acquiring skills in
-          public speaking, leadership, and teamwork. We look forward to opening
-          our doors to a diversity of thoughts and constructive,
-          thought-provoking discussions.
+          March 17-19th, 2023. MUN challenges students to think outside the box,
+          and come up with creative solutions while acquiring skills in public
+          speaking, leadership, and teamwork. We look forward to opening our
+          doors to a diversity of thoughts and constructive, thought-provoking
+          discussions.
         </p>
         <p>
           This year’s conference will consist of five committees: The United

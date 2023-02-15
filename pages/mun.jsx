@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import About from "../components/mun/About";
 import Home from "../components/mun/Home";
 import Letter from "../components/mun/Letter";
@@ -9,12 +9,25 @@ import MUNSlider from "../components/mun/MUNSlider";
 import Footer from "../components/globals/Footer";
 
 export default function MUN() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    window.onload = () => {
+      setIsLoading(false);
+    };
+  }, []);
+
   return (
     <div className="mun overflow-x-hidden">
       <Head>
         <title>RTU MUN | Model United Nation</title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
+      {!isLoading && (
+        <div className="grid place-items-center h-screen w-screen fixed inset-0 top-0 bg-black z-100">
+          <span class="munloader"></span>
+        </div>
+      )}
       <div className="hidden">
         <NavBar className="hidden" />
       </div>
