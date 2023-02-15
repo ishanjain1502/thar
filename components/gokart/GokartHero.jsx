@@ -27,13 +27,13 @@ export default function GokartHero({ setBtnClicked }) {
               <span className="text-red-400">Thar</span> Go-Kart
               Championship&nbsp;!
             </div>
-            {/* <div className="font-semibold py-4">24 February to 26 February</div> */}
-            {/* <button 
+            <div className="font-semibold py-4">17 March to 19 March</div>
+            <button 
               className="rounded-md ring-2 ring-yellow-400 text-yellow-400 px-2 py-2 text-xl hover:bg-yellow-400 hover:text-black w-52"
               onClick={handleRegisterBtnClick}
               >
               Register NOW
-              </button> */}
+              </button>
           </div>
           <div className="flex gap-8 items-center text-lg font-semibold md:self-start">
             <div className="h-24 w-24 md:h-32 md:w-32 bg-white rounded-lg bg-opacity-20 backdrop-blur-3xl flex justify-center items-center flex-col">
