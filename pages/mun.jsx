@@ -12,7 +12,7 @@ export default function MUN() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    window.onload = () => {
+    document.onload = () => {
       setIsLoading(false);
     };
   }, []);
@@ -23,11 +23,7 @@ export default function MUN() {
         <title>RTU MUN | Model United Nation</title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
-      {!isLoading && (
-        <div className="grid place-items-center h-screen w-screen fixed inset-0 top-0 bg-black z-100">
-          <span class="munloader"></span>
-        </div>
-      )}
+      {!isLoading && loader()}
       <div className="hidden">
         <NavBar className="hidden" />
       </div>
@@ -40,6 +36,13 @@ export default function MUN() {
       <div className="bg-[#1D1C41] -mt-10">
         <Footer />
       </div>
+    </div>
+  );
+}
+function loader() {
+  return (
+    <div className="grid place-items-center h-screen w-screen fixed inset-0 top-0 bg-black z-100">
+      <span class="munloader"></span>
     </div>
   );
 }
