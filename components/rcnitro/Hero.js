@@ -28,12 +28,12 @@ export default function Hero({ setBtnClicked }) {
                 Championship!
               </div>
               <div className="font-semibold py-4">17 March to 19 March</div>
-              {/* <button 
+              <button 
               className="rounded-md ring-2 ring-yellow-400 text-yellow-400 px-2 py-2 text-xl hover:bg-yellow-400 hover:text-black w-52"
               onClick={handleRegisterBtnClick}
               >
               Register NOW
-              </button> <br/> */}
+              </button> <br/>
               <div className="flex flex-row flex-wrap gap-2">
                 <a
                   href="https://drive.google.com/file/d/1b9S1ZdidrhSDC-Z3WUMtcNaEdnP667Fr/view?usp=sharing"
