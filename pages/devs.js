@@ -1,9 +1,15 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../components/globals/Footer";
 import { NavBar } from "../components/globals/NavBar";
+import { useRouter } from "next/router";
 
 export default function Devs() {
+  const router = useRouter()
+  useEffect(() => {
+    router.replace('/404');
+  })
+
   return (
     <>
       <Head>

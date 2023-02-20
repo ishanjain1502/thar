@@ -1,11 +1,17 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../components/globals/Footer";
 import { NavBar } from "../components/globals/NavBar";
 import TeamCard from "../components/team/TeamCard";
 import { team_data } from "../data/team";
+import { useRouter } from "next/router";
 
 export default function team() {
+  const router = useRouter();
+  useEffect(() => {
+    router.replace('/404');
+  })
+
   return (
     <>
       <Head>

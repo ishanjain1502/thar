@@ -12,6 +12,11 @@ function Members({ min, max, formData, setFormData }) {
   // number of members to add in additional members except min members
   // max-1 is the highest we can go and min-1 is the lowest
   const [memberCount, setMemberCount] = useState(min - 1);
+  
+  const router = useRouter();
+  useEffect(() => {
+    router.replace('/404');
+  })
 
   function handleCount(type) {
     if (type === "add" && memberCount < max - 1) {
@@ -76,6 +81,10 @@ export default function Register() {
       selectEvent({ target: { value: eventID } });
     }
   }, [router.isReady]);
+
+  useEffect(() => {
+    router.replace('/404');
+  })
 
   const [eventData, setEventData] = useState({});
   const [formData, setFormData] = useState({
