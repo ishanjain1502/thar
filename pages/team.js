@@ -6,7 +6,7 @@ import TeamCard from "../components/team/TeamCard";
 import { team_data } from "../data/team";
 import { useRouter } from "next/router";
 
-export default function team() {
+export default function Team() {
   const router = useRouter();
   useEffect(() => {
     router.replace('/404');
